@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" dir="ltr"><head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<meta name="generator" content="ReSpec 35.2.0">
+<meta name="generator" content="ReSpec 35.2.1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -312,6 +312,22 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   ],
   "maxTocLevel": 3,
   "localBiblio": {
+    "CID": {
+      "title": "Controlled Identifier Document v1.0",
+      "href": "https://www.w3.org/TR/cid/",
+      "authors": [
+        "Manu Sporny",
+        "Dave Longley",
+        "Markus Sabadello",
+        "Drummond Reed",
+        "Orie Steele",
+        "Christopher Allen",
+        "Michael B. Jones"
+      ],
+      "status": "CR",
+      "publisher": "W3C Verifiable Credentials Working Group",
+      "id": "cid"
+    },
     "DI-EDDSA": {
       "title": "The Edwards Digital Signature Algorithm Cryptosuites v1.0",
       "href": "https://www.w3.org/TR/vc-di-eddsa/",
@@ -615,7 +631,7 @@ removed before the transition to <abbr title="World Wide Web Consortium">W3C</ab
   </p><p>
                       This document is governed by the
                       <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#use-cases"><bdi class="secno">1.1 </bdi>Use Cases</a></li><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">1.2 </bdi>Requirements</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1.3 </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terminology"><bdi class="secno">1.4 </bdi>Terminology</a></li></ol></li><li class="tocline"><a class="tocxref" href="#data-model"><bdi class="secno">2. </bdi>Data Model</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#controller-documents"><bdi class="secno">2.1 </bdi>Controller Documents</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#subjects"><bdi class="secno">2.1.1 </bdi>Subjects</a></li><li class="tocline"><a class="tocxref" href="#controllers"><bdi class="secno">2.1.2 </bdi>Controllers</a></li><li class="tocline"><a class="tocxref" href="#also-known-as"><bdi class="secno">2.1.3 </bdi>Also Known As</a></li><li class="tocline"><a class="tocxref" href="#services"><bdi class="secno">2.1.4 </bdi>Services</a></li></ol></li><li class="tocline"><a class="tocxref" href="#verification-methods"><bdi class="secno">2.2 </bdi>Verification Methods</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#verification-material"><bdi class="secno">2.2.1 </bdi>Verification Material</a></li><li class="tocline"><a class="tocxref" href="#Multikey"><bdi class="secno">2.2.2 </bdi>Multikey</a></li><li class="tocline"><a class="tocxref" href="#JsonWebKey"><bdi class="secno">2.2.3 </bdi>JsonWebKey</a></li><li class="tocline"><a class="tocxref" href="#referring-to-verification-methods"><bdi class="secno">2.2.4 </bdi>Referring to Verification Methods</a></li></ol></li><li class="tocline"><a class="tocxref" href="#verification-relationships"><bdi class="secno">2.3 </bdi>Verification Relationships</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authentication"><bdi class="secno">2.3.1 </bdi>Authentication</a></li><li class="tocline"><a class="tocxref" href="#assertion"><bdi class="secno">2.3.2 </bdi>Assertion</a></li><li class="tocline"><a class="tocxref" href="#key-agreement"><bdi class="secno">2.3.3 </bdi>Key Agreement</a></li><li class="tocline"><a class="tocxref" href="#capability-invocation"><bdi class="secno">2.3.4 </bdi>Capability Invocation</a></li><li class="tocline"><a class="tocxref" href="#capability-delegation"><bdi class="secno">2.3.5 </bdi>Capability Delegation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multibase-0"><bdi class="secno">2.4 </bdi>Multibase</a></li><li class="tocline"><a class="tocxref" href="#multihash"><bdi class="secno">2.5 </bdi>Multihash</a></li></ol></li><li class="tocline"><a class="tocxref" href="#algorithms"><bdi class="secno">3. </bdi>Algorithms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#base-encode"><bdi class="secno">3.1 </bdi>Base Encode</a></li><li class="tocline"><a class="tocxref" href="#base-decode"><bdi class="secno">3.2 </bdi>Base Decode</a></li><li class="tocline"><a class="tocxref" href="#retrieve-verification-method"><bdi class="secno">3.3 </bdi>Retrieve Verification Method</a></li><li class="tocline"><a class="tocxref" href="#processing-errors"><bdi class="secno">3.4 </bdi>Processing Errors</a></li></ol></li><li class="tocline"><a class="tocxref" href="#contexts-and-vocabularies"><bdi class="secno">4. </bdi>Contexts and Vocabularies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#vocabulary"><bdi class="secno">4.1 </bdi>Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#json-ld-context"><bdi class="secno">4.2 </bdi>JSON-LD context</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#context-injection"><bdi class="secno">4.2.1 </bdi>Context Injection</a></li></ol></li><li class="tocline"><a class="tocxref" href="#datatypes"><bdi class="secno">4.3 </bdi>Datatypes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multibase"><bdi class="secno">4.3.1 </bdi>The <code>multibase</code> Datatype</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#security-considerations"><bdi class="secno">5. </bdi>Security Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proving-control-and-binding"><bdi class="secno">5.1 </bdi>Proving Control and Binding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proving-control-of-an-identifier-and-or-controller-document"><bdi class="secno">5.1.1 </bdi>Proving Control of an Identifier and/or Controller Document</a></li><li class="tocline"><a class="tocxref" href="#binding-to-physical-identity"><bdi class="secno">5.1.2 </bdi>Binding to Physical Identity</a></li></ol></li><li class="tocline"><a class="tocxref" href="#identifier-ambiguity"><bdi class="secno">5.2 </bdi>Identifier Ambiguity</a></li><li class="tocline"><a class="tocxref" href="#key-and-signature-expiration"><bdi class="secno">5.3 </bdi>Key and Signature Expiration</a></li><li class="tocline"><a class="tocxref" href="#verification-method-rotation"><bdi class="secno">5.4 </bdi>Verification Method Rotation</a></li><li class="tocline"><a class="tocxref" href="#verification-method-revocation"><bdi class="secno">5.5 </bdi>Verification Method Revocation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#revocation-semantics"><bdi class="secno">5.5.1 </bdi>Revocation Semantics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#choosing-a-multiformat"><bdi class="secno">5.6 </bdi>Choosing a Multiformat</a></li><li class="tocline"><a class="tocxref" href="#encrypted-data-in-controller-documents"><bdi class="secno">5.7 </bdi>Encrypted Data in Controller Documents</a></li><li class="tocline"><a class="tocxref" href="#content-integrity-protection"><bdi class="secno">5.8 </bdi>Content Integrity Protection</a></li><li class="tocline"><a class="tocxref" href="#integrity-protection-of-controllers"><bdi class="secno">5.9 </bdi>Integrity Protection of Controllers</a></li><li class="tocline"><a class="tocxref" href="#level-of-assurance"><bdi class="secno">5.10 </bdi>Level of Assurance</a></li><li class="tocline"><a class="tocxref" href="#service-endpoints-for-authentication-and-authorization"><bdi class="secno">5.11 </bdi>Service Endpoints for Authentication and Authorization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#privacy-considerations"><bdi class="secno">6. </bdi>Privacy Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#keep-personal-data-private"><bdi class="secno">6.1 </bdi>Keep Personal Data Private</a></li><li class="tocline"><a class="tocxref" href="#relationship-to-the-same-origin-policy"><bdi class="secno">6.2 </bdi>Relationship to the Same-Origin Policy</a></li><li class="tocline"><a class="tocxref" href="#identifier-correlation-risks"><bdi class="secno">6.3 </bdi>Identifier Correlation Risks</a></li><li class="tocline"><a class="tocxref" href="#controller-document-correlation-risks"><bdi class="secno">6.4 </bdi>Controller Document Correlation Risks</a></li><li class="tocline"><a class="tocxref" href="#subject-classification"><bdi class="secno">6.5 </bdi>Subject Classification</a></li><li class="tocline"><a class="tocxref" href="#service-privacy"><bdi class="secno">6.6 </bdi>Service Privacy</a></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibility-considerations"><bdi class="secno">7. </bdi>Accessibility Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presenting-time-values"><bdi class="secno">7.1 </bdi>Presenting Time Values</a></li></ol></li><li class="tocline"><a class="tocxref" href="#iana-considerations"><bdi class="secno">A. </bdi>IANA Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#controller-media-type"><bdi class="secno">A.1 </bdi>application/cid</a></li></ol></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">B. </bdi>Examples</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multikey-examples"><bdi class="secno">B.1 </bdi>Multikey Examples</a></li><li class="tocline"><a class="tocxref" href="#jsonwebkey-examples"><bdi class="secno">B.2 </bdi>JsonWebKey Examples</a></li></ol></li><li class="tocline"><a class="tocxref" href="#revision-history"><bdi class="secno">C. </bdi>Revision History</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">E.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.2 </bdi>Informative references</a></li></ol></li></ol></nav>
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#use-cases"><bdi class="secno">1.1 </bdi>Use Cases</a></li><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">1.2 </bdi>Requirements</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1.3 </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terminology"><bdi class="secno">1.4 </bdi>Terminology</a></li></ol></li><li class="tocline"><a class="tocxref" href="#data-model"><bdi class="secno">2. </bdi>Data Model</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#controlled-identifier-documents"><bdi class="secno">2.1 </bdi>Controlled Identifier Documents</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#subjects"><bdi class="secno">2.1.1 </bdi>Subjects</a></li><li class="tocline"><a class="tocxref" href="#controllers"><bdi class="secno">2.1.2 </bdi>Controllers</a></li><li class="tocline"><a class="tocxref" href="#also-known-as"><bdi class="secno">2.1.3 </bdi>Also Known As</a></li><li class="tocline"><a class="tocxref" href="#services"><bdi class="secno">2.1.4 </bdi>Services</a></li></ol></li><li class="tocline"><a class="tocxref" href="#verification-methods"><bdi class="secno">2.2 </bdi>Verification Methods</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#verification-material"><bdi class="secno">2.2.1 </bdi>Verification Material</a></li><li class="tocline"><a class="tocxref" href="#Multikey"><bdi class="secno">2.2.2 </bdi>Multikey</a></li><li class="tocline"><a class="tocxref" href="#JsonWebKey"><bdi class="secno">2.2.3 </bdi>JsonWebKey</a></li><li class="tocline"><a class="tocxref" href="#referring-to-verification-methods"><bdi class="secno">2.2.4 </bdi>Referring to Verification Methods</a></li></ol></li><li class="tocline"><a class="tocxref" href="#verification-relationships"><bdi class="secno">2.3 </bdi>Verification Relationships</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authentication"><bdi class="secno">2.3.1 </bdi>Authentication</a></li><li class="tocline"><a class="tocxref" href="#assertion"><bdi class="secno">2.3.2 </bdi>Assertion</a></li><li class="tocline"><a class="tocxref" href="#key-agreement"><bdi class="secno">2.3.3 </bdi>Key Agreement</a></li><li class="tocline"><a class="tocxref" href="#capability-invocation"><bdi class="secno">2.3.4 </bdi>Capability Invocation</a></li><li class="tocline"><a class="tocxref" href="#capability-delegation"><bdi class="secno">2.3.5 </bdi>Capability Delegation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multibase-0"><bdi class="secno">2.4 </bdi>Multibase</a></li><li class="tocline"><a class="tocxref" href="#multihash"><bdi class="secno">2.5 </bdi>Multihash</a></li></ol></li><li class="tocline"><a class="tocxref" href="#algorithms"><bdi class="secno">3. </bdi>Algorithms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#base-encode"><bdi class="secno">3.1 </bdi>Base Encode</a></li><li class="tocline"><a class="tocxref" href="#base-decode"><bdi class="secno">3.2 </bdi>Base Decode</a></li><li class="tocline"><a class="tocxref" href="#retrieve-verification-method"><bdi class="secno">3.3 </bdi>Retrieve Verification Method</a></li><li class="tocline"><a class="tocxref" href="#processing-errors"><bdi class="secno">3.4 </bdi>Processing Errors</a></li></ol></li><li class="tocline"><a class="tocxref" href="#contexts-and-vocabularies"><bdi class="secno">4. </bdi>Contexts and Vocabularies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#vocabulary"><bdi class="secno">4.1 </bdi>Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#json-ld-context"><bdi class="secno">4.2 </bdi>JSON-LD context</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#context-injection"><bdi class="secno">4.2.1 </bdi>Context Injection</a></li></ol></li><li class="tocline"><a class="tocxref" href="#datatypes"><bdi class="secno">4.3 </bdi>Datatypes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multibase"><bdi class="secno">4.3.1 </bdi>The <code>multibase</code> Datatype</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#security-considerations"><bdi class="secno">5. </bdi>Security Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proving-control-and-binding"><bdi class="secno">5.1 </bdi>Proving Control and Binding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proving-control-of-an-identifier-and-or-controlled-identifier-document"><bdi class="secno">5.1.1 </bdi>Proving Control of an Identifier and/or Controlled Identifier Document</a></li><li class="tocline"><a class="tocxref" href="#binding-to-physical-identity"><bdi class="secno">5.1.2 </bdi>Binding to Physical Identity</a></li></ol></li><li class="tocline"><a class="tocxref" href="#identifier-ambiguity"><bdi class="secno">5.2 </bdi>Identifier Ambiguity</a></li><li class="tocline"><a class="tocxref" href="#key-and-signature-expiration"><bdi class="secno">5.3 </bdi>Key and Signature Expiration</a></li><li class="tocline"><a class="tocxref" href="#verification-method-rotation"><bdi class="secno">5.4 </bdi>Verification Method Rotation</a></li><li class="tocline"><a class="tocxref" href="#verification-method-revocation"><bdi class="secno">5.5 </bdi>Verification Method Revocation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#revocation-semantics"><bdi class="secno">5.5.1 </bdi>Revocation Semantics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#choosing-a-multiformat"><bdi class="secno">5.6 </bdi>Choosing a Multiformat</a></li><li class="tocline"><a class="tocxref" href="#encrypted-data-in-controlled-identifier-documents"><bdi class="secno">5.7 </bdi>Encrypted Data in Controlled Identifier Documents</a></li><li class="tocline"><a class="tocxref" href="#content-integrity-protection"><bdi class="secno">5.8 </bdi>Content Integrity Protection</a></li><li class="tocline"><a class="tocxref" href="#integrity-protection-of-controllers"><bdi class="secno">5.9 </bdi>Integrity Protection of Controllers</a></li><li class="tocline"><a class="tocxref" href="#level-of-assurance"><bdi class="secno">5.10 </bdi>Level of Assurance</a></li><li class="tocline"><a class="tocxref" href="#service-endpoints-for-authentication-and-authorization"><bdi class="secno">5.11 </bdi>Service Endpoints for Authentication and Authorization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#privacy-considerations"><bdi class="secno">6. </bdi>Privacy Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#keep-personal-data-private"><bdi class="secno">6.1 </bdi>Keep Personal Data Private</a></li><li class="tocline"><a class="tocxref" href="#relationship-to-the-same-origin-policy"><bdi class="secno">6.2 </bdi>Relationship to the Same-Origin Policy</a></li><li class="tocline"><a class="tocxref" href="#identifier-correlation-risks"><bdi class="secno">6.3 </bdi>Identifier Correlation Risks</a></li><li class="tocline"><a class="tocxref" href="#controlled-identifier-document-correlation-risks"><bdi class="secno">6.4 </bdi>Controlled Identifier Document Correlation Risks</a></li><li class="tocline"><a class="tocxref" href="#subject-classification"><bdi class="secno">6.5 </bdi>Subject Classification</a></li><li class="tocline"><a class="tocxref" href="#service-privacy"><bdi class="secno">6.6 </bdi>Service Privacy</a></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibility-considerations"><bdi class="secno">7. </bdi>Accessibility Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presenting-time-values"><bdi class="secno">7.1 </bdi>Presenting Time Values</a></li></ol></li><li class="tocline"><a class="tocxref" href="#iana-considerations"><bdi class="secno">A. </bdi>IANA Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#controller-media-type"><bdi class="secno">A.1 </bdi>application/cid</a></li></ol></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">B. </bdi>Examples</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multikey-examples"><bdi class="secno">B.1 </bdi>Multikey Examples</a></li><li class="tocline"><a class="tocxref" href="#jsonwebkey-examples"><bdi class="secno">B.2 </bdi>JsonWebKey Examples</a></li></ol></li><li class="tocline"><a class="tocxref" href="#revision-history"><bdi class="secno">C. </bdi>Revision History</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">E.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.2 </bdi>Informative references</a></li></ol></li></ol></nav>
 
     <section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
       
@@ -958,9 +974,9 @@ contain <a data-link-type="dfn|abstract-op" href="#dfn-verification-relationship
 certain <a data-link-type="dfn|abstract-op" href="#dfn-verification-method" class="internalDFN" id="ref-for-dfn-verification-method-6">verification methods</a> for specific purposes.
         </p>
 
-        <div class="example" id="example-controller-document-using-publickeyjwk">
+        <div class="example" id="example-controlled-identifier-document-using-publickeyjwk">
         <div class="marker">
-    <a class="self-link" href="#example-controller-document-using-publickeyjwk">Example<bdi> 1</bdi></a><span class="example-title">: Controller Document using publicKeyJwk</span>
+    <a class="self-link" href="#example-controlled-identifier-document-using-publickeyjwk">Example<bdi> 1</bdi></a><span class="example-title">: Controlled Identifier Document using publicKeyJwk</span>
   </div> <pre aria-busy="false"><code class="hljs json"><span class="hljs-punctuation">{</span>
   <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://controller.example/101"</span><span class="hljs-punctuation">,</span>
   <span class="hljs-attr">"verificationMethod"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">{</span>
@@ -981,9 +997,9 @@ certain <a data-link-type="dfn|abstract-op" href="#dfn-verification-method" clas
 <span class="hljs-punctuation">}</span></code></pre>
       </div>
 
-        <div class="example" id="example-controller-document-using-publickeymultibase-and-json-ld">
+        <div class="example" id="example-controlled-identifier-document-using-publickeymultibase-and-json-ld">
         <div class="marker">
-    <a class="self-link" href="#example-controller-document-using-publickeymultibase-and-json-ld">Example<bdi> 2</bdi></a><span class="example-title">: Controller Document using publicKeyMultibase and JSON-LD</span>
+    <a class="self-link" href="#example-controlled-identifier-document-using-publickeymultibase-and-json-ld">Example<bdi> 2</bdi></a><span class="example-title">: Controlled Identifier Document using publicKeyMultibase and JSON-LD</span>
   </div> <pre aria-busy="false"><code class="hljs json"><span class="hljs-punctuation">{</span>
   <span class="hljs-attr">"@context"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://www.w3.org/ns/cid/v1"</span><span class="hljs-punctuation">,</span>
   <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://controller.example"</span><span class="hljs-punctuation">,</span>
@@ -1001,7 +1017,7 @@ The property names <code>id</code>, <code>type</code>, and <code>controller</cod
 different types with possible differences in constraints.
         </p></div>
 
-        <section id="controller-documents"><div class="header-wrapper"><h3 id="x2-1-controller-documents"><bdi class="secno">2.1 </bdi>Controller Documents</h3><a class="self-link" href="#controller-documents" aria-label="Permalink for Section 2.1"></a></div>
+        <section id="controlled-identifier-documents"><div class="header-wrapper"><h3 id="x2-1-controlled-identifier-documents"><bdi class="secno">2.1 </bdi>Controlled Identifier Documents</h3><a class="self-link" href="#controlled-identifier-documents" aria-label="Permalink for Section 2.1"></a></div>
           
 
           <p>
@@ -1410,7 +1426,7 @@ value <em class="rfc2119">MUST</em> be a valid URL conforming to <cite><a data-m
             <p>
 For more information regarding privacy and security considerations related to
 <a data-link-type="dfn|abstract-op" href="#dfn-service" class="internalDFN" id="ref-for-dfn-service-13">services</a> see <a href="#service-privacy" data-matched-text="[[[#service-privacy]]]" class="sec-ref"><bdi class="secno">6.6 </bdi>Service Privacy</a>, <a href="#keep-personal-data-private" data-matched-text="[[[#keep-personal-data-private]]]" class="sec-ref"><bdi class="secno">6.1 </bdi>Keep Personal Data Private</a>,
-<a href="#controller-document-correlation-risks" data-matched-text="[[[#controller-document-correlation-risks]]]" class="sec-ref"><bdi class="secno">6.4 </bdi>Controller Document Correlation Risks</a>, and
+<a href="#controlled-identifier-document-correlation-risks" data-matched-text="[[[#controlled-identifier-document-correlation-risks]]]" class="sec-ref"><bdi class="secno">6.4 </bdi>Controlled Identifier Document Correlation Risks</a>, and
 <a href="#service-endpoints-for-authentication-and-authorization" data-matched-text="[[[#service-endpoints-for-authentication-and-authorization]]]" class="sec-ref"><bdi class="secno">5.11 </bdi>Service Endpoints for Authentication and Authorization</a>.
       </p>
 
@@ -1540,7 +1556,7 @@ revocation.
 
           <div class="note" role="note" id="issue-container-generatedID-5"><div role="heading" class="note-title marker" id="h-note-5" aria-level="4"><span>Note</span><span class="issue-label">: The `controller` property is used by multiple objects</span></div><p class="">
 The <code>controller</code> property is used by <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-33">controlled identifier documents</a>, as described in
-Section <a href="#controller-documents" data-matched-text="[[[#controller-documents]]]" class="sec-ref"><bdi class="secno">2.1 </bdi>Controller Documents</a>, and by <a data-link-type="dfn|abstract-op" href="#dfn-verification-method" class="internalDFN" id="ref-for-dfn-verification-method-33">verification methods</a>, as
+Section <a href="#controlled-identifier-documents" data-matched-text="[[[#controlled-identifier-documents]]]" class="sec-ref"><bdi class="secno">2.1 </bdi>Controlled Identifier Documents</a>, and by <a data-link-type="dfn|abstract-op" href="#dfn-verification-method" class="internalDFN" id="ref-for-dfn-verification-method-33">verification methods</a>, as
 described in Section <a href="#verification-methods" data-matched-text="[[[#verification-methods]]]" class="sec-ref"><bdi class="secno">2.2 </bdi>Verification Methods</a>. When it is used in either
 place, its purpose is essentially the same; that is, it expresses one or more
 entities that are authorized to perform certain actions associated with the
@@ -1730,6 +1746,16 @@ then be encoded using the base-58-btc alphabet, according to Section
 (<code>z</code>).
                   </td>
                 </tr>
+                <tr>
+                  <td>SM2 256-bit public key</td>
+                  <td>
+The encoding of an SM2 public key <em class="rfc2119">MUST</em> start with the two-byte prefix
+<code>0x8624</code> (the varint expression of <code>0x1206</code>) followed by the 33-byte compressed
+public key data. The resulting 35-byte value <em class="rfc2119">MUST</em> then be encoded using the
+base-58-btc alphabet, according to Section <a href="#multibase-0" data-matched-text="[[[#multibase-0]]]" class="sec-ref"><bdi class="secno">2.4 </bdi>Multibase</a>, and then
+prepended with the base-58-btc Multibase header (<code>z</code>).
+                  </td>
+                </tr>
               </tbody>
             </table>
 
@@ -1782,6 +1808,16 @@ by the 96-byte compressed public key data. The resulting 98-byte value <em class
 then be encoded using the base-58-btc alphabet, according to Section
 <a href="#multibase-0" data-matched-text="[[[#multibase-0]]]" class="sec-ref"><bdi class="secno">2.4 </bdi>Multibase</a>, and then prepended with the base-58-btc Multibase header
 (<code>z</code>).
+                  </td>
+                </tr>
+                <tr>
+                  <td>SM2 256-bit secret key</td>
+                  <td>
+The encoding of an SM2 secret key <em class="rfc2119">MUST</em> start with the two-byte prefix
+<code>0x9026</code> (the varint expression of <code>0x1310</code>) followed by the 32-byte
+secret key data. The resulting 34-byte value <em class="rfc2119">MUST</em> then be encoded using the
+base-58-btc alphabet, according to Section <a href="#multibase-0" data-matched-text="[[[#multibase-0]]]" class="sec-ref"><bdi class="secno">2.4 </bdi>Multibase</a>, and then
+prepended with the base-58-btc Multibase header (<code>z</code>).
                   </td>
                 </tr>
               </tbody>
@@ -2699,11 +2735,11 @@ division is used to perform the division.
 Decrement <var>byteOffset</var> by <code>1</code> and increment <var>i</var> by <code>1</code>.
                   </li>
                 </ol>
-                </li><li>
+                </li>
+                <li>
 Set <var>decodedLength</var> to <var>i</var> and increment
 <var>sourceOffset</var> by <code>1</code>.
                 </li>
-              
             </ol>
           </li>
           <li>
@@ -2827,13 +2863,13 @@ of the URL scheme and using the supplied <var>options</var>.
 If <var>controllerDocument</var> is not a <a data-link-type="dfn|abstract-op" href="#dfn-conforming-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-conforming-controlled-identifier-document-2">conforming controlled identifier document</a>,
 an error <em class="rfc2119">MUST</em> be raised and <em class="rfc2119">SHOULD</em>
 convey an error type of
-<a href="#INVALID_CONTROLLER_DOCUMENT">INVALID_CONTROLLER_DOCUMENT</a>.
+<a href="#INVALID_CONTROLLED_IDENTIFIER_DOCUMENT">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT</a>.
           </li>
           <li>
 If <var>controllerDocument</var>.<var>id</var> does not match the
 <var>controllerDocumentUrl</var>, an error <em class="rfc2119">MUST</em> be raised and <em class="rfc2119">SHOULD</em>
 convey an error type of
-<a href="#INVALID_CONTROLLER_DOCUMENT_ID">INVALID_CONTROLLER_DOCUMENT_ID</a>.
+<a href="#INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID</a>.
           </li>
           <li>
 Let <var>verificationMethod</var> be the result of dereferencing the
@@ -2967,12 +3003,12 @@ The <code>detail</code> value <em class="rfc2119">SHOULD</em> provide a longer h
 The <code>verificationMethod</code> value in a <a data-link-type="dfn|abstract-op" href="#dfn-proof" class="internalDFN" id="ref-for-dfn-proof-19">proof</a> was malformed. See Section
 <a href="#retrieve-verification-method" data-matched-text="[[[#retrieve-verification-method]]]" class="sec-ref"><bdi class="secno">3.3 </bdi>Retrieve Verification Method</a>.
           </dd>
-          <dt id="INVALID_CONTROLLER_DOCUMENT_ID">INVALID_CONTROLLER_DOCUMENT_ID (-22)</dt>
+          <dt id="INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID (-22)</dt>
           <dd>
 The <code>id</code> value in a <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-59">controlled identifier document</a> was malformed. See Section
 <a href="#retrieve-verification-method" data-matched-text="[[[#retrieve-verification-method]]]" class="sec-ref"><bdi class="secno">3.3 </bdi>Retrieve Verification Method</a>.
           </dd>
-          <dt id="INVALID_CONTROLLER_DOCUMENT">INVALID_CONTROLLER_DOCUMENT (-23)</dt>
+          <dt id="INVALID_CONTROLLED_IDENTIFIER_DOCUMENT">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT (-23)</dt>
           <dd>
 The <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-60">controlled identifier document</a> was malformed. See Section
 <a href="#retrieve-verification-method" data-matched-text="[[[#retrieve-verification-method]]]" class="sec-ref"><bdi class="secno">3.3 </bdi>Retrieve Verification Method</a>.
@@ -3034,7 +3070,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
               <td>
                 The vocabulary in JSON-LD format [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>].<br>
 
-                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.jsonld" data-hash-format="openssl dgst -sha256">0825e3f71462e105e85ea144e2eb1521c2755e6679bd2eb459a9a796c56b18e8</span></code>
+                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.jsonld" data-hash-format="openssl dgst -sha256">c6f9f36b2310ded8b4aee607c58b235cfc1537dcca1762a15bf773447a4eb507</span></code>
               </td>
             </tr>
             <tr>
@@ -3044,7 +3080,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
               <td>
                 The vocabulary in Turtle format [<cite><a class="bibref" data-link-type="biblio" href="#bib-turtle" title="RDF 1.1 Turtle">TURTLE</a></cite>].<br>
 
-                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.ttl" data-hash-format="openssl dgst -sha256">2fefc7e645fdfa34491c772d0e9c2eed9f95cde3b205e4667abe876580be7f7d</span></code>
+                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.ttl" data-hash-format="openssl dgst -sha256">13d3ee6c5ce9dac8de9f6d4d3f19b63626d11fa7d71d93afa4bdad31ec1dafa3</span></code>
               </td>
             </tr>
             <tr>
@@ -3055,7 +3091,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
                 The vocabulary in HTML+RDFa Format [<cite><a class="bibref" data-link-type="biblio" href="#bib-html-rdfa" title="HTML+RDFa 1.1 - Second Edition">HTML-RDFA</a></cite>].<br>
 
 
-                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.html" data-hash-format="openssl dgst -sha256">0f989a247fb87f514640f1080ad40713b6c950edeb1d29e8c5b45f647699b3d4</span></code>
+                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.html" data-hash-format="openssl dgst -sha256">4482d1ccfbc878bca8c8adee33fa5008b39e8cc159c336057d455080a83c24ed</span></code>
               </td>
             </tr>
           </tbody>
@@ -3244,7 +3280,7 @@ over an identifier or a <a data-link-type="dfn|abstract-op" href="#dfn-controlle
 authorization.
       </p>
 
-      <section id="proving-control-of-an-identifier-and-or-controller-document"><div class="header-wrapper"><h4 id="x5-1-1-proving-control-of-an-identifier-and-or-controller-document"><bdi class="secno">5.1.1 </bdi>Proving Control of an Identifier and/or Controller Document</h4><a class="self-link" href="#proving-control-of-an-identifier-and-or-controller-document" aria-label="Permalink for Section 5.1.1"></a></div>
+      <section id="proving-control-of-an-identifier-and-or-controlled-identifier-document"><div class="header-wrapper"><h4 id="x5-1-1-proving-control-of-an-identifier-and-or-controlled-identifier-document"><bdi class="secno">5.1.1 </bdi>Proving Control of an Identifier and/or Controlled Identifier Document</h4><a class="self-link" href="#proving-control-of-an-identifier-and-or-controlled-identifier-document" aria-label="Permalink for Section 5.1.1"></a></div>
         
 
         <p>
@@ -3622,7 +3658,7 @@ be used for any particular application or ecosystem.
 
     </section>
 
-    <section id="encrypted-data-in-controller-documents"><div class="header-wrapper"><h3 id="x5-7-encrypted-data-in-controller-documents"><bdi class="secno">5.7 </bdi>Encrypted Data in Controller Documents</h3><a class="self-link" href="#encrypted-data-in-controller-documents" aria-label="Permalink for Section 5.7"></a></div>
+    <section id="encrypted-data-in-controlled-identifier-documents"><div class="header-wrapper"><h3 id="x5-7-encrypted-data-in-controlled-identifier-documents"><bdi class="secno">5.7 </bdi>Encrypted Data in Controlled Identifier Documents</h3><a class="self-link" href="#encrypted-data-in-controlled-identifier-documents" aria-label="Permalink for Section 5.7"></a></div>
       
       <p>
 Encryption algorithms have been known to fail due to advances in cryptography
@@ -3829,7 +3865,7 @@ identification and correlation across interaction domains.
       </p>
     </section>
 
-    <section id="controller-document-correlation-risks"><div class="header-wrapper"><h3 id="x6-4-controller-document-correlation-risks"><bdi class="secno">6.4 </bdi>Controller Document Correlation Risks</h3><a class="self-link" href="#controller-document-correlation-risks" aria-label="Permalink for Section 6.4"></a></div>
+    <section id="controlled-identifier-document-correlation-risks"><div class="header-wrapper"><h3 id="x6-4-controlled-identifier-document-correlation-risks"><bdi class="secno">6.4 </bdi>Controlled Identifier Document Correlation Risks</h3><a class="self-link" href="#controlled-identifier-document-correlation-risks" aria-label="Permalink for Section 6.4"></a></div>
       
 
       <p>
@@ -3853,7 +3889,7 @@ of thing the <a data-link-type="dfn|abstract-op" href="#dfn-subjects" class="int
       <p>
 Not only do such properties potentially result in personal data (see
 <a href="#keep-personal-data-private" data-matched-text="[[[#keep-personal-data-private]]]" class="sec-ref"><bdi class="secno">6.1 </bdi>Keep Personal Data Private</a>) or correlatable data (see <a href="#identifier-correlation-risks" class="sec-ref"> <bdi class="secno">6.3 </bdi>Identifier Correlation Risks</a> and
-<a href="#controller-document-correlation-risks" data-matched-text="[[[#controller-document-correlation-risks]]]" class="sec-ref"><bdi class="secno">6.4 </bdi>Controller Document Correlation Risks</a>) being present in
+<a href="#controlled-identifier-document-correlation-risks" data-matched-text="[[[#controlled-identifier-document-correlation-risks]]]" class="sec-ref"><bdi class="secno">6.4 </bdi>Controlled Identifier Document Correlation Risks</a>) being present in
 the <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-104">controlled identifier document</a>, but they can be used for grouping particular
 identifiers in such a way that they are included in or excluded from certain
 operations or functionalities.
@@ -3985,7 +4021,7 @@ subject to the same encoding considerations specified in Section 11 of
           </tr>
           <tr>
             <td>Security considerations: </td>
-            <td>As defined in the <cite><a data-matched-text="[[[CONTROLLER-DOCUMENT]]]" href="https://www.w3.org/TR/controller-document/">Controller Documents 1.0</a></cite>.</td>
+            <td>As defined in the <cite><a data-matched-text="[[[CID]]]" href="https://www.w3.org/TR/cid/">Controlled Identifier Document v1.0</a></cite>.</td>
           </tr>
           <tr>
             <td>Contact: </td>
@@ -4100,6 +4136,17 @@ developers seeking test values.
   ]
 }</pre>
       </div>
+
+          <div class="example" id="example-an-sm2-public-key-encoded-as-a-multikey">
+        <div class="marker">
+    <a class="self-link" href="#example-an-sm2-public-key-encoded-as-a-multikey">Example<bdi> 29</bdi></a><span class="example-title">: An SM2 public key encoded as a Multikey</span>
+  </div> <pre class="nohighlight">{
+  "id": "https://multikey.example/issuer/123#key-0",
+  "type": "Multikey",
+  "controller": "https://multikey.example/issuer/123",
+  "publicKeyMultibase": "zEPJc1vCfbG2aoZn8f3U8ggYRL4ZFfF63ZA3qFSk81WJxnCQr"
+}</pre>
+      </div>
         </section>
         <section class="informative" id="jsonwebkey-examples"><div class="header-wrapper"><h3 id="b-2-jsonwebkey-examples"><bdi class="secno">B.2 </bdi>JsonWebKey Examples</h3><a class="self-link" href="#jsonwebkey-examples" aria-label="Permalink for Appendix B.2"></a></div><p><em>This section is non-normative.</em></p>
         
@@ -4111,7 +4158,7 @@ developers seeking test values.
 
           <div class="example" id="example-a-p-256-public-key-encoded-as-a-jsonwebkey">
         <div class="marker">
-    <a class="self-link" href="#example-a-p-256-public-key-encoded-as-a-jsonwebkey">Example<bdi> 29</bdi></a><span class="example-title">: A P-256 public key encoded as a JsonWebKey</span>
+    <a class="self-link" href="#example-a-p-256-public-key-encoded-as-a-jsonwebkey">Example<bdi> 30</bdi></a><span class="example-title">: A P-256 public key encoded as a JsonWebKey</span>
   </div> <pre class="nohighlight">{
   "id": "https://jsonwebkey.example/issuer/123#key-0",
   "type": "JsonWebKey",
@@ -4127,7 +4174,7 @@ developers seeking test values.
 
           <div class="example" id="example-a-p-384-public-key-encoded-as-a-jsonwebkey">
         <div class="marker">
-    <a class="self-link" href="#example-a-p-384-public-key-encoded-as-a-jsonwebkey">Example<bdi> 30</bdi></a><span class="example-title">: A P-384 public key encoded as a JsonWebKey</span>
+    <a class="self-link" href="#example-a-p-384-public-key-encoded-as-a-jsonwebkey">Example<bdi> 31</bdi></a><span class="example-title">: A P-384 public key encoded as a JsonWebKey</span>
   </div> <pre class="nohighlight">{
   "id": "https://jsonwebkey.example/issuer/123#key-0",
   "type": "JsonWebKey",
@@ -4143,7 +4190,7 @@ developers seeking test values.
 
           <div class="example" id="example-an-ed25519-public-key-encoded-as-a-jsonwebkey">
         <div class="marker">
-    <a class="self-link" href="#example-an-ed25519-public-key-encoded-as-a-jsonwebkey">Example<bdi> 31</bdi></a><span class="example-title">: An Ed25519 public key encoded as a JsonWebKey</span>
+    <a class="self-link" href="#example-an-ed25519-public-key-encoded-as-a-jsonwebkey">Example<bdi> 32</bdi></a><span class="example-title">: An Ed25519 public key encoded as a JsonWebKey</span>
   </div> <pre class="nohighlight">{
   "id": "https://jsonwebkey.example/issuer/123#key-0",
   "type": "JsonWebKey",
@@ -4158,7 +4205,7 @@ developers seeking test values.
 
           <div class="example" id="example-a-bls12-381-g2-group-public-key-encoded-as-a-jsonwebkey">
         <div class="marker">
-    <a class="self-link" href="#example-a-bls12-381-g2-group-public-key-encoded-as-a-jsonwebkey">Example<bdi> 32</bdi></a><span class="example-title">: A BLS12-381 G2 group public key, encoded as a JsonWebKey</span>
+    <a class="self-link" href="#example-a-bls12-381-g2-group-public-key-encoded-as-a-jsonwebkey">Example<bdi> 33</bdi></a><span class="example-title">: A BLS12-381 G2 group public key, encoded as a JsonWebKey</span>
   </div> <pre class="nohighlight">{
   "id": "https://jsonwebkey.example/issuer/123#key-0",
   "type": "JsonWebKey",
@@ -4174,7 +4221,7 @@ developers seeking test values.
 
           <div class="example" id="example-multiple-public-keys-encoded-as-jsonwebkey-in-a-controlled-identifier-document">
         <div class="marker">
-    <a class="self-link" href="#example-multiple-public-keys-encoded-as-jsonwebkey-in-a-controlled-identifier-document">Example<bdi> 33</bdi></a><span class="example-title">: Multiple public keys encoded as JsonWebKey in a controlled identifier document</span>
+    <a class="self-link" href="#example-multiple-public-keys-encoded-as-jsonwebkey-in-a-controlled-identifier-document">Example<bdi> 34</bdi></a><span class="example-title">: Multiple public keys encoded as JsonWebKey in a controlled identifier document</span>
   </div> <pre class="nohighlight">{
   "@context": "https://www.w3.org/ns/cid/v1",
   "id": "https://controller.example/123",
@@ -4401,14 +4448,14 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </dd><dt id="bib-url">[URL]</dt><dd>
       <a href="https://url.spec.whatwg.org/"><cite>URL Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
     </dd><dt id="bib-vc-data-model-2.0">[VC-DATA-MODEL-2.0]</dt><dd>
-      <a href="https://www.w3.org/TR/vc-data-model-2.0/"><cite>Verifiable Credentials Data Model v2.0</cite></a>. Manu Sporny; Ted Thibodeau Jr; Ivan Herman; Michael Jones; Gabe Cohen.  W3C. 19 October 2024. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/vc-data-model-2.0/">https://www.w3.org/TR/vc-data-model-2.0/</a>
+      <a href="https://www.w3.org/TR/vc-data-model-2.0/"><cite>Verifiable Credentials Data Model v2.0</cite></a>. Ivan Herman; Michael Jones; Manu Sporny; Ted Thibodeau Jr; Gabe Cohen.  W3C. 19 December 2024. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/vc-data-model-2.0/">https://www.w3.org/TR/vc-data-model-2.0/</a>
     </dd><dt id="bib-xmlschema11-2">[XMLSCHEMA11-2]</dt><dd>
       <a href="https://www.w3.org/TR/xmlschema11-2/"><cite>W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes</cite></a>. David Peterson; Sandy Gao; Ashok Malhotra; Michael Sperberg-McQueen; Henry Thompson; Paul V. Biron et al.  W3C. 5 April 2012. W3C Recommendation. URL: <a href="https://www.w3.org/TR/xmlschema11-2/">https://www.w3.org/TR/xmlschema11-2/</a>
     </dd></dl>
   </section><section id="informative-references"><div class="header-wrapper"><h3 id="e-2-informative-references"><bdi class="secno">E.2 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix E.2"></a></div>
     
-    <dl class="bibliography"><dt id="bib-controller-document">[CONTROLLER-DOCUMENT]</dt><dd>
-      <a href="https://www.w3.org/TR/controller-document/"><cite>Controller Documents 1.0</cite></a>. Manu Sporny; Michael Jones.  W3C. 28 October 2024. W3C Working Draft. URL: <a href="https://www.w3.org/TR/controller-document/">https://www.w3.org/TR/controller-document/</a>
+    <dl class="bibliography"><dt id="bib-cid">[CID]</dt><dd>
+      <a href="https://www.w3.org/TR/cid/"><cite>Controlled Identifier Document v1.0</cite></a>. Manu Sporny; Dave Longley; Markus Sabadello; Drummond Reed; Orie Steele; Christopher Allen; Michael B. Jones.  W3C Verifiable Credentials Working Group. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/cid/">https://www.w3.org/TR/cid/</a>
     </dd><dt id="bib-did-core">[DID-CORE]</dt><dd>
       <a href="https://www.w3.org/TR/did-core/"><cite>Decentralized Identifiers (DIDs) v1.0</cite></a>. Manu Sporny; Amy Guy; Markus Sabadello; Drummond Reed.  W3C. 19 July 2022. W3C Recommendation. URL: <a href="https://www.w3.org/TR/did-core/">https://www.w3.org/TR/did-core/</a>
     </dd><dt id="bib-did-use-cases">[DID-USE-CASES]</dt><dd>
@@ -4426,7 +4473,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </dd><dt id="bib-turtle">[TURTLE]</dt><dd>
       <a href="https://www.w3.org/TR/turtle/"><cite>RDF 1.1 Turtle</cite></a>. Eric Prud'hommeaux; Gavin Carothers.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/turtle/">https://www.w3.org/TR/turtle/</a>
     </dd><dt id="bib-vc-data-integrity">[VC-DATA-INTEGRITY]</dt><dd>
-      <a href="https://www.w3.org/TR/vc-data-integrity/"><cite>Verifiable Credential Data Integrity 1.0</cite></a>. Manu Sporny; Dave Longley; Greg Bernstein; Dmitri Zagidulin; Sebastian Crane.  W3C. 17 November 2024. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/vc-data-integrity/">https://www.w3.org/TR/vc-data-integrity/</a>
+      <a href="https://www.w3.org/TR/vc-data-integrity/"><cite>Verifiable Credential Data Integrity 1.0</cite></a>. Manu Sporny; Dave Longley; Dmitri Zagidulin; Sebastian Crane; Greg Bernstein.  W3C. 19 December 2024. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/vc-data-integrity/">https://www.w3.org/TR/vc-data-integrity/</a>
     </dd><dt id="bib-vc-extensions">[VC-EXTENSIONS]</dt><dd>
       <a href="https://www.w3.org/TR/vc-extensions/"><cite>Verifiable Credential Extensions</cite></a>. Manu Sporny.  W3C Verifiable Credentials Working Group. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/vc-extensions/">https://www.w3.org/TR/vc-extensions/</a>
     </dd><dt id="bib-vc-use-cases">[VC-USE-CASES]</dt><dd>
@@ -4551,7 +4598,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </li><li>
       <a href="#ref-for-dfn-controlled-identifier-document-7" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-controlled-identifier-document-8" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-9" title="§ 2.1 Controller Documents">§ 2.1 Controller Documents</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-9" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a> 
     </li><li>
       <a href="#ref-for-dfn-controlled-identifier-document-10" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-controlled-identifier-document-11" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-12" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-13" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-14" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-15" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controlled-identifier-document-16" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controlled-identifier-document-17" title="Reference 8">(8)</a> <a href="#ref-for-dfn-controlled-identifier-document-18" title="Reference 9">(9)</a> 
     </li><li>
@@ -4581,7 +4628,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </li><li>
       <a href="#ref-for-dfn-controlled-identifier-document-64" title="§ 5.1 Proving Control and Binding">§ 5.1 Proving Control and Binding</a> <a href="#ref-for-dfn-controlled-identifier-document-65" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-66" title="§ 5.1.1 Proving Control of an Identifier and/or Controller Document">§ 5.1.1 Proving Control of an Identifier and/or Controller Document</a> <a href="#ref-for-dfn-controlled-identifier-document-67" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-66" title="§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document">§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document</a> <a href="#ref-for-dfn-controlled-identifier-document-67" title="Reference 2">(2)</a> 
     </li><li>
       <a href="#ref-for-dfn-controlled-identifier-document-68" title="§ 5.1.2 Binding to Physical Identity">§ 5.1.2 Binding to Physical Identity</a> <a href="#ref-for-dfn-controlled-identifier-document-69" title="Reference 2">(2)</a> 
     </li><li>
@@ -4591,7 +4638,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </li><li>
       <a href="#ref-for-dfn-controlled-identifier-document-76" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a> <a href="#ref-for-dfn-controlled-identifier-document-77" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-78" title="§ 5.7 Encrypted Data in Controller Documents">§ 5.7 Encrypted Data in Controller Documents</a> <a href="#ref-for-dfn-controlled-identifier-document-79" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-80" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-81" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-82" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-78" title="§ 5.7 Encrypted Data in Controlled Identifier Documents">§ 5.7 Encrypted Data in Controlled Identifier Documents</a> <a href="#ref-for-dfn-controlled-identifier-document-79" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-80" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-81" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-82" title="Reference 5">(5)</a> 
     </li><li>
       <a href="#ref-for-dfn-controlled-identifier-document-83" title="§ 5.8 Content Integrity Protection">§ 5.8 Content Integrity Protection</a> <a href="#ref-for-dfn-controlled-identifier-document-84" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-85" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-86" title="Reference 4">(4)</a> 
     </li><li>
@@ -4607,7 +4654,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </li><li>
       <a href="#ref-for-dfn-controlled-identifier-document-99" title="§ 6.2 Relationship to the Same-Origin Policy">§ 6.2 Relationship to the Same-Origin Policy</a> 
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-100" title="§ 6.4 Controller Document Correlation Risks">§ 6.4 Controller Document Correlation Risks</a> <a href="#ref-for-dfn-controlled-identifier-document-101" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-102" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-100" title="§ 6.4 Controlled Identifier Document Correlation Risks">§ 6.4 Controlled Identifier Document Correlation Risks</a> <a href="#ref-for-dfn-controlled-identifier-document-101" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-102" title="Reference 3">(3)</a> 
     </li><li>
       <a href="#ref-for-dfn-controlled-identifier-document-103" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a> <a href="#ref-for-dfn-controlled-identifier-document-104" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-105" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-106" title="Reference 4">(4)</a> 
     </li><li>
@@ -4751,7 +4798,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </li><li>
       <a href="#ref-for-dfn-subjects-3" title="§ 1.4 Terminology">§ 1.4 Terminology</a> 
     </li><li>
-      <a href="#ref-for-dfn-subjects-4" title="§ 2.1 Controller Documents">§ 2.1 Controller Documents</a> 
+      <a href="#ref-for-dfn-subjects-4" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a> 
     </li><li>
       <a href="#ref-for-dfn-subjects-5" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-subjects-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-subjects-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-subjects-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-subjects-9" title="Reference 5">(5)</a> 
     </li><li>
@@ -4787,7 +4834,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </li><li>
       <a href="#ref-for-dfn-verification-method-5" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-verification-method-6" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-verification-method-7" title="§ 2.1 Controller Documents">§ 2.1 Controller Documents</a> <a href="#ref-for-dfn-verification-method-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-10" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-11" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-12" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-verification-method-7" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a> <a href="#ref-for-dfn-verification-method-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-10" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-11" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-12" title="Reference 6">(6)</a> 
     </li><li>
       <a href="#ref-for-dfn-verification-method-13" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-verification-method-14" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-15" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-16" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-17" title="Reference 5">(5)</a> 
     </li><li>
@@ -4817,7 +4864,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </li><li>
       <a href="#ref-for-dfn-verification-method-88" title="§ 3.4 Processing Errors">§ 3.4 Processing Errors</a> <a href="#ref-for-dfn-verification-method-89" title="Reference 2">(2)</a> 
     </li><li>
-      <a href="#ref-for-dfn-verification-method-90" title="§ 5.1.1 Proving Control of an Identifier and/or Controller Document">§ 5.1.1 Proving Control of an Identifier and/or Controller Document</a> 
+      <a href="#ref-for-dfn-verification-method-90" title="§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document">§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document</a> 
     </li><li>
       <a href="#ref-for-dfn-verification-method-91" title="§ 5.4 Verification Method Rotation">§ 5.4 Verification Method Rotation</a> <a href="#ref-for-dfn-verification-method-92" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-93" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-94" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-95" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-96" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-97" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-method-98" title="Reference 8">(8)</a> <a href="#ref-for-dfn-verification-method-99" title="Reference 9">(9)</a> <a href="#ref-for-dfn-verification-method-100" title="Reference 10">(10)</a> <a href="#ref-for-dfn-verification-method-101" title="Reference 11">(11)</a> <a href="#ref-for-dfn-verification-method-102" title="Reference 12">(12)</a> <a href="#ref-for-dfn-verification-method-103" title="Reference 13">(13)</a> 
     </li><li>
@@ -4825,7 +4872,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </li><li>
       <a href="#ref-for-dfn-verification-method-117" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a> 
     </li><li>
-      <a href="#ref-for-dfn-verification-method-118" title="§ 6.4 Controller Document Correlation Risks">§ 6.4 Controller Document Correlation Risks</a> <a href="#ref-for-dfn-verification-method-119" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-verification-method-118" title="§ 6.4 Controlled Identifier Document Correlation Risks">§ 6.4 Controlled Identifier Document Correlation Risks</a> <a href="#ref-for-dfn-verification-method-119" title="Reference 2">(2)</a> 
     </li><li>
       <a href="#ref-for-dfn-verification-method-120" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a> 
     </li>
@@ -4863,7 +4910,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </li><li>
       <a href="#ref-for-dfn-verification-relationship-24" title="§ 3.4 Processing Errors">§ 3.4 Processing Errors</a> 
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-25" title="§ 5.1.1 Proving Control of an Identifier and/or Controller Document">§ 5.1.1 Proving Control of an Identifier and/or Controller Document</a> 
+      <a href="#ref-for-dfn-verification-relationship-25" title="§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document">§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document</a> 
     </li><li>
       <a href="#ref-for-dfn-verification-relationship-26" title="§ 5.1.2 Binding to Physical Identity">§ 5.1.2 Binding to Physical Identity</a> 
     </li><li>
@@ -4933,7 +4980,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     <li>
       <a href="#ref-for-dfn-service-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-service-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-3" title="Reference 3">(3)</a> 
     </li><li>
-      <a href="#ref-for-dfn-service-4" title="§ 2.1 Controller Documents">§ 2.1 Controller Documents</a> 
+      <a href="#ref-for-dfn-service-4" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a> 
     </li><li>
       <a href="#ref-for-dfn-service-5" title="§ 2.1.4 Services">§ 2.1.4 Services</a> <a href="#ref-for-dfn-service-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-service-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-service-9" title="Reference 5">(5)</a> <a href="#ref-for-dfn-service-10" title="Reference 6">(6)</a> <a href="#ref-for-dfn-service-11" title="Reference 7">(7)</a> <a href="#ref-for-dfn-service-12" title="Reference 8">(8)</a> <a href="#ref-for-dfn-service-13" title="Reference 9">(9)</a> 
     </li><li>
@@ -5073,7 +5120,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     <li>
       <a href="#ref-for-dfn-pairwise-identifier-1" title="§ 6.3 Identifier Correlation Risks">§ 6.3 Identifier Correlation Risks</a> <a href="#ref-for-dfn-pairwise-identifier-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-pairwise-identifier-3" title="Reference 3">(3)</a> 
     </li><li>
-      <a href="#ref-for-dfn-pairwise-identifier-4" title="§ 6.4 Controller Document Correlation Risks">§ 6.4 Controller Document Correlation Risks</a> <a href="#ref-for-dfn-pairwise-identifier-5" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-pairwise-identifier-4" title="§ 6.4 Controlled Identifier Document Correlation Risks">§ 6.4 Controlled Identifier Document Correlation Risks</a> <a href="#ref-for-dfn-pairwise-identifier-5" title="Reference 2">(2)</a> 
     </li>
   </ul>
     </div><script id="respec-dfn-panel">(() => {
