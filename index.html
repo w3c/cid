@@ -2245,7 +2245,10 @@ the Multihash value itself.
       <p>
 This section defines algorithms used by this specification including
 instructions on how to base-encode and base-decode values, safely retrieve
-verification methods, and produce processing errors over HTTP channels.
+verification methods, retrieve document fragments, and produce processing error
+descriptions over HTTP channels. Alternatives to the algorithms provided in this
+section MAY be used as long as the outputs of the alternative algorithm remain
+the same.
       </p>
 
       <section class="normative">
@@ -2258,8 +2261,6 @@ particular base alphabet, such as base-64-url-no-pad or base-58-btc. The
 required inputs are the <var>bytes</var>, <var>targetBase</var>, and
 <var>baseAlphabet</var>. The output is a string that contains the base-encoded
 value. All mathematical operations MUST be performed using integer arithmetic.
-Alternatives to the algorithm provided below MAY be used as long as the
-outputs of the alternative algorithm remain the same.
         </p>
 
         <ol class="algorithm">
@@ -2404,8 +2405,7 @@ uses a particular base alphabet, such as base-64-url-no-pad or base-58-btc. The
 required inputs are the <var>sourceEncoding</var>, <var>sourceBase</var>, and
 <var>baseAlphabet</var>. The output is an array of bytes that contains the
 base-decoded value. All mathematical operations MUST be performed using integer
-arithmetic. Alternatives to the algorithm provided below MAY be used as long as
-the outputs of the alternative algorithm remain the same.
+arithmetic.
         </p>
 
         <ol class="algorithm">
@@ -2687,6 +2687,18 @@ In the example above, the algorithm described in this section will use the
 identifier=]. The algorithm will then confirm that the [=verification method=]
 exists in the external [=controlled identifier document=] and that the appropriate
 relationships exist as described earlier in this section.
+        </p>
+
+        <p class="note" title="Fragment identifier processing">
+The fragment identifier processing rules for retrieving [=verification methods=]
+are dependent on the media type of a [=controlled identifier document=]. While
+the algorithm in this section attempts to defer to the media type of the
+corresponding [=controlled identifier document=] (such as `application/did`),
+and while Section [[[#fragment-resolution]]] defines how to resolve fragment
+identifiers according to the `application/cid` media type, implementers are
+advised that other fragment processing rules might exist that perform fragment
+processing in alternative ways that might result in different outcomes based on
+the media type.
         </p>
 
       </section>
