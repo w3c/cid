@@ -2691,6 +2691,51 @@ relationships exist as described earlier in this section.
 
       </section>
 
+
+      <section class="normative">
+        <h2>Fragment Resolution</h2>
+
+        <p>
+The following algorithm specifies how to retrieve the portion of a document that
+contains a given fragment identifier. The required inputs are a [=controlled
+identifier document=] ([=map=] <var>document</var>) and a fragment identifier
+([=string=] <var>fragmentIdentifier</var>). The output is a [=map=] containing
+the document fragment.
+        </p>
+
+        <ol class="algorithm">
+          <li>
+Let <var>documentFragment</var> be `null`.
+          </li>
+          <li>
+Let <var>canonicalDocumentUrl</var> be the value of
+<var>document</var>.<var>id</var>.
+          </li>
+          <li>
+Let <var>fullyQualifiedFragment</var> be the value of
+<var>canonicalDocumentUrl</var> with <var>fragmentIdentifier</var> appended to
+it.
+          </li>
+          <li>
+Recursively process every [=map=] in <var>document</var> checking to see if
+it has an `id` value that is equal to <var>fullyQualifiedFragment</var> or
+<var>fragmentIdentifier</var>. If a match is found, set
+<var>documentFragment</var> to the matched [=map=] and stop recursively
+processing.
+          </li>
+          <li>
+Return <var>documentFragment</var>.
+          </li>
+        </ol>
+
+        <p class="note" title="Multiple fragments with the same value">
+While it is possible to express a document that contains multiple fragments that
+use the same identifier, due to interoperability concerns, doing so is to be
+avoided and the behaviour is not defined.
+        </p>
+
+      </section>
+
       <section class="normative">
         <h3>Processing Errors</h3>
 
@@ -3749,11 +3794,17 @@ format.
           </tr>
           <tr>
             <td>Subtype name: </td>
-            <td>controller</td>
+            <td>cid</td>
           </tr>
           <tr>
             <td>Required parameters: </td>
             <td>None</td>
+          </tr>
+          <tr>
+            <td>Fragment identifier considerations:</td>
+            <td>
+As defined in Section [[[#fragment-resolution]]] in the [[[CID]]] specification.
+            </td>
           </tr>
           <tr>
             <td>Encoding considerations: </td>
@@ -3766,7 +3817,10 @@ subject to the same encoding considerations specified in Section 11 of
           </tr>
           <tr>
             <td>Security considerations: </td>
-            <td>As defined in the [[[CID]]].</td>
+            <td>
+As defined in Section [[[#security-considerations]]] in the [[[CID]]]
+specification.
+            </td>
           </tr>
           <tr>
             <td>Contact: </td>
