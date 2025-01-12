@@ -25,7 +25,7 @@
           //subtitle: "Controlled Identifier Documents",
 
           // if you wish the publication date to be other than today, set this
-          publishDate:  "2025-01-09",
+          publishDate:  "2025-01-30",
 
           // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
           // and its maturity status
@@ -37,7 +37,7 @@
 
           // if this is a LCWD, uncomment and set the end of its review period
           implementationReportURI: "https://w3c.github.io/cid/implementations/1.0/",
-          crEnd: "2025-02-09",
+          crEnd: "2025-02-28",
 
           // if you want to have extra CSS, append them to this list
           // it is recommended that the respec.css stylesheet be kept
@@ -4011,12 +4011,29 @@ This section contains the substantive changes that have been made to this
 specification over time.
       </p>
 
+      <p>
+This specification was created to generalize the [[[?DID-CORE]]]
+specification to use non-decentralized identifiers and systems, such as HTTPS
+URLs. As such, much of the content from the [[[?DID-CORE]]]
+specification was copied into this document and generalized through largely
+editorial changes. The changes since the [[[?DID-CORE]]] specification are
+below:
+      </p>
+
       <ul>
         <li>
-Populated Terminology section.
+Migrate the Identifiers, Verification Methods, Verification Relationships,
+Services, Privacy Considerations, and Security Considerations sections to this
+specification. Generalize the language to allow non-DID identifiers.
         </li>
         <li>
-Apply wording updates from VC-JOSE-COSE spec.
+Migrate the definitions of the Multibase and Multihash datatypes, Algorithms,
+and Contexts and Vocabularies sections from the [[[?VC-DATA-INTEGRITY]]]
+specification, which inherited those sections from the [[[?DID-CORE]]]
+specification.
+        </li>
+        <li>
+Editorial changes to align narrative and flow between migrated sections.
         </li>
       </ul>
 
