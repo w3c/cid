@@ -265,13 +265,25 @@ code {
   color: rgb(199, 73, 0);
   font-weight: bold;
 }
-pre.highlight {
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+pre .highlight {
   font-weight: bold;
   color: green;
 }
-pre.nohighlight {
+pre .nohighlight {
   overflow-x: auto;
   white-space: pre-wrap;
+}
+pre .comment {
+  font-weight: bold;
+  color: SteelBlue;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 ol.algorithm { counter-reset:numsection; list-style-type: none; }
 ol.algorithm li { margin: 0.5em 0; }
@@ -671,10 +683,29 @@ contain [=verification relationships=] that explicitly permit the use of
 certain [=verification methods=] for specific purposes.
         </p>
 
-        <pre class="example" title="Controlled Identifier Document using publicKeyJwk">
+        <pre class="example nohighlight" title="Controlled Identifier Document in JSON-LD format using Multikey">
+{
+  "@context": "https://www.w3.org/ns/cid/v1",
+  "id": "https://controller.example",
+  "authentication": [<span class="highlight">{
+      "id": "https://controller.example#authn-key-123",
+      "type": "Multikey",
+      "controller": "https://controller.example",
+      "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
+  }</span>]
+}
+        </pre>
+
+        <p>
+The example above shows a valid JSON-LD [=controlled identifier document=]
+that expresses a [=public key=] that can be used for the purposes of
+[=authentication=] using the <a href="#Multikey">Multikey</a> format.
+        </p>
+
+        <pre class="example nohighlight" title="Controlled Identifier Document in JSON format using JsonWebKey">
 {
   "id": "https://controller.example/101",
-  "verificationMethod": [{
+  "verificationMethod": [<span class="highlight">{
     "id": "https://controller.example/101#key-20240828",
     "type": "JsonWebKey",
     "controller": "https://controller.example/101",
@@ -686,24 +717,16 @@ certain [=verification methods=] for specific purposes.
       "x": "f83OJ3D2xF1Bg8vub9tLe1gHMzV76e8Tus9uPHvRVEU",
       "y": "x_FEzRu9m36HLN_tue659LNpXW6pCyStikYjKIWI5a0"
     }
-
-  }],
+  }</span>],
   "authentication": ["#key-20240828"]
 }
         </pre>
 
-        <pre class="example" title="Controlled Identifier Document using publicKeyMultibase and JSON-LD">
-{
-  "@context": "https://www.w3.org/ns/cid/v1",
-  "id": "https://controller.example",
-  "authentication": [{
-      "id": "https://controller.example#authn-key-123",
-      "type": "Multikey",
-      "controller": "https://controller.example",
-      "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
-    }]
-}
-        </pre>
+        <p>
+The example above shows a valid JSON [=controlled identifier document=]
+that expresses a [=public key=] that can be used for the purposes of
+[=authentication=] using the <a href="#JsonWebKey">JsonWebKey</a> format.
+        </p>
 
         <p class="note"
            title="Property names used in map of different types">
@@ -863,9 +886,16 @@ A [=controlled identifier document=] MUST contain an `id` value in the <em>topmo
 <a data-cite="INFRA#ordered-map">map</a>.
             </p>
 
-            <pre class="example nohighlight">
+            <pre class="example nohighlight" title="Usage of the `id` property">
 {
-  "id": "https://controller.example/123"
+  "@context": "https://www.w3.org/ns/cid/v1",
+  <span class="highlight">"id": "https://controller.example"</span>,
+  "authentication": [{
+      "id": "https://controller.example#authn-key-123",
+      "type": "Multikey",
+      "controller": "https://controller.example",
+      "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
+  }]
 }
             </pre>
 
@@ -977,8 +1007,14 @@ is determined entirely by its storage location.
               title="Controlled identifier document with a controller property">
 {
   "@context": "https://www.w3.org/ns/cid/v1",
-  "id": "https://controller1.example/123",
-  "controller": "https://controllerB.example/abc",
+  "id": "https://controllerA.example",
+  <span class="highlight">"controller": "https://controllerB.example/abc"</span>,
+  "authentication": [{
+      "id": "https://controllerA.example#authn-key-123",
+      "type": "Multikey",
+      "controller": "https://controllerA.example",
+      "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
+  }]
 }
             </pre>
 
@@ -1028,11 +1064,31 @@ The `alsoKnownAs` property is OPTIONAL. If present, its value MUST
 be a <a data-cite="INFRA#ordered-set">set</a> where each item in the
 set is a URI conforming to [[RFC3986]].
               </dd>
-              <dd>
+            </dl>
+
+            <p>
 This relationship is a statement that the subject of this identifier is
 also identified by one or more other identifiers.
-              </dd>
-            </dl>
+            </p>
+
+            <pre class="example nohighlight"
+              title="Controlled identifier document using an alsoKnownAs property">
+{
+  "@context": "https://www.w3.org/ns/cid/v1",
+  "id": "https://controller.example",
+  <span class="highlight">"alsoKnownAs": [
+    "https://someOtherIdentifier.example/xyz",
+    "https://yetAnotherIdentifier.example/987"
+  ]</span>,
+  "authentication": [{
+      "id": "https://controller.example#authn-key-123",
+      "type": "Multikey",
+      "controller": "https://controller.example",
+      "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
+  }]
+}
+            </pre>
+
 
             <div class="note" title="Equivalence and alsoKnownAs">
               <p>
@@ -1133,10 +1189,17 @@ For more information regarding privacy and security considerations related to
 
       <pre class="example nohighlight" title="Usage of the service property">
 {
-  "service": [{
+  "id": "https://controller.example",
+  "authentication": [{
+      "id": "https://controller.example#authn-key-123",
+      "type": "Multikey",
+      "controller": "https://controller.example",
+      "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
+  }],
+  <span class="highlight">"service": [{
     "type": "ExampleSocialMediaService",
     "serviceEndpoint": "https://warbler.example/sal674"
-  }]
+  }]</span>
 }
             </pre>
 
@@ -1253,22 +1316,30 @@ revocation.
 
           <pre class="example nohighlight"
             title="Example verification method structure">
-    {
-      "@context": "https://www.w3.org/ns/cid/v1",
-      "id": "https://controller.example/123456789abcdefghi",
-      <span class="comment">...</span>
-      "verificationMethod": [{
-        "id": <span class="comment">...</span>,
-        "type": <span class="comment">...</span>,
-        "controller": <span class="comment">...</span>,
-        "publicKeyJwk": <span class="comment">...</span>
-      }, {
-        "id": <span class="comment">...</span>,
-        "type": <span class="comment">...</span>,
-        "controller": <span class="comment">...</span>,
-        "publicKeyMultibase": <span class="comment">...</span>
-      }]
+{
+  "@context": "https://www.w3.org/ns/cid/v1",
+  "id": "https://controller.example",
+  <span class="highlight">"verificationMethod": [{
+    "id": "https://controller.example#authn-key-123",
+    "type": "Multikey",
+    "controller": "https://controller.example",
+    "expires": "2025-12-01T00:00:00Z",
+    "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
+  }, {
+    "id": "https://controller.example/101#key-20240828",
+    "type": "JsonWebKey",
+    "controller": "https://controller.example/101",
+    "revoked": "2024-12-10T15:28:32Z",
+    "publicKeyJwk": {
+      "kid": "key-20240828",
+      "kty": "EC",
+      "crv": "P-256",
+      "alg": "ES256",
+      "x": "f83OJ3D2xF1Bg8vub9tLe1gHMzV76e8Tus9uPHvRVEU",
+      "y": "x_FEzRu9m36HLN_tue659LNpXW6pCyStikYjKIWI5a0"
     }
+  }]</span>
+}
           </pre>
 
           <p class="note"
@@ -1352,28 +1423,30 @@ methods</a> using both properties above is shown below.
             <pre id="example-various-verification-method-types"
               class="example nohighlight"
               title="Verification methods using publicKeyJwk and publicKeyMultibase">
-    {
-      "@context": "https://www.w3.org/ns/cid/v1",
-      "id": "https://controller.example/123456789abcdefghi",
-      <span class="comment">...</span>
-      "verificationMethod": [{
-        "id": "https://controller.example/123#_Qq0UL2Fq651Q0Fjd6TvnYE-faHiOpRlPVQcY_-tA4A",
-        "type": "JsonWebKey", <span class="comment">// external (property value)</span>
-        "controller": "https://controller.example/123456789abcdefghi",
-        "publicKeyJwk": {
-          "crv": "Ed25519", <span class="comment">// external (property name)</span>
-          "x": "VCpo2LMLhn6iWku8MKvSLg2ZAoC-nlOyPVQaO3FxVeQ", <span class="comment">// external (property name)</span>
-          "kty": "OKP", <span class="comment">// external (property name)</span>
-          "kid": "_Qq0UL2Fq651Q0Fjd6TvnYE-faHiOpRlPVQcY_-tA4A" <span class="comment">// external (property name)</span>
-        }
-      }, {
-        "id": "https://controller.example/123456789abcdefghi#keys-1",
-        "type": "Multikey", <span class="comment">// external (property value)</span>
-        "controller": "https://controller.example/123456789abcdefghi",
-        "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
-      }],
-      <span class="comment">...</span>
-    }
+{
+  "@context": "https://www.w3.org/ns/cid/v1",
+  "id": "https://controller.example",
+  "verificationMethod": [{
+    "id": "https://controller.example#authn-key-123",
+    "type": "Multikey",
+    "controller": "https://controller.example",
+    "expires": "2025-12-01T00:00:00Z",
+    <span class="highlight">"publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"</span>
+  }, {
+    "id": "https://controller.example/101#key-20240828",
+    "type": "JsonWebKey",
+    "controller": "https://controller.example/101",
+    "revoked": "2024-12-10T15:28:32Z",
+    <span class="highlight">"publicKeyJwk": {
+      "kid": "key-20240828",
+      "kty": "EC",
+      "crv": "P-256",
+      "alg": "ES256",
+      "x": "f83OJ3D2xF1Bg8vub9tLe1gHMzV76e8Tus9uPHvRVEU",
+      "y": "x_FEzRu9m36HLN_tue659LNpXW6pCyStikYjKIWI5a0"
+    }</span>
+  }]
+}
             </pre>
           </section>
 
@@ -1417,9 +1490,9 @@ above:
 {
   "@context": "https://www.w3.org/ns/cid/v1",
   "id": "https://controller.example/123456789abcdefghi#keys-1",
-  "type": "Multikey",
+  <span class="highlight">"type": "Multikey"</span>,
   "controller": "https://controller.example/123456789abcdefghi",
-  "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
+  "publicKeyMultibase": "<span class="highlight">z6Mk</span>mM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
 }
             </pre>
 
@@ -1634,15 +1707,15 @@ An example of an object that conforms to `JsonWebKey` is provided below:
             <pre class="example nohighlight" title="JSON Web Key encoding of a secp384r1 (P-384) public key">
 {
   "id": "https://controller.example/123456789abcdefghi#key-1",
-  "type": "JsonWebKey",
+  <span class="highlight">"type": "JsonWebKey"</span>,
   "controller": "https://controller.example/123456789abcdefghi",
   "publicKeyJwk": {
       "kid": "key-1",
-      "kty": "EC",
+      <span class="highlight">"kty": "EC",
       "crv": "P-384",
       "alg": "ES384",
       "x": "1F14JSzKbwxO-Heqew5HzEt-0NZXAjCu8w-RiuV8_9tMiXrSZdjsWqi4y86OFb5d",
-      "y": "dnd8yoq-NOJcBuEYgdVVMmSxonXg-DU90d7C4uPWb_Lkd4WIQQEH0DyeC2KUDMIU"
+      "y": "dnd8yoq-NOJcBuEYgdVVMmSxonXg-DU90d7C4uPWb_Lkd4WIQQEH0DyeC2KUDMIU"</span>
     }
 }
             </pre>
@@ -1672,11 +1745,12 @@ referred to as <em>private keys</em>.
   "id": "https://controller.example/123456789abcdefghi#key-1",
   "type": "JsonWebKey",
   "controller": "https://controller.example/123456789abcdefghi",
-  "secretKeyJwk": {
-      "kty": "EC",
+  <span class="highlight">"secretKeyJwk"</span>: {
+      "id": "secret-1",
+      <span class="highlight">"kty": "EC",
       "crv": "P-384",
       "alg": "ES384",
-      "d": "fGwges0SX1mj4eZamUCL4qtZijy9uT15fI4gKTuRvre4Kkoju2SHM4rlFOeKVraH",
+      "d": "fGwges0SX1mj4eZamUCL4qtZijy9uT15fI4gKTuRvre4Kkoju2SHM4rlFOeKVraH"</span>,
       "x": "1F14JSzKbwxO-Heqew5HzEt-0NZXAjCu8w-RiuV8_9tMiXrSZdjsWqi4y86OFb5d",
       "y": "dnd8yoq-NOJcBuEYgdVVMmSxonXg-DU90d7C4uPWb_Lkd4WIQQEH0DyeC2KUDMIU"
     }
@@ -1716,24 +1790,22 @@ is done by dereferencing the URL and searching the resulting resource for a
 
             <pre class="example nohighlight"
             title="Embedding and referencing verification methods">
-    {
-<span class="comment">...</span>
-
-      "authentication": [
-        <span class="comment">// this key is referenced and might be used by</span>
-        <span class="comment">// more than one verification relationship</span>
-        "https://controller.example/123456789abcdefghi#keys-1",
-        <span class="comment">// this key is embedded and may *only* be used for authentication</span>
-        {
-          "id": "https://controller.example/123456789abcdefghi#keys-2",
-          "type": "Multikey", <span class="comment">// external (property value)</span>
-          "controller": "https://controller.example/123456789abcdefghi",
-          "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
-        }
-      ],
-
-<span class="comment">...</span>
-    }
+{
+  "@context": "https://www.w3.org/ns/cid/v1",
+  "id": "https://controller.example",
+  "authentication": [
+    <span class="comment">// this key is referenced and might be used by</span>
+    <span class="comment">// more than one verification relationship</span>
+    <span class="highlight">"https://controllerB.example/123456789abcdefghi#keys-1"</span>,
+    <span class="comment">// this key is embedded and may *only* be used for authentication</span>
+    <span class="highlight">{
+      "id": "https://controllerA.example/123456789abcdefghi#keys-2",
+      "type": "Multikey",
+      "controller": "https://controller.example/123456789abcdefghi",
+      "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
+    }</span>
+  ]
+}
             </pre>
           </section>
         </section>
@@ -1828,7 +1900,7 @@ referenced.
           "controller": "https://controller.example/123456789abcdefghi",
           "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
         }
-      ],
+      ]
       <span class="comment">...</span>
     }
             </pre>
@@ -1900,7 +1972,7 @@ corresponding [=controlled identifier document=].
           "controller": "https://controller.example/123456789abcdefghi",
           "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
         }
-      ],
+      ]
       <span class="comment">...</span>
     }
             </pre>
@@ -1960,7 +2032,7 @@ wrap a decryption key for the recipient.
             "x": "W_Vcc7guviK-gPNDBmevVw-uJVamQV5rMNQGUwCqlH0"
           }
         }
-      ],
+      ]
       <span class="comment">...</span>
     }
             </pre>
@@ -2024,7 +2096,7 @@ protected resource.
         "controller": "https://controller.example/123456789abcdefghi",
         "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
         }
-      ],
+      ]
       <span class="comment">...</span>
     }
             </pre>
@@ -2092,7 +2164,7 @@ example described in [[[#capability-invocation]]].
           "controller": "https://controller.example/123456789abcdefghi",
           "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
         }
-      ],
+      ]
       <span class="comment">...</span>
     }
             </pre>
@@ -2638,16 +2710,17 @@ The following example provides a minimum conformant
 [=verification method=] as required by the algorithm in this section:
         </p>
 
-        <pre class="example" title="Minimum conformant controlled identifier document">
+        <pre class="example nohighlight" title="Minimum conformant controlled identifier document">
 {
+  "@context": "https://www.w3.org/ns/cid/v1",
   "id": "https://controller.example/123",
   "verificationMethod": [{
     "id": "https://controller.example/123#key-456",
-    "type": "ExampleVerificationMethodType",
+    "type": "Multikey",
     "controller": "https://controller.example/123",
-    <span class="comment">// public cryptographic material goes here</span>
+    "publicKeyMultibase": "z6MkmM42vxfqZQsv4ehtTjFFxQ4sQKS2w6WR7emozFAn5cxu"
   }],
-  "authentication": ["#key-456"]
+  "authentication": ["https://controller.example/123#key-456"]
 }
         </pre>
 
@@ -2957,6 +3030,7 @@ same declarations, such as the Decentralized Identifier v1.1 context
 
           <pre class="example nohighlight" title="A controlled identifier document without an @context property">
 {
+  <span class="comment">// The @context declaration is missing in this controlled identifier document</span>
   "id": "https://controller.example/101",
   "verificationMethod": [{
     "id": "https://controller.example/101#key-203947",
@@ -3863,6 +3937,7 @@ developers seeking test values.
           <pre class="example nohighlight"
             title="A P-256 public key encoded as a Multikey">
 {
+  "@context": "https://www.w3.org/ns/cid/v1",
   "id": "https://multikey.example/issuer/123#key-0",
   "type": "Multikey",
   "controller": "https://multikey.example/issuer/123",
@@ -3873,17 +3948,18 @@ developers seeking test values.
           <pre class="example nohighlight"
             title="A P-384 public key encoded as a Multikey">
 {
+  "@context": "https://www.w3.org/ns/cid/v1",
   "id": "https://multikey.example/issuer/123#key-0",
   "type": "Multikey",
   "controller": "https://multikey.example/issuer/123",
-  "publicKeyMultibase": "z82LkvCwHNreneWpsgPEbV3gu1C6NFJEBg4srfJ5gdxEsMGRJ
-    Uz2sG9FE42shbn2xkZJh54"
+  "publicKeyMultibase": "z82LkvCwHNreneWpsgPEbV3gu1C6NFJEBg4srfJ5gdxEsMGRJUz2sG9FE42shbn2xkZJh54"
 }
           </pre>
 
           <pre class="example nohighlight"
             title="An Ed25519 public key encoded as a Multikey">
 {
+  "@context": "https://www.w3.org/ns/cid/v1",
   "id": "https://multikey.example/issuer/123#key-0",
   "type": "Multikey",
   "controller": "https://multikey.example/issuer/123",
@@ -3894,12 +3970,11 @@ developers seeking test values.
           <pre class="example nohighlight"
             title="A BLS12-381 G2 group public key, encoded as a Multikey">
 {
+  "@context": "https://www.w3.org/ns/cid/v1",
   "id": "https://multikey.example/issuer/123#key-0",
   "type": "Multikey",
   "controller": "https://multikey.example/issuer/123",
-  "publicKeyMultibase": "zUC7EK3ZakmukHhuncwkbySmomv3FmrkmS36E4Ks5rsb6VQSRpoCrx6
-  Hb8e2Nk6UvJFSdyw9NK1scFXJp21gNNYFjVWNgaqyGnkyhtagagCpQb5B7tagJu3HDbjQ8h
-  5ypoHjwBb"
+  "publicKeyMultibase": "zUC7EK3ZakmukHhuncwkbySmomv3FmrkmS36E4Ks5rsb6VQSRpoCrx6Hb8e2Nk6UvJFSdyw9NK1scFXJp21gNNYFjVWNgaqyGnkyhtagagCpQb5B7tagJu3HDbjQ8h5ypoHjwBb"
 }
           </pre>
 
@@ -3922,9 +3997,7 @@ developers seeking test values.
     "id": "https://multikey.example/issuer/123#key-3",
     "type": "Multikey",
     "controller": "https://multikey.example/issuer/123",
-    "publicKeyMultibase": "zUC7EK3ZakmukHhuncwkbySmomv3FmrkmS36E4Ks5rsb6VQSRpoCrx6
-    Hb8e2Nk6UvJFSdyw9NK1scFXJp21gNNYFjVWNgaqyGnkyhtagagCpQb5B7tagJu3HDbjQ8h
-    5ypoHjwBb"
+    "publicKeyMultibase": "zUC7EK3ZakmukHhuncwkbySmomv3FmrkmS36E4Ks5rsb6VQSRpoCrx6Hb8e2Nk6UvJFSdyw9NK1scFXJp21gNNYFjVWNgaqyGnkyhtagagCpQb5B7tagJu3HDbjQ8h5ypoHjwBb"
   }],
   "authentication": [
     "https://controller.example/123#key-1"
