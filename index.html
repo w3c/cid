@@ -1279,11 +1279,21 @@ described in Section [[[#verification-methods]]]. When it is used in either
 place, its purpose is essentially the same; that is, it expresses one or more
 entities that are authorized to perform certain actions associated with the
 resource with which it is associated.
+Note, however, that for [=verification methods=], it is only
+an assertion made by the `controller` of the [=controlled identifier document=],
+and this assertion is not necessarily true, i.e., it may be false.
+To ensure that a [=verification method=] 
+is bound to a particular [=controller=],
+one must go from the expression of the [=verification method=]
+to its [=controlled-identifier-document=],
+and then verify that the latter contains references to both
+the [=verification method=] and its [=controller=]. See Section [[[#retrieve-verification-method]]] for an algorithm that ensures that a proper binding is verified.
             </p>
             <p>
-In the case of the [=controller=] of a [=controlled identifier document=], the
-[=controller=] can update the content of the document. In the case of the
-[=controller=] of a [=verification method=], the [=controller=] can generate
+The [=controller=] of a [=controlled identifier document=]
+can update the content of the document. Only the actual
+[=controller=] of a [=verification method=] (regardless of who
+is asserted to be the controller) can generate
 proofs that satisfy the method.
             </p>
             <p>
