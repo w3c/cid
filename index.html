@@ -2690,15 +2690,14 @@ relationships exist as described earlier in this section.
         </p>
 
         <p class="note" title="Fragment identifier processing">
-The fragment identifier processing rules for retrieving [=verification methods=]
-are dependent on the media type of a [=controlled identifier document=]. While
-the algorithm in this section attempts to defer to the media type of the
-corresponding [=controlled identifier document=] (such as `application/did`),
-and while Section [[[#fragment-resolution]]] defines how to resolve fragment
+The fragment identifier processing rules when retrieving [=verification methods=]
+depend on the media type of a [=controlled identifier document=]. While the
+algorithm in this section attempts to defer to the media type of the
+corresponding [=controlled identifier document=] (such as `application/did`), and
+while Section [[[#fragment-resolution]]] defines how to resolve fragment
 identifiers according to the `application/cid` media type, implementers are
-advised that other fragment processing rules might exist that perform fragment
-processing in alternative ways that might result in different outcomes based on
-the media type.
+advised that a [=controlled identifier document=] of another media type might
+require different fragment processing rules that might produce different results.
         </p>
 
       </section>
