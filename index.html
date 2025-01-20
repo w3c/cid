@@ -2697,8 +2697,8 @@ relationships exist as described earlier in this section.
         <p>
 The algorithms described in this specification throw specific types of errors.
 Implementers might find it useful to convey these errors to other libraries or
-software systems. This section provides specific URLs, descriptions, and error
-codes for the errors, such that an ecosystem implementing technologies described
+software systems. This section provides specific URLs and descriptions for the errors,
+such that an ecosystem implementing technologies described
 by this specification might interoperate more effectively when errors occur.
         </p>
 
@@ -2714,10 +2714,6 @@ The `type` value of the error object MUST be a URL that starts with the value
 below.
           </li>
           <li>
-The `code` value MUST be the integer code described in the table below
-(in parentheses, beside the type name).
-          </li>
-          <li>
 The `title` value SHOULD provide a short but specific human-readable string for
 the error.
           </li>
@@ -2727,27 +2723,27 @@ The `detail` value SHOULD provide a longer human-readable string for the error.
         </ul>
 
         <dl>
-          <dt id="INVALID_VERIFICATION_METHOD_URL">INVALID_VERIFICATION_METHOD_URL (-21)</dt>
+          <dt id="INVALID_VERIFICATION_METHOD_URL">INVALID_VERIFICATION_METHOD_URL</dt>
           <dd>
 The `verificationMethod` value in a [=proof=] was malformed. See Section
 [[[#retrieve-verification-method]]].
           </dd>
-          <dt id="INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID (-22)</dt>
+          <dt id="INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID</dt>
           <dd>
 The `id` value in a [=controlled identifier document=] was malformed. See Section
 [[[#retrieve-verification-method]]].
           </dd>
-          <dt id="INVALID_CONTROLLED_IDENTIFIER_DOCUMENT">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT (-23)</dt>
+          <dt id="INVALID_CONTROLLED_IDENTIFIER_DOCUMENT">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT</dt>
           <dd>
 The [=controlled identifier document=] was malformed. See Section
 [[[#retrieve-verification-method]]].
           </dd>
-          <dt id="INVALID_VERIFICATION_METHOD">INVALID_VERIFICATION_METHOD (-24)</dt>
+          <dt id="INVALID_VERIFICATION_METHOD">INVALID_VERIFICATION_METHOD</dt>
           <dd>
 The [=verification method=] in a [=controlled identifier document=] was malformed. See Section
 [[[#retrieve-verification-method]]].
           </dd>
-          <dt id="INVALID_RELATIONSHIP_FOR_VERIFICATION_METHOD">INVALID_RELATIONSHIP_FOR_VERIFICATION_METHOD (-25)</dt>
+          <dt id="INVALID_RELATIONSHIP_FOR_VERIFICATION_METHOD">INVALID_RELATIONSHIP_FOR_VERIFICATION_METHOD</dt>
           <dd>
 The [=verification method=] in a [=controlled identifier document=] was not
 associated using the expected [=verification relationship=] as expressed in
