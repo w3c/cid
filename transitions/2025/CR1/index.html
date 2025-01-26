@@ -42,11 +42,11 @@ dfn{cursor:pointer}
 .dfn-panel li{margin-left:1em}
 .dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
 </style>
-    
+
 <title>Controlled Identifiers (CIDs) v1.0</title>
-    
-    
-    
+
+
+
 <style id="respec-mainstyle">
 @keyframes pop{
 0%{transform:scale(1,1)}
@@ -91,11 +91,11 @@ dd{margin-left:0}
 .removeOnSave{display:none}
 }
 </style>
-    
-    
 
-    
-    
+
+
+
+
 <style>
 
 code {
@@ -151,7 +151,7 @@ table.simple tbody tr:nth-of-type(even) {
 table.simple tbody tr:last-of-type {
     border-bottom: 2px solid #005a9c;
 }
-    
+
 </style>
 
 <meta name="color-scheme" content="light">
@@ -506,7 +506,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <body class="h-entry" data-cite="URL I18N-GLOSSARY INFRA VC-DATA-MODEL-2.0"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
-    <h1 id="title" class="title">Controlled Identifiers (CIDs) v1.0</h1> 
+    <h1 id="title" class="title">Controlled Identifiers (CIDs) v1.0</h1>
     <p id="w3c-state"><a href="https://www.w3.org/standards/types#CR">W3C Candidate Recommendation Snapshot</a> <time class="dt-published" datetime="2025-01-30">30 January 2025</time></p>
     <details open="">
       <summary>More details about this document</summary>
@@ -519,21 +519,21 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
               </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/cid/">https://w3c.github.io/cid/</a></dd>
         <dt>History:</dt><dd>
-                    <a href="https://github.com/w3c/cid/commits/">Commit history</a>
+                    <a data-previous-shortname='controller-document' href="https://www.w3.org/standards/history/cid/">Publication history</a>
                   </dd>
-        
+
         <dt>Implementation report:</dt><dd>
                 <a href="https://w3c.github.io/cid/implementations/1.0/">https://w3c.github.io/cid/implementations/1.0/</a>
               </dd>
-        
-        
-        
+
+
+
         <dt>Editors:</dt><dd class="editor p-author h-card vcard" data-editor-id="41758">
     <a class="u-url url p-name fn" href="https://www.linkedin.com/in/manusporny/">Manu Sporny</a> (<a class="p-org org h-org" href="http://digitalbazaar.com/">Digital Bazaar</a>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="38745">
     <a class="u-url url p-name fn" href="https://self-issued.info/">Michael B. Jones</a> (<span class="p-org org h-org">Invited Expert</span>)
   </dd>
-        
+
         <dt>Authors:</dt><dd class="editor p-author h-card vcard">
     <a class="u-url url p-name fn" href="http://digitalbazaar.com/">Dave Longley</a> (<a class="p-org org h-org" href="http://digitalbazaar.com/">Digital Bazaar</a>)
   </dd><dd class="editor p-author h-card vcard">
@@ -553,7 +553,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <a href="https://github.com/w3c/cid/issues/new/choose">new issue</a>,
         <a href="https://github.com/w3c/cid/issues/">open issues</a>)
       </dd><dd><a href="mailto:public-vc-wg@w3.org?subject=%5Bcid-1.0%5D%20YOUR%20TOPIC%20HERE">public-vc-wg@w3.org</a> with subject line <kbd>[cid-1.0] <em>… message topic …</em></kbd> (<a rel="discussion" href="https://lists.w3.org/Archives/Public/public-vc-wg">archives</a>)</dd>
-        
+
         <dt>Related Specifications</dt><dd>
     <a href="https://www.w3.org/TR/did-core/">Decentralized Identifiers v1.0</a>
   </dd><dd>
@@ -565,13 +565,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </dd>
       </dl>
     </details>
-    
-    
+
+
     <p class="copyright">
     <a href="https://www.w3.org/policies/#copyright">Copyright</a>
     ©
     2025
-    
+
     <a href="https://www.w3.org/">World Wide Web Consortium</a>.
     <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
     <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>,
@@ -611,7 +611,7 @@ removed before the transition to <abbr title="World Wide Web Consortium">W3C</ab
     <p>
     This document was published by the <a href="https://www.w3.org/groups/wg/vc">Verifiable Credentials Working Group</a> as
     a Candidate Recommendation Snapshot using the
-        <a href="https://www.w3.org/policies/process/20231103/#recs-and-notes">Recommendation track</a>. 
+        <a href="https://www.w3.org/policies/process/20231103/#recs-and-notes">Recommendation track</a>.
   </p><p>Publication as a Candidate Recommendation does not
   imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. A Candidate Recommendation Snapshot has received
         <a href="https://www.w3.org/policies/process/20231103/#dfn-wide-review">wide review</a>, is intended to
@@ -623,13 +623,13 @@ removed before the transition to <abbr title="World Wide Web Consortium">W3C</ab
           This Candidate Recommendation is not expected to advance to Proposed
           Recommendation any earlier than 28 February 2025.
         </p><p>
-    
+
         This document was produced by a group
         operating under the
         <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
-      
-    
+
+
                 <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
                 <a rel="disclosure" href="https://www.w3.org/groups/wg/vc/ipr">public list of any patent disclosures</a>
           made in connection with the deliverables of
@@ -639,14 +639,14 @@ removed before the transition to <abbr title="World Wide Web Consortium">W3C</ab
           <a href="https://www.w3.org/policies/patent-policy/#def-essential">Essential Claim(s)</a>
           must disclose the information in accordance with
           <a href="https://www.w3.org/policies/patent-policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-        
+
   </p><p>
                       This document is governed by the
                       <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                     </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#use-cases"><bdi class="secno">1.1 </bdi>Use Cases</a></li><li class="tocline"><a class="tocxref" href="#requirements"><bdi class="secno">1.2 </bdi>Requirements</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1.3 </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#terminology"><bdi class="secno">1.4 </bdi>Terminology</a></li></ol></li><li class="tocline"><a class="tocxref" href="#data-model"><bdi class="secno">2. </bdi>Data Model</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#controlled-identifier-documents"><bdi class="secno">2.1 </bdi>Controlled Identifier Documents</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#subjects"><bdi class="secno">2.1.1 </bdi>Subjects</a></li><li class="tocline"><a class="tocxref" href="#controllers"><bdi class="secno">2.1.2 </bdi>Controllers</a></li><li class="tocline"><a class="tocxref" href="#also-known-as"><bdi class="secno">2.1.3 </bdi>Also Known As</a></li><li class="tocline"><a class="tocxref" href="#services"><bdi class="secno">2.1.4 </bdi>Services</a></li></ol></li><li class="tocline"><a class="tocxref" href="#verification-methods"><bdi class="secno">2.2 </bdi>Verification Methods</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#verification-material"><bdi class="secno">2.2.1 </bdi>Verification Material</a></li><li class="tocline"><a class="tocxref" href="#Multikey"><bdi class="secno">2.2.2 </bdi>Multikey</a></li><li class="tocline"><a class="tocxref" href="#JsonWebKey"><bdi class="secno">2.2.3 </bdi>JsonWebKey</a></li><li class="tocline"><a class="tocxref" href="#referring-to-verification-methods"><bdi class="secno">2.2.4 </bdi>Referring to Verification Methods</a></li></ol></li><li class="tocline"><a class="tocxref" href="#verification-relationships"><bdi class="secno">2.3 </bdi>Verification Relationships</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#authentication"><bdi class="secno">2.3.1 </bdi>Authentication</a></li><li class="tocline"><a class="tocxref" href="#assertion"><bdi class="secno">2.3.2 </bdi>Assertion</a></li><li class="tocline"><a class="tocxref" href="#key-agreement"><bdi class="secno">2.3.3 </bdi>Key Agreement</a></li><li class="tocline"><a class="tocxref" href="#capability-invocation"><bdi class="secno">2.3.4 </bdi>Capability Invocation</a></li><li class="tocline"><a class="tocxref" href="#capability-delegation"><bdi class="secno">2.3.5 </bdi>Capability Delegation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multibase-0"><bdi class="secno">2.4 </bdi>Multibase</a></li><li class="tocline"><a class="tocxref" href="#multihash"><bdi class="secno">2.5 </bdi>Multihash</a></li></ol></li><li class="tocline"><a class="tocxref" href="#algorithms"><bdi class="secno">3. </bdi>Algorithms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#base-encode"><bdi class="secno">3.1 </bdi>Base Encode</a></li><li class="tocline"><a class="tocxref" href="#base-decode"><bdi class="secno">3.2 </bdi>Base Decode</a></li><li class="tocline"><a class="tocxref" href="#retrieve-verification-method"><bdi class="secno">3.3 </bdi>Retrieve Verification Method</a></li><li class="tocline"><a class="tocxref" href="#fragment-resolution"><bdi class="secno">3.4 </bdi>Fragment Resolution</a></li><li class="tocline"><a class="tocxref" href="#processing-errors"><bdi class="secno">3.5 </bdi>Processing Errors</a></li></ol></li><li class="tocline"><a class="tocxref" href="#contexts-and-vocabularies"><bdi class="secno">4. </bdi>Contexts and Vocabularies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#vocabulary"><bdi class="secno">4.1 </bdi>Vocabulary</a></li><li class="tocline"><a class="tocxref" href="#json-ld-context"><bdi class="secno">4.2 </bdi>JSON-LD context</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#context-injection"><bdi class="secno">4.2.1 </bdi>Context Injection</a></li></ol></li><li class="tocline"><a class="tocxref" href="#datatypes"><bdi class="secno">4.3 </bdi>Datatypes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multibase"><bdi class="secno">4.3.1 </bdi>The <code>multibase</code> Datatype</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#security-considerations"><bdi class="secno">5. </bdi>Security Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proving-control-and-binding"><bdi class="secno">5.1 </bdi>Proving Control and Binding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proving-control-of-an-identifier-and-or-controlled-identifier-document"><bdi class="secno">5.1.1 </bdi>Proving Control of an Identifier and/or Controlled Identifier Document</a></li><li class="tocline"><a class="tocxref" href="#binding-to-physical-identity"><bdi class="secno">5.1.2 </bdi>Binding to Physical Identity</a></li></ol></li><li class="tocline"><a class="tocxref" href="#identifier-ambiguity"><bdi class="secno">5.2 </bdi>Identifier Ambiguity</a></li><li class="tocline"><a class="tocxref" href="#key-and-signature-expiration"><bdi class="secno">5.3 </bdi>Key and Signature Expiration</a></li><li class="tocline"><a class="tocxref" href="#verification-method-rotation"><bdi class="secno">5.4 </bdi>Verification Method Rotation</a></li><li class="tocline"><a class="tocxref" href="#verification-method-revocation"><bdi class="secno">5.5 </bdi>Verification Method Revocation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#revocation-semantics"><bdi class="secno">5.5.1 </bdi>Revocation Semantics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#choosing-a-multiformat"><bdi class="secno">5.6 </bdi>Choosing a Multiformat</a></li><li class="tocline"><a class="tocxref" href="#encrypted-data-in-controlled-identifier-documents"><bdi class="secno">5.7 </bdi>Encrypted Data in Controlled Identifier Documents</a></li><li class="tocline"><a class="tocxref" href="#content-integrity-protection"><bdi class="secno">5.8 </bdi>Content Integrity Protection</a></li><li class="tocline"><a class="tocxref" href="#integrity-protection-of-controllers"><bdi class="secno">5.9 </bdi>Integrity Protection of Controllers</a></li><li class="tocline"><a class="tocxref" href="#level-of-assurance"><bdi class="secno">5.10 </bdi>Level of Assurance</a></li><li class="tocline"><a class="tocxref" href="#service-endpoints-for-authentication-and-authorization"><bdi class="secno">5.11 </bdi>Service Endpoints for Authentication and Authorization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#privacy-considerations"><bdi class="secno">6. </bdi>Privacy Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#keep-personal-data-private"><bdi class="secno">6.1 </bdi>Keep Personal Data Private</a></li><li class="tocline"><a class="tocxref" href="#relationship-to-the-same-origin-policy"><bdi class="secno">6.2 </bdi>Relationship to the Same-Origin Policy</a></li><li class="tocline"><a class="tocxref" href="#identifier-correlation-risks"><bdi class="secno">6.3 </bdi>Identifier Correlation Risks</a></li><li class="tocline"><a class="tocxref" href="#controlled-identifier-document-correlation-risks"><bdi class="secno">6.4 </bdi>Controlled Identifier Document Correlation Risks</a></li><li class="tocline"><a class="tocxref" href="#subject-classification"><bdi class="secno">6.5 </bdi>Subject Classification</a></li><li class="tocline"><a class="tocxref" href="#service-privacy"><bdi class="secno">6.6 </bdi>Service Privacy</a></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibility-considerations"><bdi class="secno">7. </bdi>Accessibility Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presenting-time-values"><bdi class="secno">7.1 </bdi>Presenting Time Values</a></li></ol></li><li class="tocline"><a class="tocxref" href="#iana-considerations"><bdi class="secno">A. </bdi>IANA Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#controller-media-type"><bdi class="secno">A.1 </bdi>application/cid</a></li></ol></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">B. </bdi>Examples</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#multikey-examples"><bdi class="secno">B.1 </bdi>Multikey Examples</a></li><li class="tocline"><a class="tocxref" href="#jsonwebkey-examples"><bdi class="secno">B.2 </bdi>JsonWebKey Examples</a></li></ol></li><li class="tocline"><a class="tocxref" href="#revision-history"><bdi class="secno">C. </bdi>Revision History</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">E.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.2 </bdi>Informative references</a></li></ol></li></ol></nav>
 
     <section class="informative" id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div><p><em>This section is non-normative.</em></p>
-      
+
 
       <p>
 <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-1">Controlled identifier documents</a> identify a <a data-link-type="dfn|abstract-op" href="#dfn-subjects" class="internalDFN" id="ref-for-dfn-subjects-1">subject</a> and provide <a data-link-type="dfn|abstract-op" href="#dfn-verification-method" class="internalDFN" id="ref-for-dfn-verification-method-1">verification methods</a> that express public cryptographic material, such as <a data-link-type="dfn|abstract-op" href="#dfn-public-key" class="internalDFN" id="ref-for-dfn-public-key-1">public keys</a>,
@@ -688,7 +688,7 @@ process of retrieving the canonical DID document for a DID.</em>
       </p></div>
 
       <section id="use-cases"><div class="header-wrapper"><h3 id="x1-1-use-cases"><bdi class="secno">1.1 </bdi>Use Cases</h3><a class="self-link" href="#use-cases" aria-label="Permalink for Section 1.1"></a></div>
-        
+
         <p>
 The use cases below illustrate the need for this specification.
 While many other related use cases exist, such as those in <cite><a data-matched-text="[[[DID-USE-CASES]]]" href="https://www.w3.org/TR/did-use-cases/">Use Cases and Requirements for Decentralized Identifiers</a></cite>
@@ -697,7 +697,7 @@ specification is designed to address.
         </p>
 
         <section class="notoc"><div class="header-wrapper"><h4 id="globally-unique-identifiers">Globally Unique Identifiers</h4><a class="self-link" href="#globally-unique-identifiers" aria-label="Permalink for this Section"></a></div>
-          
+
 
           <p>
 Lemmy runs multiple enterprise portals that manage large amounts of sensitive
@@ -709,7 +709,7 @@ email addresses and passwords.
         </section>
 
         <section class="notoc"><div class="header-wrapper"><h4 id="cryptographic-verification">Cryptographic Verification</h4><a class="self-link" href="#cryptographic-verification" aria-label="Permalink for this Section"></a></div>
-          
+
 
           <p>
 Lemmy would like to ensure that his customers prove control over their
@@ -720,7 +720,7 @@ update each organization's data.
         </section>
 
         <section class="notoc"><div class="header-wrapper"><h4 id="cryptographic-purpose">Cryptographic Purpose</h4><a class="self-link" href="#cryptographic-purpose" aria-label="Permalink for this Section"></a></div>
-          
+
 
           <p>
 Stef, who operates a high security service, would like to ensure that certain
@@ -731,7 +731,7 @@ levels of access and protection for each type of cryptographic key.
         </section>
 
         <section class="notoc"><div class="header-wrapper"><h4 id="service-engagement">Service Engagement</h4><a class="self-link" href="#service-engagement" aria-label="Permalink for this Section"></a></div>
-          
+
 
           <p>
 Marge, a software developer, would like to publicly advertise ways in which
@@ -741,7 +741,7 @@ uses based on her globally unique identifier(s).
         </section>
 
         <section class="notoc"><div class="header-wrapper"><h4 id="extensibility">Extensibility</h4><a class="self-link" href="#extensibility" aria-label="Permalink for this Section"></a></div>
-          
+
 
           <p>
 Cory, a systems architect, would like to extend the use cases described in this
@@ -751,7 +751,7 @@ with extensions being added by others.
         </section>
 
         <section class="notoc"><div class="header-wrapper"><h4 id="issue-and-present-claims">Issue and Present Claims</h4><a class="self-link" href="#issue-and-present-claims" aria-label="Permalink for this Section"></a></div>
-          
+
 
           <p>
 Neru would like to issue digital credentials on behalf of her company that
@@ -765,7 +765,7 @@ cryptographically authenticate themselves when they present the credential.
       </section>
 
       <section id="requirements"><div class="header-wrapper"><h3 id="x1-2-requirements"><bdi class="secno">1.2 </bdi>Requirements</h3><a class="self-link" href="#requirements" aria-label="Permalink for Section 1.2"></a></div>
-        
+
 
         <p>
 The following requirements are derived from the use cases described earlier in
@@ -869,7 +869,7 @@ when non-conforming documents are consumed.
       </section>
 
       <section id="terminology"><div class="header-wrapper"><h3 id="x1-4-terminology"><bdi class="secno">1.4 </bdi>Terminology</h3><a class="self-link" href="#terminology" aria-label="Permalink for Section 1.4"></a></div>
-        
+
 
         <p>
 This section defines the terms used in this specification. A link to the relevant
@@ -976,7 +976,7 @@ relationship is <a href="#authentication" data-matched-text="[[[#authentication]
     </section>
 
       <section id="data-model"><div class="header-wrapper"><h2 id="x2-data-model"><bdi class="secno">2. </bdi>Data Model</h2><a class="self-link" href="#data-model" aria-label="Permalink for Section 2."></a></div>
-        
+
 
         <p>
 A <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-7">controlled identifier document</a> specifies one or more relationships between
@@ -1041,7 +1041,7 @@ different types with possible differences in constraints.
         </p></div>
 
         <section id="controlled-identifier-documents"><div class="header-wrapper"><h3 id="x2-1-controlled-identifier-documents"><bdi class="secno">2.1 </bdi>Controlled Identifier Documents</h3><a class="self-link" href="#controlled-identifier-documents" aria-label="Permalink for Section 2.1"></a></div>
-          
+
 
           <p>
 The following sections define the properties in a <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-11">controlled identifier document</a>,
@@ -1168,7 +1168,7 @@ the URL syntax, or a <a href="https://infra.spec.whatwg.org/#ordered-set">set</a
           </table>
 
           <section id="subjects"><div class="header-wrapper"><h4 id="x2-1-1-subjects"><bdi class="secno">2.1.1 </bdi>Subjects</h4><a class="self-link" href="#subjects" aria-label="Permalink for Section 2.1.1"></a></div>
-            
+
             <p>
 A <a data-link-type="dfn|abstract-op" href="#dfn-subjects" class="internalDFN" id="ref-for-dfn-subjects-5">subject</a> is expressed using the <code>id</code> property in a <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-12">controlled identifier document</a>.
 The value of an <code>id</code> property is referred to as an <dfn data-plurals="identifiers" id="dfn-identifier" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">identifier</dfn>.
@@ -1237,7 +1237,7 @@ considered when evaluating the security impacts of reliance on a given
           </section>
 
           <section id="controllers"><div class="header-wrapper"><h4 id="x2-1-2-controllers"><bdi class="secno">2.1.2 </bdi>Controllers</h4><a class="self-link" href="#controllers" aria-label="Permalink for Section 2.1.2"></a></div>
-            
+
 
             <p>
 A <a data-link-type="dfn|abstract-op" href="#dfn-controller-s" class="internalDFN" id="ref-for-dfn-controller-s-2">controller</a> of a <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-21">controlled identifier document</a> is any entity capable of making changes to that
@@ -1348,7 +1348,7 @@ to threat models and attack vectors.
           </section>
 
           <section id="also-known-as"><div class="header-wrapper"><h4 id="x2-1-3-also-known-as"><bdi class="secno">2.1.3 </bdi>Also Known As</h4><a class="self-link" href="#also-known-as" aria-label="Permalink for Section 2.1.3"></a></div>
-            
+
 
             <p>
 A <a data-link-type="dfn|abstract-op" href="#dfn-subjects" class="internalDFN" id="ref-for-dfn-subjects-10">subject</a> can have multiple identifiers that are used for different purposes
@@ -1415,7 +1415,7 @@ not necessarily appropriate, <em>even with</em> a reciprocal relationship.
           </section>
 
           <section id="services"><div class="header-wrapper"><h4 id="x2-1-4-services"><bdi class="secno">2.1.4 </bdi>Services</h4><a class="self-link" href="#services" aria-label="Permalink for Section 2.1.4"></a></div>
-            
+
 
             <p>
 <a data-link-type="dfn|abstract-op" href="#dfn-service" class="internalDFN" id="ref-for-dfn-service-5">Services</a> are used in <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-32">controlled identifier documents</a> to express ways of
@@ -1510,7 +1510,7 @@ For more information regarding privacy and security considerations related to
         </section>
 
         <section id="verification-methods"><div class="header-wrapper"><h3 id="x2-2-verification-methods"><bdi class="secno">2.2 </bdi>Verification Methods</h3><a class="self-link" href="#verification-methods" aria-label="Permalink for Section 2.2"></a></div>
-          
+
           <p>
 A <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-33">controlled identifier document</a> can express <a data-link-type="dfn|abstract-op" href="#dfn-verification-method" class="internalDFN" id="ref-for-dfn-verification-method-18">verification methods</a>, such as
 cryptographic <a data-link-type="dfn|abstract-op" href="#dfn-public-key" class="internalDFN" id="ref-for-dfn-public-key-4">public keys</a>, which can be used to verify <a data-link-type="dfn|abstract-op" href="#dfn-proof" class="internalDFN" id="ref-for-dfn-proof-13">proofs</a>,
@@ -1659,7 +1659,7 @@ the controller of the key because the value of <code>controller</code> for a <a 
           </p>
 
           <section id="verification-material"><div class="header-wrapper"><h4 id="x2-2-1-verification-material"><bdi class="secno">2.2.1 </bdi>Verification Material</h4><a class="self-link" href="#verification-material" aria-label="Permalink for Section 2.2.1"></a></div>
-            
+
 
             <p>
 Verification material is any information that is used by a process that applies
@@ -1733,7 +1733,7 @@ methods</a> using both properties above is shown below.
           </section>
 
           <section id="Multikey"><div class="header-wrapper"><h4 id="x2-2-2-multikey"><bdi class="secno">2.2.2 </bdi>Multikey</h4><a class="self-link" href="#Multikey" aria-label="Permalink for Section 2.2.2"></a></div>
-            
+
             <p>
 The Multikey data model is a specific type of <a data-link-type="dfn|abstract-op" href="#dfn-verification-method" class="internalDFN" id="ref-for-dfn-verification-method-47">verification method</a> that
 encodes key types into a single binary stream that is then encoded as a
@@ -1927,7 +1927,7 @@ already defined by this specification.
           </section>
 
           <section id="JsonWebKey"><div class="header-wrapper"><h4 id="x2-2-3-jsonwebkey"><bdi class="secno">2.2.3 </bdi>JsonWebKey</h4><a class="self-link" href="#JsonWebKey" aria-label="Permalink for Section 2.2.3"></a></div>
-            
+
             <p>
 The JSON Web Key (JWK) data model is a specific type of <a data-link-type="dfn|abstract-op" href="#dfn-verification-method" class="internalDFN" id="ref-for-dfn-verification-method-48">verification method</a>
 that uses the JWK specification [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc7517" title="JSON Web Key (JWK)">RFC7517</a></cite>] to encode key types into a
@@ -2053,7 +2053,7 @@ the point on the <code>P-384</code> curve that is associated with the public key
           </section>
 
           <section id="referring-to-verification-methods"><div class="header-wrapper"><h4 id="x2-2-4-referring-to-verification-methods"><bdi class="secno">2.2.4 </bdi>Referring to Verification Methods</h4><a class="self-link" href="#referring-to-verification-methods" aria-label="Permalink for Section 2.2.4"></a></div>
-            
+
             <p>
 <a data-link-type="dfn|abstract-op" href="#dfn-verification-method" class="internalDFN" id="ref-for-dfn-verification-method-49">Verification methods</a> can be embedded in or referenced from properties
 associated with various <a data-link-type="dfn|abstract-op" href="#dfn-verification-relationship" class="internalDFN" id="ref-for-dfn-verification-relationship-4">verification relationships</a> as described in
@@ -2096,7 +2096,7 @@ is done by dereferencing the URL and searching the resulting resource for a
         </section>
 
         <section id="verification-relationships"><div class="header-wrapper"><h3 id="x2-3-verification-relationships"><bdi class="secno">2.3 </bdi>Verification Relationships</h3><a class="self-link" href="#verification-relationships" aria-label="Permalink for Section 2.3"></a></div>
-          
+
 
           <p>
 A <a data-link-type="dfn|abstract-op" href="#dfn-verification-relationship" class="internalDFN" id="ref-for-dfn-verification-relationship-6">verification relationship</a> is an expression that one or more
@@ -2133,7 +2133,7 @@ any such properties used <em class="rfc2119">SHOULD</em> be registered in the li
           </p>
 
           <section id="authentication"><div class="header-wrapper"><h4 id="x2-3-1-authentication"><bdi class="secno">2.3.1 </bdi>Authentication</h4><a class="self-link" href="#authentication" aria-label="Permalink for Section 2.3.1"></a></div>
-            
+
 
             <p>
 The <code>authentication</code> <a data-link-type="dfn|abstract-op" href="#dfn-verification-relationship" class="internalDFN" id="ref-for-dfn-verification-relationship-14">verification relationship</a> is used to specify how the
@@ -2206,7 +2206,7 @@ of the <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-docu
           </section>
 
           <section id="assertion"><div class="header-wrapper"><h4 id="x2-3-2-assertion"><bdi class="secno">2.3.2 </bdi>Assertion</h4><a class="self-link" href="#assertion" aria-label="Permalink for Section 2.3.2"></a></div>
-            
+
 
             <p>
 The <code>assertionMethod</code> <a data-link-type="dfn|abstract-op" href="#dfn-verification-relationship" class="internalDFN" id="ref-for-dfn-verification-relationship-15">verification relationship</a> is used to
@@ -2257,7 +2257,7 @@ verifiable credential by a verifier.
           </section>
 
           <section id="key-agreement"><div class="header-wrapper"><h4 id="x2-3-3-key-agreement"><bdi class="secno">2.3.3 </bdi>Key Agreement</h4><a class="self-link" href="#key-agreement" aria-label="Permalink for Section 2.3.3"></a></div>
-            
+
 
             <p>
 The <code>keyAgreement</code> <a data-link-type="dfn|abstract-op" href="#dfn-verification-relationship" class="internalDFN" id="ref-for-dfn-verification-relationship-16">verification relationship</a> is used to
@@ -2319,7 +2319,7 @@ wrap a decryption key for the recipient.
           </section>
 
           <section id="capability-invocation"><div class="header-wrapper"><h4 id="x2-3-4-capability-invocation"><bdi class="secno">2.3.4 </bdi>Capability Invocation</h4><a class="self-link" href="#capability-invocation" aria-label="Permalink for Section 2.3.4"></a></div>
-            
+
 
             <p>
 The <code>capabilityInvocation</code> <a data-link-type="dfn|abstract-op" href="#dfn-verification-relationship" class="internalDFN" id="ref-for-dfn-verification-relationship-17">verification relationship</a> is used
@@ -2385,7 +2385,7 @@ protected resource.
           </section>
 
           <section id="capability-delegation"><div class="header-wrapper"><h4 id="x2-3-5-capability-delegation"><bdi class="secno">2.3.5 </bdi>Capability Delegation</h4><a class="self-link" href="#capability-delegation" aria-label="Permalink for Section 2.3.5"></a></div>
-            
+
 
             <p>
 The <code>capabilityDelegation</code> <a data-link-type="dfn|abstract-op" href="#dfn-verification-relationship" class="internalDFN" id="ref-for-dfn-verification-relationship-18">verification relationship</a> is used to specify a
@@ -2456,7 +2456,7 @@ example described in <a href="#capability-invocation" data-matched-text="[[[#cap
         </section>
 
         <section id="multibase-0"><div class="header-wrapper"><h3 id="x2-4-multibase"><bdi class="secno">2.4 </bdi>Multibase</h3><a class="self-link" href="#multibase-0" aria-label="Permalink for Section 2.4"></a></div>
-          
+
 
           <p>
 A Multibase value encodes a binary value as a
@@ -2519,7 +2519,7 @@ Multibase header. Any algorithm with equivalent output <em class="rfc2119">MAY</
         </section>
 
         <section id="multihash"><div class="header-wrapper"><h3 id="x2-5-multihash"><bdi class="secno">2.5 </bdi>Multihash</h3><a class="self-link" href="#multihash" aria-label="Permalink for Section 2.5"></a></div>
-          
+
 
           <p>
 A Multihash value starts with a binary header, which includes 1) an identifier
@@ -2596,11 +2596,11 @@ the Multihash value itself.
       </section>
 
     <section id="algorithms"><div class="header-wrapper"><h2 id="x3-algorithms"><bdi class="secno">3. </bdi>Algorithms</h2><a class="self-link" href="#algorithms" aria-label="Permalink for Section 3."></a></div>
-      
+
 
       <p>
 This section defines algorithms used by this specification including
-instructions on the following: how to base-encode and base-decode values; 
+instructions on the following: how to base-encode and base-decode values;
 how to safely retrieve verification methods; how to retrieve document
 fragments; and how to produce descriptions of processing errors over HTTP
 channels. Alternatives to the algorithms provided in this section <em class="rfc2119">MAY</em> be
@@ -2608,7 +2608,7 @@ used as long as the outputs of the alternative algorithm remain the same.
       </p>
 
       <section class="normative" id="base-encode"><div class="header-wrapper"><h3 id="x3-1-base-encode"><bdi class="secno">3.1 </bdi>Base Encode</h3><a class="self-link" href="#base-encode" aria-label="Permalink for Section 3.1"></a></div>
-        
+
 
         <p>
 The following algorithm specifies how to encode an array of bytes, where each
@@ -2754,7 +2754,7 @@ Return <var>baseEncoding</var> as the base-encoded value.
       </section>
 
       <section class="normative" id="base-decode"><div class="header-wrapper"><h3 id="x3-2-base-decode"><bdi class="secno">3.2 </bdi>Base Decode</h3><a class="self-link" href="#base-decode" aria-label="Permalink for Section 3.2"></a></div>
-        
+
 
         <p>
 The following algorithm specifies how to decode an array of bytes, where each
@@ -2910,7 +2910,7 @@ to <var>decodedSize</var>, starting at offset <var>decodedOffset</var> to
       </section>
 
       <section class="normative" id="retrieve-verification-method"><div class="header-wrapper"><h3 id="x3-3-retrieve-verification-method"><bdi class="secno">3.3 </bdi>Retrieve Verification Method</h3><a class="self-link" href="#retrieve-verification-method" aria-label="Permalink for Section 3.3"></a></div>
-        
+
 
         <p>
 The following algorithm specifies how to safely retrieve a verification method,
@@ -3059,7 +3059,7 @@ require different fragment processing rules that might produce different results
 
 
       <section class="normative" id="fragment-resolution"><div class="header-wrapper"><h3 id="x3-4-fragment-resolution"><bdi class="secno">3.4 </bdi>Fragment Resolution</h3><a class="self-link" href="#fragment-resolution" aria-label="Permalink for Section 3.4"></a></div>
-        
+
 
         <p>
 The following algorithm specifies how to retrieve the portion of a document that
@@ -3102,7 +3102,7 @@ avoided and the behaviour is not defined.
       </section>
 
       <section class="normative" id="processing-errors"><div class="header-wrapper"><h3 id="x3-5-processing-errors"><bdi class="secno">3.5 </bdi>Processing Errors</h3><a class="self-link" href="#processing-errors" aria-label="Permalink for Section 3.5"></a></div>
-        
+
 
         <p>
 The algorithms described in this specification throw specific types of errors.
@@ -3165,7 +3165,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
     </section>
 
     <section id="contexts-and-vocabularies"><div class="header-wrapper"><h2 id="x4-contexts-and-vocabularies"><bdi class="secno">4. </bdi>Contexts and Vocabularies</h2><a class="self-link" href="#contexts-and-vocabularies" aria-label="Permalink for Section 4."></a></div>
-      
+
 
       <div class="issue" id="issue-container-number-3"><div role="heading" class="issue-title marker" id="h-issue-1" aria-level="3"><span>Issue 3</span><span class="issue-label">: (AT RISK) Hash values might change during Candidate Recommendation</span></div><p class="">
         This section lists cryptographic hash values that might change during the
@@ -3174,7 +3174,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
       </p></div>
 
       <section id="vocabulary"><div class="header-wrapper"><h3 id="x4-1-vocabulary"><bdi class="secno">4.1 </bdi>Vocabulary</h3><a class="self-link" href="#vocabulary" aria-label="Permalink for Section 4.1"></a></div>
-        
+
         <p>
           The terms defined in this specification are also part of the
           RDF <a href="https://www.w3.org/TR/rdf-concepts/#vocabularies">vocabulary namespace</a>&nbsp;[<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf-concepts" title="Resource Description Framework (RDF): Concepts and Abstract Syntax">RDF-CONCEPTS</a></cite>]
@@ -3241,7 +3241,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
       </section>
 
       <section id="json-ld-context"><div class="header-wrapper"><h3 id="x4-2-json-ld-context"><bdi class="secno">4.2 </bdi>JSON-LD context</h3><a class="self-link" href="#json-ld-context" aria-label="Permalink for Section 4.2"></a></div>
-        
+
         <p>
           Implementations that perform JSON-LD processing <em class="rfc2119">MUST</em> treat the following
           JSON-LD context URL as already resolved, where the resolved document matches
@@ -3283,7 +3283,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
         </p></div>
 
         <section id="context-injection"><div class="header-wrapper"><h4 id="x4-2-1-context-injection"><bdi class="secno">4.2.1 </bdi>Context Injection</h4><a class="self-link" href="#context-injection" aria-label="Permalink for Section 4.2.1"></a></div>
-          
+
           <p>
 The <code>@context</code> property is used to ensure that implementations are using the
 same semantics when terms in this specification are processed. For example, this
@@ -3336,14 +3336,14 @@ processed in either mode are either implementation or specification bugs.
       </section>
 
       <section id="datatypes"><div class="header-wrapper"><h3 id="x4-3-datatypes"><bdi class="secno">4.3 </bdi>Datatypes</h3><a class="self-link" href="#datatypes" aria-label="Permalink for Section 4.3"></a></div>
-        
+
 
         <p>
 This section defines datatypes that are used by this specification.
         </p>
 
       <section id="the-multibase-datatype"><div class="header-wrapper"><h4 id="multibase"><bdi class="secno">4.3.1 </bdi>The <code>multibase</code> Datatype</h4><a class="self-link" href="#multibase" aria-label="Permalink for Section 4.3.1"></a></div>
-        
+
 
         <p>
 <a href="#multibase-0">Multibase</a>-encoded strings are used to encode binary
@@ -3392,7 +3392,7 @@ The canonical mapping consists of using the lexical-to-value mapping.
   </section>
 
   <section class="informative" id="security-considerations"><div class="header-wrapper"><h2 id="x5-security-considerations"><bdi class="secno">5. </bdi>Security Considerations</h2><a class="self-link" href="#security-considerations" aria-label="Permalink for Section 5."></a></div><p><em>This section is non-normative.</em></p>
-    
+
 
     <p>
 This section contains a variety of security considerations that people using
@@ -3405,7 +3405,7 @@ unique to this specification.
     </p>
 
     <section id="proving-control-and-binding"><div class="header-wrapper"><h3 id="x5-1-proving-control-and-binding"><bdi class="secno">5.1 </bdi>Proving Control and Binding</h3><a class="self-link" href="#proving-control-and-binding" aria-label="Permalink for Section 5.1"></a></div>
-      
+
 
       <p>
 Binding an entity in the digital world or the physical world to an identifier, to
@@ -3417,7 +3417,7 @@ authorization.
       </p>
 
       <section id="proving-control-of-an-identifier-and-or-controlled-identifier-document"><div class="header-wrapper"><h4 id="x5-1-1-proving-control-of-an-identifier-and-or-controlled-identifier-document"><bdi class="secno">5.1.1 </bdi>Proving Control of an Identifier and/or Controlled Identifier Document</h4><a class="self-link" href="#proving-control-of-an-identifier-and-or-controlled-identifier-document" aria-label="Permalink for Section 5.1.1"></a></div>
-        
+
 
         <p>
 Proving control over an identifier and/or a <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-74">controlled identifier document</a> is useful
@@ -3432,7 +3432,7 @@ authentication or authorization security protocol.
       </section>
 
       <section id="binding-to-physical-identity"><div class="header-wrapper"><h4 id="x5-1-2-binding-to-physical-identity"><bdi class="secno">5.1.2 </bdi>Binding to Physical Identity</h4><a class="self-link" href="#binding-to-physical-identity" aria-label="Permalink for Section 5.1.2"></a></div>
-        
+
 
         <p>
 An identifier or <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-76">controlled identifier document</a> do not inherently carry any
@@ -3461,7 +3461,7 @@ by this specification and further defined in <cite><a data-matched-text="[[[?VC-
       </section>
     </section>
     <section id="identifier-ambiguity"><div class="header-wrapper"><h3 id="x5-2-identifier-ambiguity"><bdi class="secno">5.2 </bdi>Identifier Ambiguity</h3><a class="self-link" href="#identifier-ambiguity" aria-label="Permalink for Section 5.2"></a></div>
-      
+
         <p>
 Even in cases where the <a data-link-type="dfn|abstract-op" href="#dfn-subjects" class="internalDFN" id="ref-for-dfn-subjects-17">subject</a> referred to by an <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class="internalDFN" id="ref-for-dfn-identifier-19">identifier</a> proves
 control, the interpretation of the <a data-link-type="dfn|abstract-op" href="#dfn-subjects" class="internalDFN" id="ref-for-dfn-subjects-18">subject</a> remains contextual and
@@ -3549,7 +3549,7 @@ any particular <a data-link-type="dfn|abstract-op" href="#dfn-identifier" class=
     </section>
 
     <section id="key-and-signature-expiration"><div class="header-wrapper"><h3 id="x5-3-key-and-signature-expiration"><bdi class="secno">5.3 </bdi>Key and Signature Expiration</h3><a class="self-link" href="#key-and-signature-expiration" aria-label="Permalink for Section 5.3"></a></div>
-      
+
 
       <p>
 In a decentralized architecture, there might not be centralized authorities to
@@ -3573,7 +3573,7 @@ time it was used.
     </section>
 
     <section id="verification-method-rotation"><div class="header-wrapper"><h3 id="x5-4-verification-method-rotation"><bdi class="secno">5.4 </bdi>Verification Method Rotation</h3><a class="self-link" href="#verification-method-rotation" aria-label="Permalink for Section 5.4"></a></div>
-      
+
 
       <p>
 Rotation is a management process that enables the secret cryptographic material
@@ -3641,7 +3641,7 @@ some time.
     </section>
 
     <section id="verification-method-revocation"><div class="header-wrapper"><h3 id="x5-5-verification-method-revocation"><bdi class="secno">5.5 </bdi>Verification Method Revocation</h3><a class="self-link" href="#verification-method-revocation" aria-label="Permalink for Section 5.5"></a></div>
-      
+
 
       <p>
 Revocation is a management process that enables the secret cryptographic
@@ -3725,7 +3725,7 @@ method</a> is publicly revoked.
       </ul>
 
       <section id="revocation-semantics"><div class="header-wrapper"><h4 id="x5-5-1-revocation-semantics"><bdi class="secno">5.5.1 </bdi>Revocation Semantics</h4><a class="self-link" href="#revocation-semantics" aria-label="Permalink for Section 5.5.1"></a></div>
-        
+
 
         <p>
 Although verifiers might choose not to accept <a data-link-type="dfn|abstract-op" href="#dfn-proof" class="internalDFN" id="ref-for-dfn-proof-25">proofs</a> or signatures from a
@@ -3763,7 +3763,7 @@ that can be invalidated at any time by the <a data-link-type="dfn|abstract-op" h
     </section>
 
     <section id="choosing-a-multiformat"><div class="header-wrapper"><h3 id="x5-6-choosing-a-multiformat"><bdi class="secno">5.6 </bdi>Choosing a Multiformat</h3><a class="self-link" href="#choosing-a-multiformat" aria-label="Permalink for Section 5.6"></a></div>
-      
+
 
       <p>
 <dfn class="external lint-ignore" id="dfn-multiformats" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Multiformats</dfn> enable self-describing
@@ -3795,7 +3795,7 @@ be used for any particular application or ecosystem.
     </section>
 
     <section id="encrypted-data-in-controlled-identifier-documents"><div class="header-wrapper"><h3 id="x5-7-encrypted-data-in-controlled-identifier-documents"><bdi class="secno">5.7 </bdi>Encrypted Data in Controlled Identifier Documents</h3><a class="self-link" href="#encrypted-data-in-controlled-identifier-documents" aria-label="Permalink for Section 5.7"></a></div>
-      
+
       <p>
 Encryption algorithms have been known to fail due to advances in cryptography
 and computing power. Implementers are advised to assume that any encrypted data
@@ -3821,7 +3821,7 @@ receiving party.
     </section>
 
     <section id="content-integrity-protection"><div class="header-wrapper"><h3 id="x5-8-content-integrity-protection"><bdi class="secno">5.8 </bdi>Content Integrity Protection</h3><a class="self-link" href="#content-integrity-protection" aria-label="Permalink for Section 5.8"></a></div>
-      
+
       <p>
 <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-91">Controlled identifier documents</a> that include links to external machine-readable
 content such as images, web pages, or schemas are vulnerable to tampering. It is
@@ -3842,7 +3842,7 @@ version of the external JSON-LD Context.
     </section>
 
     <section id="integrity-protection-of-controllers"><div class="header-wrapper"><h3 id="x5-9-integrity-protection-of-controllers"><bdi class="secno">5.9 </bdi>Integrity Protection of Controllers</h3><a class="self-link" href="#integrity-protection-of-controllers" aria-label="Permalink for Section 5.9"></a></div>
-      
+
 
       <p>
 As described in Section <a href="#controllers" data-matched-text="[[[#controllers]]]" class="sec-ref"><bdi class="secno">2.1.2 </bdi>Controllers</a>, this specification includes a
@@ -3873,7 +3873,7 @@ such protection.
     </section>
 
     <section id="level-of-assurance"><div class="header-wrapper"><h3 id="x5-10-level-of-assurance"><bdi class="secno">5.10 </bdi>Level of Assurance</h3><a class="self-link" href="#level-of-assurance" aria-label="Permalink for Section 5.10"></a></div>
-      
+
 
       <p>
 Additional information about the security context of authentication events is
@@ -3912,7 +3912,7 @@ extended to incorporate this information.
     </section>
 
     <section id="service-endpoints-for-authentication-and-authorization"><div class="header-wrapper"><h3 id="x5-11-service-endpoints-for-authentication-and-authorization"><bdi class="secno">5.11 </bdi>Service Endpoints for Authentication and Authorization</h3><a class="self-link" href="#service-endpoints-for-authentication-and-authorization" aria-label="Permalink for Section 5.11"></a></div>
-      
+
 
       <p>
 If a <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-100">controlled identifier document</a> publishes a <a data-link-type="dfn|abstract-op" href="#dfn-service" class="internalDFN" id="ref-for-dfn-service-14">service</a> intended for authentication
@@ -3926,7 +3926,7 @@ protocols supported by that <a data-link-type="dfn|abstract-op" href="#dfn-servi
   </section>
 
   <section class="informative" id="privacy-considerations"><div class="header-wrapper"><h2 id="x6-privacy-considerations"><bdi class="secno">6. </bdi>Privacy Considerations</h2><a class="self-link" href="#privacy-considerations" aria-label="Permalink for Section 6."></a></div><p><em>This section is non-normative.</em></p>
-    
+
 
     <p>
 Since <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-101">controlled identifier documents</a> are designed to be administered directly by
@@ -3942,7 +3942,7 @@ implementers might find useful when building systems that utilize <a data-link-t
     </p>
 
     <section id="keep-personal-data-private"><div class="header-wrapper"><h3 id="x6-1-keep-personal-data-private"><bdi class="secno">6.1 </bdi>Keep Personal Data Private</h3><a class="self-link" href="#keep-personal-data-private" aria-label="Permalink for Section 6.1"></a></div>
-      
+
 
       <p>
 If a <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-104">controlled identifier document</a> is about a specific individual and is
@@ -3959,7 +3959,7 @@ communication channels.
     </section>
 
     <section id="relationship-to-the-same-origin-policy"><div class="header-wrapper"><h3 id="x6-2-relationship-to-the-same-origin-policy"><bdi class="secno">6.2 </bdi>Relationship to the Same-Origin Policy</h3><a class="self-link" href="#relationship-to-the-same-origin-policy" aria-label="Permalink for Section 6.2"></a></div>
-      
+
 
       <p>
 The <a href="https://en.wikipedia.org/wiki/Same-origin_policy">
@@ -3987,7 +3987,7 @@ same-origin bound cryptographic key would suffice.
     </section>
 
     <section id="identifier-correlation-risks"><div class="header-wrapper"><h3 id="x6-3-identifier-correlation-risks"><bdi class="secno">6.3 </bdi>Identifier Correlation Risks</h3><a class="self-link" href="#identifier-correlation-risks" aria-label="Permalink for Section 6.3"></a></div>
-      
+
 
       <p>
 Identifiers can be used for unwanted correlation. <a data-link-type="dfn|abstract-op" href="#dfn-controller-s" class="internalDFN" id="ref-for-dfn-controller-s-47">Controllers</a> can
@@ -4002,7 +4002,7 @@ identification and correlation across interaction domains.
     </section>
 
     <section id="controlled-identifier-document-correlation-risks"><div class="header-wrapper"><h3 id="x6-4-controlled-identifier-document-correlation-risks"><bdi class="secno">6.4 </bdi>Controlled Identifier Document Correlation Risks</h3><a class="self-link" href="#controlled-identifier-document-correlation-risks" aria-label="Permalink for Section 6.4"></a></div>
-      
+
 
       <p>
 The anti-correlation protections of <a data-link-type="dfn|abstract-op" href="#dfn-pairwise-identifier" class="internalDFN" id="ref-for-dfn-pairwise-identifier-4">pairwise identifiers</a> are easily defeated
@@ -4016,7 +4016,7 @@ also needs to use pairwise unique information, such as ensuring that
     </section>
 
     <section id="subject-classification"><div class="header-wrapper"><h3 id="x6-5-subject-classification"><bdi class="secno">6.5 </bdi>Subject Classification</h3><a class="self-link" href="#subject-classification" aria-label="Permalink for Section 6.5"></a></div>
-      
+
       <p>
 It is dangerous to add properties to the <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-111">controlled identifier document</a> that can be
 used to indicate, explicitly or through inference, what <em>type</em> or nature
@@ -4046,7 +4046,7 @@ relationships</a> related to using the identifier.
     </section>
 
     <section id="service-privacy"><div class="header-wrapper"><h3 id="x6-6-service-privacy"><bdi class="secno">6.6 </bdi>Service Privacy</h3><a class="self-link" href="#service-privacy" aria-label="Permalink for Section 6.6"></a></div>
-      
+
       <p>
 The ability for a <a data-link-type="dfn|abstract-op" href="#dfn-controller-s" class="internalDFN" id="ref-for-dfn-controller-s-50">controller</a> to optionally express at least one <a data-link-type="dfn|abstract-op" href="#dfn-service" class="internalDFN" id="ref-for-dfn-service-17">service</a> in the <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-115">controlled identifier document</a> increases their control and agency.
 Each additional endpoint in the <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-116">controlled identifier document</a> adds privacy risk either
@@ -4076,7 +4076,7 @@ location of the <a data-link-type="dfn|abstract-op" href="#dfn-subjects" class="
     </section>
 
     <section id="accessibility-considerations"><div class="header-wrapper"><h2 id="x7-accessibility-considerations"><bdi class="secno">7. </bdi>Accessibility Considerations</h2><a class="self-link" href="#accessibility-considerations" aria-label="Permalink for Section 7."></a></div>
-      
+
       <p>
 The following section describes accessibility considerations that developers
 implementing this specification are urged to consider in order to ensure that
@@ -4089,7 +4089,7 @@ guidance below is provided for those situations.
       </p>
 
       <section id="presenting-time-values"><div class="header-wrapper"><h3 id="x7-1-presenting-time-values"><bdi class="secno">7.1 </bdi>Presenting Time Values</h3><a class="self-link" href="#presenting-time-values" aria-label="Permalink for Section 7.1"></a></div>
-        
+
         <p>
 This specification enables the expression of dates and times related to the
 validity period of <a data-link-type="dfn|abstract-op" href="#dfn-proof" class="internalDFN" id="ref-for-dfn-proof-27">proofs</a>. This information might be indirectly
@@ -4116,10 +4116,10 @@ calculation.
 
     </section>
 
-    
+
 
     <section class="appendix informative" id="iana-considerations"><div class="header-wrapper"><h2 id="a-iana-considerations"><bdi class="secno">A. </bdi>IANA Considerations</h2><a class="self-link" href="#iana-considerations" aria-label="Permalink for Appendix A."></a></div><p><em>This section is non-normative.</em></p>
-      
+
 
       <p>
 This section will be submitted to the Internet Engineering Steering Group
@@ -4127,7 +4127,7 @@ This section will be submitted to the Internet Engineering Steering Group
       </p>
 
       <section id="controller-media-type"><div class="header-wrapper"><h3 id="a-1-application-cid"><bdi class="secno">A.1 </bdi>application/cid</h3><a class="self-link" href="#controller-media-type" aria-label="Permalink for Appendix A.1"></a></div>
-        
+
         <p>
 This specification registers the <code>application/cid</code> media type specifically for
 identifying documents conforming to the <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document" class="internalDFN" id="ref-for-dfn-controlled-identifier-document-121">controlled identifier document</a>
@@ -4181,14 +4181,14 @@ specification.
     </section>
 
     <section class="appendix informative" id="examples"><div class="header-wrapper"><h2 id="b-examples"><bdi class="secno">B. </bdi>Examples</h2><a class="self-link" href="#examples" aria-label="Permalink for Appendix B."></a></div><p><em>This section is non-normative.</em></p>
-      
+
 
       <p>
 This section contains more detailed examples of the concepts introduced in
 the specification.
       </p>
       <section class="informative" id="multikey-examples"><div class="header-wrapper"><h3 id="b-1-multikey-examples"><bdi class="secno">B.1 </bdi>Multikey Examples</h3><a class="self-link" href="#multikey-examples" aria-label="Permalink for Appendix B.1"></a></div><p><em>This section is non-normative.</em></p>
-        
+
 
         <p>
 This section contains various Multikey examples that might be useful for
@@ -4293,7 +4293,7 @@ developers seeking test values.
       </div>
         </section>
         <section class="informative" id="jsonwebkey-examples"><div class="header-wrapper"><h3 id="b-2-jsonwebkey-examples"><bdi class="secno">B.2 </bdi>JsonWebKey Examples</h3><a class="self-link" href="#jsonwebkey-examples" aria-label="Permalink for Appendix B.2"></a></div><p><em>This section is non-normative.</em></p>
-        
+
 
         <p>
 This section contains various JsonWebKey examples that might be useful for
@@ -4417,10 +4417,10 @@ developers seeking test values.
         </section>
       </section>
 
-    
+
 
     <section class="appendix informative" id="revision-history"><div class="header-wrapper"><h2 id="c-revision-history"><bdi class="secno">C. </bdi>Revision History</h2><a class="self-link" href="#revision-history" aria-label="Permalink for Appendix C."></a></div><p><em>This section is non-normative.</em></p>
-      
+
 
       <p>
 This section contains the substantive changes that have been made to this
@@ -4456,7 +4456,7 @@ Editorial changes to align narrative and flow between migrated sections.
     </section>
 
     <section class="appendix informative" id="acknowledgements"><div class="header-wrapper"><h2 id="d-acknowledgements"><bdi class="secno">D. </bdi>Acknowledgements</h2><a class="self-link" href="#acknowledgements" aria-label="Permalink for Appendix D."></a></div><p><em>This section is non-normative.</em></p>
-      
+
 
       <p>
 The specification authors would like to thank the contributors to the
@@ -4574,10 +4574,10 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
 
     </section>
 
-  
+
 
 <section id="references" class="appendix"><div class="header-wrapper"><h2 id="e-references"><bdi class="secno">E. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix E."></a></div><section id="normative-references"><div class="header-wrapper"><h3 id="e-1-normative-references"><bdi class="secno">E.1 </bdi>Normative references</h3><a class="self-link" href="#normative-references" aria-label="Permalink for Appendix E.1"></a></div>
-    
+
     <dl class="bibliography"><dt id="bib-did-extensions-properties">[DID-EXTENSIONS-PROPERTIES]</dt><dd>
       <a href="https://www.w3.org/TR/did-extensions-properties/"><cite>DID Document Property Extensions</cite></a>. Manu Sporny; Markus Sabadello.  W3C. 19 November 2024. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/did-extensions-properties/">https://www.w3.org/TR/did-extensions-properties/</a>
     </dd><dt id="bib-infra">[INFRA]</dt><dd>
@@ -4614,7 +4614,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <a href="https://www.w3.org/TR/xmlschema11-2/"><cite>W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes</cite></a>. David Peterson; Sandy Gao; Ashok Malhotra; Michael Sperberg-McQueen; Henry Thompson; Paul V. Biron et al.  W3C. 5 April 2012. W3C Recommendation. URL: <a href="https://www.w3.org/TR/xmlschema11-2/">https://www.w3.org/TR/xmlschema11-2/</a>
     </dd></dl>
   </section><section id="informative-references"><div class="header-wrapper"><h3 id="e-2-informative-references"><bdi class="secno">E.2 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix E.2"></a></div>
-    
+
     <dl class="bibliography"><dt id="bib-cid">[CID]</dt><dd>
       <a href="https://www.w3.org/TR/cid/"><cite>Controlled Identifier Document v1.0</cite></a>. Manu Sporny; Dave Longley; Markus Sabadello; Drummond Reed; Orie Steele; Christopher Allen; Michael B. Jones.  W3C Verifiable Credentials Working Group. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/cid/">https://www.w3.org/TR/cid/</a>
     </dd><dt id="bib-did-core">[DID-CORE]</dt><dd>
@@ -4648,99 +4648,99 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-conforming-controlled-identifier-document" aria-label="Permalink for definition: conforming controlled identifier document. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-conforming-controlled-identifier-document-1" title="§ 1.3 Conformance">§ 1.3 Conformance</a> 
+      <a href="#ref-for-dfn-conforming-controlled-identifier-document-1" title="§ 1.3 Conformance">§ 1.3 Conformance</a>
     </li><li>
-      <a href="#ref-for-dfn-conforming-controlled-identifier-document-2" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> 
+      <a href="#ref-for-dfn-conforming-controlled-identifier-document-2" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-conforming-verification-method" aria-label="Links in this document to definition: conforming verification method">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-conforming-verification-method" aria-label="Permalink for definition: conforming verification method. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-conforming-verification-method-1" title="§ 1.3 Conformance">§ 1.3 Conformance</a> 
+      <a href="#ref-for-dfn-conforming-verification-method-1" title="§ 1.3 Conformance">§ 1.3 Conformance</a>
     </li><li>
-      <a href="#ref-for-dfn-conforming-verification-method-2" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> 
+      <a href="#ref-for-dfn-conforming-verification-method-2" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-conforming-document" aria-label="Links in this document to definition: conforming document">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-conforming-document" aria-label="Permalink for definition: conforming document. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-conforming-document-1" title="§ 1.3 Conformance">§ 1.3 Conformance</a> 
+      <a href="#ref-for-dfn-conforming-document-1" title="§ 1.3 Conformance">§ 1.3 Conformance</a>
     </li><li>
-      <a href="#ref-for-dfn-conforming-document-2" title="§ 2.1.4 Services">§ 2.1.4 Services</a> 
+      <a href="#ref-for-dfn-conforming-document-2" title="§ 2.1.4 Services">§ 2.1.4 Services</a>
     </li><li>
-      <a href="#ref-for-dfn-conforming-document-3" title="§ 4.2.1 Context Injection">§ 4.2.1 Context Injection</a> 
+      <a href="#ref-for-dfn-conforming-document-3" title="§ 4.2.1 Context Injection">§ 4.2.1 Context Injection</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-conforming-processor" aria-label="Links in this document to definition: conforming processor">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-conforming-processor" aria-label="Permalink for definition: conforming processor. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-conforming-processor-1" title="§ 4.2.1 Context Injection">§ 4.2.1 Context Injection</a> 
+      <a href="#ref-for-dfn-conforming-processor-1" title="§ 4.2.1 Context Injection">§ 4.2.1 Context Injection</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-authenticated" aria-label="Links in this document to definition: authentication">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-authenticated" aria-label="Permalink for definition: authentication. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-authenticated-1" title="§ 1.4 Terminology">§ 1.4 Terminology</a> 
+      <a href="#ref-for-dfn-authenticated-1" title="§ 1.4 Terminology">§ 1.4 Terminology</a>
     </li><li>
-      <a href="#ref-for-dfn-authenticated-2" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-authenticated-3" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-authenticated-2" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-authenticated-3" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-authenticated-4" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-authenticated-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-authenticated-6" title="Reference 3">(3)</a> <a href="#ref-for-dfn-authenticated-7" title="Reference 4">(4)</a> <a href="#ref-for-dfn-authenticated-8" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-authenticated-4" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-authenticated-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-authenticated-6" title="Reference 3">(3)</a> <a href="#ref-for-dfn-authenticated-7" title="Reference 4">(4)</a> <a href="#ref-for-dfn-authenticated-8" title="Reference 5">(5)</a>
     </li><li>
-      <a href="#ref-for-dfn-authenticated-9" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> 
+      <a href="#ref-for-dfn-authenticated-9" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a>
     </li><li>
-      <a href="#ref-for-dfn-authenticated-10" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> 
+      <a href="#ref-for-dfn-authenticated-10" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a>
     </li><li>
-      <a href="#ref-for-dfn-authenticated-11" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> <a href="#ref-for-dfn-authenticated-12" title="Reference 2">(2)</a> <a href="#ref-for-dfn-authenticated-13" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-authenticated-11" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> <a href="#ref-for-dfn-authenticated-12" title="Reference 2">(2)</a> <a href="#ref-for-dfn-authenticated-13" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-authenticated-14" title="§ 5.10 Level of Assurance">§ 5.10 Level of Assurance</a> 
+      <a href="#ref-for-dfn-authenticated-14" title="§ 5.10 Level of Assurance">§ 5.10 Level of Assurance</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-authorized" aria-label="Links in this document to definition: authorization">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-authorized" aria-label="Permalink for definition: authorization. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-authorized-1" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-authorized-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-authorized-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-authorized-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-authorized-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-authorized-6" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-authorized-1" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-authorized-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-authorized-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-authorized-4" title="Reference 4">(4)</a> <a href="#ref-for-dfn-authorized-5" title="Reference 5">(5)</a> <a href="#ref-for-dfn-authorized-6" title="Reference 6">(6)</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-controlled-identifier" aria-label="Links in this document to definition: controlled identifier">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-controlled-identifier" aria-label="Permalink for definition: controlled identifier. Activate to close this dialog.">Permalink</a>
-        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
@@ -4750,431 +4750,431 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-controlled-identifier-document" aria-label="Permalink for definition: controlled identifier document. Activate to close this dialog.">Permalink</a>
-        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-controlled-identifier-document-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-controlled-identifier-document-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-3" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-controlled-identifier-document-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-3" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-4" title="§ 1.4 Terminology">§ 1.4 Terminology</a> <a href="#ref-for-dfn-controlled-identifier-document-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-6" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-4" title="§ 1.4 Terminology">§ 1.4 Terminology</a> <a href="#ref-for-dfn-controlled-identifier-document-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-6" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-7" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-controlled-identifier-document-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-10" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-7" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-controlled-identifier-document-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-10" title="Reference 4">(4)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-11" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-11" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-12" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-controlled-identifier-document-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-14" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-15" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-16" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-17" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controlled-identifier-document-18" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controlled-identifier-document-19" title="Reference 8">(8)</a> <a href="#ref-for-dfn-controlled-identifier-document-20" title="Reference 9">(9)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-12" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-controlled-identifier-document-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-14" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-15" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-16" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-17" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controlled-identifier-document-18" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controlled-identifier-document-19" title="Reference 8">(8)</a> <a href="#ref-for-dfn-controlled-identifier-document-20" title="Reference 9">(9)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-21" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-controlled-identifier-document-22" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-23" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-24" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-25" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-26" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controlled-identifier-document-27" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controlled-identifier-document-28" title="Reference 8">(8)</a> <a href="#ref-for-dfn-controlled-identifier-document-29" title="Reference 9">(9)</a> <a href="#ref-for-dfn-controlled-identifier-document-30" title="Reference 10">(10)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-21" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-controlled-identifier-document-22" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-23" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-24" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-25" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-26" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controlled-identifier-document-27" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controlled-identifier-document-28" title="Reference 8">(8)</a> <a href="#ref-for-dfn-controlled-identifier-document-29" title="Reference 9">(9)</a> <a href="#ref-for-dfn-controlled-identifier-document-30" title="Reference 10">(10)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-31" title="§ 2.1.3 Also Known As">§ 2.1.3 Also Known As</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-31" title="§ 2.1.3 Also Known As">§ 2.1.3 Also Known As</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-32" title="§ 2.1.4 Services">§ 2.1.4 Services</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-32" title="§ 2.1.4 Services">§ 2.1.4 Services</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-33" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-controlled-identifier-document-34" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-35" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-36" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-37" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-38" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controlled-identifier-document-39" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controlled-identifier-document-40" title="Reference 8">(8)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-33" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-controlled-identifier-document-34" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-35" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-36" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-37" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-38" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controlled-identifier-document-39" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controlled-identifier-document-40" title="Reference 8">(8)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-41" title="§ 2.2.1 Verification Material">§ 2.2.1 Verification Material</a> <a href="#ref-for-dfn-controlled-identifier-document-42" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-41" title="§ 2.2.1 Verification Material">§ 2.2.1 Verification Material</a> <a href="#ref-for-dfn-controlled-identifier-document-42" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-43" title="§ 2.2.4 Referring to Verification Methods">§ 2.2.4 Referring to Verification Methods</a> <a href="#ref-for-dfn-controlled-identifier-document-44" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-43" title="§ 2.2.4 Referring to Verification Methods">§ 2.2.4 Referring to Verification Methods</a> <a href="#ref-for-dfn-controlled-identifier-document-44" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-45" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> <a href="#ref-for-dfn-controlled-identifier-document-46" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-47" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-48" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-45" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> <a href="#ref-for-dfn-controlled-identifier-document-46" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-47" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-48" title="Reference 4">(4)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-49" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> <a href="#ref-for-dfn-controlled-identifier-document-50" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-51" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-49" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> <a href="#ref-for-dfn-controlled-identifier-document-50" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-51" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-52" title="§ 2.3.4 Capability Invocation">§ 2.3.4 Capability Invocation</a> <a href="#ref-for-dfn-controlled-identifier-document-53" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-52" title="§ 2.3.4 Capability Invocation">§ 2.3.4 Capability Invocation</a> <a href="#ref-for-dfn-controlled-identifier-document-53" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-54" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> <a href="#ref-for-dfn-controlled-identifier-document-55" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-56" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-57" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-58" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-59" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controlled-identifier-document-60" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controlled-identifier-document-61" title="Reference 8">(8)</a> <a href="#ref-for-dfn-controlled-identifier-document-62" title="Reference 9">(9)</a> <a href="#ref-for-dfn-controlled-identifier-document-63" title="Reference 10">(10)</a> <a href="#ref-for-dfn-controlled-identifier-document-64" title="Reference 11">(11)</a> <a href="#ref-for-dfn-controlled-identifier-document-65" title="Reference 12">(12)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-54" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> <a href="#ref-for-dfn-controlled-identifier-document-55" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-56" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-57" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-58" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-59" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controlled-identifier-document-60" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controlled-identifier-document-61" title="Reference 8">(8)</a> <a href="#ref-for-dfn-controlled-identifier-document-62" title="Reference 9">(9)</a> <a href="#ref-for-dfn-controlled-identifier-document-63" title="Reference 10">(10)</a> <a href="#ref-for-dfn-controlled-identifier-document-64" title="Reference 11">(11)</a> <a href="#ref-for-dfn-controlled-identifier-document-65" title="Reference 12">(12)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-66" title="§ 3.4 Fragment Resolution">§ 3.4 Fragment Resolution</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-66" title="§ 3.4 Fragment Resolution">§ 3.4 Fragment Resolution</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-67" title="§ 3.5 Processing Errors">§ 3.5 Processing Errors</a> <a href="#ref-for-dfn-controlled-identifier-document-68" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-69" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-70" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-67" title="§ 3.5 Processing Errors">§ 3.5 Processing Errors</a> <a href="#ref-for-dfn-controlled-identifier-document-68" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-69" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-70" title="Reference 4">(4)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-71" title="§ 4.2.1 Context Injection">§ 4.2.1 Context Injection</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-71" title="§ 4.2.1 Context Injection">§ 4.2.1 Context Injection</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-72" title="§ 5.1 Proving Control and Binding">§ 5.1 Proving Control and Binding</a> <a href="#ref-for-dfn-controlled-identifier-document-73" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-72" title="§ 5.1 Proving Control and Binding">§ 5.1 Proving Control and Binding</a> <a href="#ref-for-dfn-controlled-identifier-document-73" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-74" title="§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document">§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document</a> <a href="#ref-for-dfn-controlled-identifier-document-75" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-74" title="§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document">§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document</a> <a href="#ref-for-dfn-controlled-identifier-document-75" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-76" title="§ 5.1.2 Binding to Physical Identity">§ 5.1.2 Binding to Physical Identity</a> <a href="#ref-for-dfn-controlled-identifier-document-77" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-76" title="§ 5.1.2 Binding to Physical Identity">§ 5.1.2 Binding to Physical Identity</a> <a href="#ref-for-dfn-controlled-identifier-document-77" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-78" title="§ 5.4 Verification Method Rotation">§ 5.4 Verification Method Rotation</a> <a href="#ref-for-dfn-controlled-identifier-document-79" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-80" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-78" title="§ 5.4 Verification Method Rotation">§ 5.4 Verification Method Rotation</a> <a href="#ref-for-dfn-controlled-identifier-document-79" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-80" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-81" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a> <a href="#ref-for-dfn-controlled-identifier-document-82" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-83" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-81" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a> <a href="#ref-for-dfn-controlled-identifier-document-82" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-83" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-84" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a> <a href="#ref-for-dfn-controlled-identifier-document-85" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-84" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a> <a href="#ref-for-dfn-controlled-identifier-document-85" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-86" title="§ 5.7 Encrypted Data in Controlled Identifier Documents">§ 5.7 Encrypted Data in Controlled Identifier Documents</a> <a href="#ref-for-dfn-controlled-identifier-document-87" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-88" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-89" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-90" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-86" title="§ 5.7 Encrypted Data in Controlled Identifier Documents">§ 5.7 Encrypted Data in Controlled Identifier Documents</a> <a href="#ref-for-dfn-controlled-identifier-document-87" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-88" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-89" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-90" title="Reference 5">(5)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-91" title="§ 5.8 Content Integrity Protection">§ 5.8 Content Integrity Protection</a> <a href="#ref-for-dfn-controlled-identifier-document-92" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-93" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-94" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-91" title="§ 5.8 Content Integrity Protection">§ 5.8 Content Integrity Protection</a> <a href="#ref-for-dfn-controlled-identifier-document-92" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-93" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-94" title="Reference 4">(4)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-95" title="§ 5.9 Integrity Protection of Controllers">§ 5.9 Integrity Protection of Controllers</a> <a href="#ref-for-dfn-controlled-identifier-document-96" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-97" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-95" title="§ 5.9 Integrity Protection of Controllers">§ 5.9 Integrity Protection of Controllers</a> <a href="#ref-for-dfn-controlled-identifier-document-96" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-97" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-98" title="§ 5.10 Level of Assurance">§ 5.10 Level of Assurance</a> <a href="#ref-for-dfn-controlled-identifier-document-99" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-98" title="§ 5.10 Level of Assurance">§ 5.10 Level of Assurance</a> <a href="#ref-for-dfn-controlled-identifier-document-99" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-100" title="§ 5.11 Service Endpoints for Authentication and Authorization">§ 5.11 Service Endpoints for Authentication and Authorization</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-100" title="§ 5.11 Service Endpoints for Authentication and Authorization">§ 5.11 Service Endpoints for Authentication and Authorization</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-101" title="§ 6. Privacy Considerations">§ 6. Privacy Considerations</a> <a href="#ref-for-dfn-controlled-identifier-document-102" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-103" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-101" title="§ 6. Privacy Considerations">§ 6. Privacy Considerations</a> <a href="#ref-for-dfn-controlled-identifier-document-102" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-103" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-104" title="§ 6.1 Keep Personal Data Private">§ 6.1 Keep Personal Data Private</a> <a href="#ref-for-dfn-controlled-identifier-document-105" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-106" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-104" title="§ 6.1 Keep Personal Data Private">§ 6.1 Keep Personal Data Private</a> <a href="#ref-for-dfn-controlled-identifier-document-105" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-106" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-107" title="§ 6.2 Relationship to the Same-Origin Policy">§ 6.2 Relationship to the Same-Origin Policy</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-107" title="§ 6.2 Relationship to the Same-Origin Policy">§ 6.2 Relationship to the Same-Origin Policy</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-108" title="§ 6.4 Controlled Identifier Document Correlation Risks">§ 6.4 Controlled Identifier Document Correlation Risks</a> <a href="#ref-for-dfn-controlled-identifier-document-109" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-110" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-108" title="§ 6.4 Controlled Identifier Document Correlation Risks">§ 6.4 Controlled Identifier Document Correlation Risks</a> <a href="#ref-for-dfn-controlled-identifier-document-109" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-110" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-111" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a> <a href="#ref-for-dfn-controlled-identifier-document-112" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-113" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-114" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-111" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a> <a href="#ref-for-dfn-controlled-identifier-document-112" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-113" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-114" title="Reference 4">(4)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-115" title="§ 6.6 Service Privacy">§ 6.6 Service Privacy</a> <a href="#ref-for-dfn-controlled-identifier-document-116" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-117" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-118" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-119" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-120" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-115" title="§ 6.6 Service Privacy">§ 6.6 Service Privacy</a> <a href="#ref-for-dfn-controlled-identifier-document-116" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controlled-identifier-document-117" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controlled-identifier-document-118" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controlled-identifier-document-119" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controlled-identifier-document-120" title="Reference 6">(6)</a>
     </li><li>
-      <a href="#ref-for-dfn-controlled-identifier-document-121" title="§ A.1 application/cid">§ A.1 application/cid</a> 
+      <a href="#ref-for-dfn-controlled-identifier-document-121" title="§ A.1 application/cid">§ A.1 application/cid</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-controller-s" aria-label="Links in this document to definition: controller">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-controller-s" aria-label="Permalink for definition: controller. Activate to close this dialog.">Permalink</a>
-        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-controller-s-1" title="§ 1.4 Terminology">§ 1.4 Terminology</a> 
+      <a href="#ref-for-dfn-controller-s-1" title="§ 1.4 Terminology">§ 1.4 Terminology</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-2" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-controller-s-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-4" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controller-s-5" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controller-s-6" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controller-s-7" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controller-s-8" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controller-s-9" title="Reference 8">(8)</a> <a href="#ref-for-dfn-controller-s-10" title="Reference 9">(9)</a> <a href="#ref-for-dfn-controller-s-11" title="Reference 10">(10)</a> <a href="#ref-for-dfn-controller-s-12" title="Reference 11">(11)</a> <a href="#ref-for-dfn-controller-s-13" title="Reference 12">(12)</a> <a href="#ref-for-dfn-controller-s-14" title="Reference 13">(13)</a> <a href="#ref-for-dfn-controller-s-15" title="Reference 14">(14)</a> <a href="#ref-for-dfn-controller-s-16" title="Reference 15">(15)</a> <a href="#ref-for-dfn-controller-s-17" title="Reference 16">(16)</a> <a href="#ref-for-dfn-controller-s-18" title="Reference 17">(17)</a> <a href="#ref-for-dfn-controller-s-19" title="Reference 18">(18)</a> 
+      <a href="#ref-for-dfn-controller-s-2" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-controller-s-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-4" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controller-s-5" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controller-s-6" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controller-s-7" title="Reference 6">(6)</a> <a href="#ref-for-dfn-controller-s-8" title="Reference 7">(7)</a> <a href="#ref-for-dfn-controller-s-9" title="Reference 8">(8)</a> <a href="#ref-for-dfn-controller-s-10" title="Reference 9">(9)</a> <a href="#ref-for-dfn-controller-s-11" title="Reference 10">(10)</a> <a href="#ref-for-dfn-controller-s-12" title="Reference 11">(11)</a> <a href="#ref-for-dfn-controller-s-13" title="Reference 12">(12)</a> <a href="#ref-for-dfn-controller-s-14" title="Reference 13">(13)</a> <a href="#ref-for-dfn-controller-s-15" title="Reference 14">(14)</a> <a href="#ref-for-dfn-controller-s-16" title="Reference 15">(15)</a> <a href="#ref-for-dfn-controller-s-17" title="Reference 16">(16)</a> <a href="#ref-for-dfn-controller-s-18" title="Reference 17">(17)</a> <a href="#ref-for-dfn-controller-s-19" title="Reference 18">(18)</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-20" title="§ 2.1.4 Services">§ 2.1.4 Services</a> <a href="#ref-for-dfn-controller-s-21" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controller-s-20" title="§ 2.1.4 Services">§ 2.1.4 Services</a> <a href="#ref-for-dfn-controller-s-21" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-22" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-controller-s-23" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-24" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controller-s-25" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controller-s-26" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controller-s-27" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-controller-s-22" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-controller-s-23" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-24" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controller-s-25" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controller-s-26" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controller-s-27" title="Reference 6">(6)</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-28" title="§ 2.3.2 Assertion">§ 2.3.2 Assertion</a> 
+      <a href="#ref-for-dfn-controller-s-28" title="§ 2.3.2 Assertion">§ 2.3.2 Assertion</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-29" title="§ 2.3.3 Key Agreement">§ 2.3.3 Key Agreement</a> <a href="#ref-for-dfn-controller-s-30" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controller-s-29" title="§ 2.3.3 Key Agreement">§ 2.3.3 Key Agreement</a> <a href="#ref-for-dfn-controller-s-30" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-31" title="§ 2.3.4 Capability Invocation">§ 2.3.4 Capability Invocation</a> <a href="#ref-for-dfn-controller-s-32" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-33" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controller-s-31" title="§ 2.3.4 Capability Invocation">§ 2.3.4 Capability Invocation</a> <a href="#ref-for-dfn-controller-s-32" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-33" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-34" title="§ 2.3.5 Capability Delegation">§ 2.3.5 Capability Delegation</a> <a href="#ref-for-dfn-controller-s-35" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-36" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-controller-s-34" title="§ 2.3.5 Capability Delegation">§ 2.3.5 Capability Delegation</a> <a href="#ref-for-dfn-controller-s-35" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-36" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-37" title="§ 5.4 Verification Method Rotation">§ 5.4 Verification Method Rotation</a> <a href="#ref-for-dfn-controller-s-38" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controller-s-37" title="§ 5.4 Verification Method Rotation">§ 5.4 Verification Method Rotation</a> <a href="#ref-for-dfn-controller-s-38" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-39" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a> <a href="#ref-for-dfn-controller-s-40" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-41" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controller-s-42" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controller-s-43" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controller-s-44" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-controller-s-39" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a> <a href="#ref-for-dfn-controller-s-40" title="Reference 2">(2)</a> <a href="#ref-for-dfn-controller-s-41" title="Reference 3">(3)</a> <a href="#ref-for-dfn-controller-s-42" title="Reference 4">(4)</a> <a href="#ref-for-dfn-controller-s-43" title="Reference 5">(5)</a> <a href="#ref-for-dfn-controller-s-44" title="Reference 6">(6)</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-45" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a> 
+      <a href="#ref-for-dfn-controller-s-45" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-46" title="§ 6. Privacy Considerations">§ 6. Privacy Considerations</a> 
+      <a href="#ref-for-dfn-controller-s-46" title="§ 6. Privacy Considerations">§ 6. Privacy Considerations</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-47" title="§ 6.3 Identifier Correlation Risks">§ 6.3 Identifier Correlation Risks</a> <a href="#ref-for-dfn-controller-s-48" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-controller-s-47" title="§ 6.3 Identifier Correlation Risks">§ 6.3 Identifier Correlation Risks</a> <a href="#ref-for-dfn-controller-s-48" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-49" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a> 
+      <a href="#ref-for-dfn-controller-s-49" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a>
     </li><li>
-      <a href="#ref-for-dfn-controller-s-50" title="§ 6.6 Service Privacy">§ 6.6 Service Privacy</a> 
+      <a href="#ref-for-dfn-controller-s-50" title="§ 6.6 Service Privacy">§ 6.6 Service Privacy</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-cryptosuite" aria-label="Links in this document to definition: cryptographic suite">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-cryptosuite" aria-label="Permalink for definition: cryptographic suite. Activate to close this dialog.">Permalink</a>
-        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-cryptosuite-1" title="§ 2.2.1 Verification Material">§ 2.2.1 Verification Material</a> 
+      <a href="#ref-for-dfn-cryptosuite-1" title="§ 2.2.1 Verification Material">§ 2.2.1 Verification Material</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-private-key" aria-label="Links in this document to definition: private key">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-private-key" aria-label="Permalink for definition: private key. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-private-key-1" title="§ 1.4 Terminology">§ 1.4 Terminology</a> 
+      <a href="#ref-for-dfn-private-key-1" title="§ 1.4 Terminology">§ 1.4 Terminology</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-proof" aria-label="Links in this document to definition: proof">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-proof" aria-label="Permalink for definition: proof. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-proof-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-proof-2" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-proof-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-proof-2" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-3" title="§ 1.4 Terminology">§ 1.4 Terminology</a> <a href="#ref-for-dfn-proof-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-proof-5" title="Reference 3">(3)</a> <a href="#ref-for-dfn-proof-6" title="Reference 4">(4)</a> <a href="#ref-for-dfn-proof-7" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-proof-3" title="§ 1.4 Terminology">§ 1.4 Terminology</a> <a href="#ref-for-dfn-proof-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-proof-5" title="Reference 3">(3)</a> <a href="#ref-for-dfn-proof-6" title="Reference 4">(4)</a> <a href="#ref-for-dfn-proof-7" title="Reference 5">(5)</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-8" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> 
+      <a href="#ref-for-dfn-proof-8" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-9" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-proof-10" title="Reference 2">(2)</a> <a href="#ref-for-dfn-proof-11" title="Reference 3">(3)</a> <a href="#ref-for-dfn-proof-12" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-proof-9" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-proof-10" title="Reference 2">(2)</a> <a href="#ref-for-dfn-proof-11" title="Reference 3">(3)</a> <a href="#ref-for-dfn-proof-12" title="Reference 4">(4)</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-13" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-proof-14" title="Reference 2">(2)</a> <a href="#ref-for-dfn-proof-15" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-proof-13" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-proof-14" title="Reference 2">(2)</a> <a href="#ref-for-dfn-proof-15" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-16" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> 
+      <a href="#ref-for-dfn-proof-16" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-17" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> <a href="#ref-for-dfn-proof-18" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-proof-17" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> <a href="#ref-for-dfn-proof-18" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-19" title="§ 3.5 Processing Errors">§ 3.5 Processing Errors</a> <a href="#ref-for-dfn-proof-20" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-proof-19" title="§ 3.5 Processing Errors">§ 3.5 Processing Errors</a> <a href="#ref-for-dfn-proof-20" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-21" title="§ 5.4 Verification Method Rotation">§ 5.4 Verification Method Rotation</a> <a href="#ref-for-dfn-proof-22" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-proof-21" title="§ 5.4 Verification Method Rotation">§ 5.4 Verification Method Rotation</a> <a href="#ref-for-dfn-proof-22" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-23" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a> <a href="#ref-for-dfn-proof-24" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-proof-23" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a> <a href="#ref-for-dfn-proof-24" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-25" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a> 
+      <a href="#ref-for-dfn-proof-25" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-26" title="§ 5.10 Level of Assurance">§ 5.10 Level of Assurance</a> 
+      <a href="#ref-for-dfn-proof-26" title="§ 5.10 Level of Assurance">§ 5.10 Level of Assurance</a>
     </li><li>
-      <a href="#ref-for-dfn-proof-27" title="§ 7.1 Presenting Time Values">§ 7.1 Presenting Time Values</a> <a href="#ref-for-dfn-proof-28" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-proof-27" title="§ 7.1 Presenting Time Values">§ 7.1 Presenting Time Values</a> <a href="#ref-for-dfn-proof-28" title="Reference 2">(2)</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-public-key" aria-label="Links in this document to definition: public key">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-public-key" aria-label="Permalink for definition: public key. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-public-key-1" title="§ 1. Introduction">§ 1. Introduction</a> 
+      <a href="#ref-for-dfn-public-key-1" title="§ 1. Introduction">§ 1. Introduction</a>
     </li><li>
-      <a href="#ref-for-dfn-public-key-2" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-public-key-3" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-public-key-2" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-public-key-3" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-public-key-4" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-public-key-5" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-public-key-4" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-public-key-5" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-public-key-6" title="§ 2.2.3 JsonWebKey">§ 2.2.3 JsonWebKey</a> <a href="#ref-for-dfn-public-key-7" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-public-key-6" title="§ 2.2.3 JsonWebKey">§ 2.2.3 JsonWebKey</a> <a href="#ref-for-dfn-public-key-7" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-public-key-8" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> 
+      <a href="#ref-for-dfn-public-key-8" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a>
     </li><li>
-      <a href="#ref-for-dfn-public-key-9" title="§ 2.3.3 Key Agreement">§ 2.3.3 Key Agreement</a> 
+      <a href="#ref-for-dfn-public-key-9" title="§ 2.3.3 Key Agreement">§ 2.3.3 Key Agreement</a>
     </li><li>
-      <a href="#ref-for-dfn-public-key-10" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> 
+      <a href="#ref-for-dfn-public-key-10" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-subjects" aria-label="Links in this document to definition: subject">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-subjects" aria-label="Permalink for definition: subject. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-subjects-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-subjects-2" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-subjects-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-subjects-2" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-3" title="§ 1.4 Terminology">§ 1.4 Terminology</a> 
+      <a href="#ref-for-dfn-subjects-3" title="§ 1.4 Terminology">§ 1.4 Terminology</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-4" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a> 
+      <a href="#ref-for-dfn-subjects-4" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-5" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-subjects-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-subjects-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-subjects-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-subjects-9" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-subjects-5" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-subjects-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-subjects-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-subjects-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-subjects-9" title="Reference 5">(5)</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-10" title="§ 2.1.3 Also Known As">§ 2.1.3 Also Known As</a> <a href="#ref-for-dfn-subjects-11" title="Reference 2">(2)</a> <a href="#ref-for-dfn-subjects-12" title="Reference 3">(3)</a> <a href="#ref-for-dfn-subjects-13" title="Reference 4">(4)</a> <a href="#ref-for-dfn-subjects-14" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-subjects-10" title="§ 2.1.3 Also Known As">§ 2.1.3 Also Known As</a> <a href="#ref-for-dfn-subjects-11" title="Reference 2">(2)</a> <a href="#ref-for-dfn-subjects-12" title="Reference 3">(3)</a> <a href="#ref-for-dfn-subjects-13" title="Reference 4">(4)</a> <a href="#ref-for-dfn-subjects-14" title="Reference 5">(5)</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-15" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> 
+      <a href="#ref-for-dfn-subjects-15" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-16" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> 
+      <a href="#ref-for-dfn-subjects-16" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-17" title="§ 5.2 Identifier Ambiguity">§ 5.2 Identifier Ambiguity</a> <a href="#ref-for-dfn-subjects-18" title="Reference 2">(2)</a> <a href="#ref-for-dfn-subjects-19" title="Reference 3">(3)</a> <a href="#ref-for-dfn-subjects-20" title="Reference 4">(4)</a> <a href="#ref-for-dfn-subjects-21" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-subjects-17" title="§ 5.2 Identifier Ambiguity">§ 5.2 Identifier Ambiguity</a> <a href="#ref-for-dfn-subjects-18" title="Reference 2">(2)</a> <a href="#ref-for-dfn-subjects-19" title="Reference 3">(3)</a> <a href="#ref-for-dfn-subjects-20" title="Reference 4">(4)</a> <a href="#ref-for-dfn-subjects-21" title="Reference 5">(5)</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-22" title="§ 5.11 Service Endpoints for Authentication and Authorization">§ 5.11 Service Endpoints for Authentication and Authorization</a> <a href="#ref-for-dfn-subjects-23" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-subjects-22" title="§ 5.11 Service Endpoints for Authentication and Authorization">§ 5.11 Service Endpoints for Authentication and Authorization</a> <a href="#ref-for-dfn-subjects-23" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-24" title="§ 6.3 Identifier Correlation Risks">§ 6.3 Identifier Correlation Risks</a> 
+      <a href="#ref-for-dfn-subjects-24" title="§ 6.3 Identifier Correlation Risks">§ 6.3 Identifier Correlation Risks</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-25" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a> <a href="#ref-for-dfn-subjects-26" title="Reference 2">(2)</a> <a href="#ref-for-dfn-subjects-27" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-subjects-25" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a> <a href="#ref-for-dfn-subjects-26" title="Reference 2">(2)</a> <a href="#ref-for-dfn-subjects-27" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-subjects-28" title="§ 6.6 Service Privacy">§ 6.6 Service Privacy</a> 
+      <a href="#ref-for-dfn-subjects-28" title="§ 6.6 Service Privacy">§ 6.6 Service Privacy</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-verification-method" aria-label="Links in this document to definition: verification method">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-verification-method" aria-label="Permalink for definition: verification method. Activate to close this dialog.">Permalink</a>
-        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-verification-method-1" title="§ 1. Introduction">§ 1. Introduction</a> 
+      <a href="#ref-for-dfn-verification-method-1" title="§ 1. Introduction">§ 1. Introduction</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-2" title="§ 1.4 Terminology">§ 1.4 Terminology</a> <a href="#ref-for-dfn-verification-method-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-4" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-verification-method-2" title="§ 1.4 Terminology">§ 1.4 Terminology</a> <a href="#ref-for-dfn-verification-method-3" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-4" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-5" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-verification-method-6" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-verification-method-5" title="§ 2. Data Model">§ 2. Data Model</a> <a href="#ref-for-dfn-verification-method-6" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-7" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a> <a href="#ref-for-dfn-verification-method-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-10" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-11" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-12" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-verification-method-7" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a> <a href="#ref-for-dfn-verification-method-8" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-9" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-10" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-11" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-12" title="Reference 6">(6)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-13" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-verification-method-14" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-15" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-16" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-17" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-verification-method-13" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-verification-method-14" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-15" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-16" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-17" title="Reference 5">(5)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-18" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-verification-method-19" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-20" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-21" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-22" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-23" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-24" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-method-25" title="Reference 8">(8)</a> <a href="#ref-for-dfn-verification-method-26" title="Reference 9">(9)</a> <a href="#ref-for-dfn-verification-method-27" title="Reference 10">(10)</a> <a href="#ref-for-dfn-verification-method-28" title="Reference 11">(11)</a> <a href="#ref-for-dfn-verification-method-29" title="Reference 12">(12)</a> <a href="#ref-for-dfn-verification-method-30" title="Reference 13">(13)</a> <a href="#ref-for-dfn-verification-method-31" title="Reference 14">(14)</a> <a href="#ref-for-dfn-verification-method-32" title="Reference 15">(15)</a> <a href="#ref-for-dfn-verification-method-33" title="Reference 16">(16)</a> <a href="#ref-for-dfn-verification-method-34" title="Reference 17">(17)</a> <a href="#ref-for-dfn-verification-method-35" title="Reference 18">(18)</a> <a href="#ref-for-dfn-verification-method-36" title="Reference 19">(19)</a> <a href="#ref-for-dfn-verification-method-37" title="Reference 20">(20)</a> <a href="#ref-for-dfn-verification-method-38" title="Reference 21">(21)</a> <a href="#ref-for-dfn-verification-method-39" title="Reference 22">(22)</a> <a href="#ref-for-dfn-verification-method-40" title="Reference 23">(23)</a> 
+      <a href="#ref-for-dfn-verification-method-18" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> <a href="#ref-for-dfn-verification-method-19" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-20" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-21" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-22" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-23" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-24" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-method-25" title="Reference 8">(8)</a> <a href="#ref-for-dfn-verification-method-26" title="Reference 9">(9)</a> <a href="#ref-for-dfn-verification-method-27" title="Reference 10">(10)</a> <a href="#ref-for-dfn-verification-method-28" title="Reference 11">(11)</a> <a href="#ref-for-dfn-verification-method-29" title="Reference 12">(12)</a> <a href="#ref-for-dfn-verification-method-30" title="Reference 13">(13)</a> <a href="#ref-for-dfn-verification-method-31" title="Reference 14">(14)</a> <a href="#ref-for-dfn-verification-method-32" title="Reference 15">(15)</a> <a href="#ref-for-dfn-verification-method-33" title="Reference 16">(16)</a> <a href="#ref-for-dfn-verification-method-34" title="Reference 17">(17)</a> <a href="#ref-for-dfn-verification-method-35" title="Reference 18">(18)</a> <a href="#ref-for-dfn-verification-method-36" title="Reference 19">(19)</a> <a href="#ref-for-dfn-verification-method-37" title="Reference 20">(20)</a> <a href="#ref-for-dfn-verification-method-38" title="Reference 21">(21)</a> <a href="#ref-for-dfn-verification-method-39" title="Reference 22">(22)</a> <a href="#ref-for-dfn-verification-method-40" title="Reference 23">(23)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-41" title="§ 2.2.1 Verification Material">§ 2.2.1 Verification Material</a> <a href="#ref-for-dfn-verification-method-42" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-43" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-44" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-45" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-46" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-verification-method-41" title="§ 2.2.1 Verification Material">§ 2.2.1 Verification Material</a> <a href="#ref-for-dfn-verification-method-42" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-43" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-44" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-45" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-46" title="Reference 6">(6)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-47" title="§ 2.2.2 Multikey">§ 2.2.2 Multikey</a> 
+      <a href="#ref-for-dfn-verification-method-47" title="§ 2.2.2 Multikey">§ 2.2.2 Multikey</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-48" title="§ 2.2.3 JsonWebKey">§ 2.2.3 JsonWebKey</a> 
+      <a href="#ref-for-dfn-verification-method-48" title="§ 2.2.3 JsonWebKey">§ 2.2.3 JsonWebKey</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-49" title="§ 2.2.4 Referring to Verification Methods">§ 2.2.4 Referring to Verification Methods</a> <a href="#ref-for-dfn-verification-method-50" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-51" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-52" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-53" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-54" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-verification-method-49" title="§ 2.2.4 Referring to Verification Methods">§ 2.2.4 Referring to Verification Methods</a> <a href="#ref-for-dfn-verification-method-50" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-51" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-52" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-53" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-54" title="Reference 6">(6)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-55" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> <a href="#ref-for-dfn-verification-method-56" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-57" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-58" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-59" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-60" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-61" title="Reference 7">(7)</a> 
+      <a href="#ref-for-dfn-verification-method-55" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> <a href="#ref-for-dfn-verification-method-56" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-57" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-58" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-59" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-60" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-61" title="Reference 7">(7)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-62" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> <a href="#ref-for-dfn-verification-method-63" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-64" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-65" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-verification-method-62" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> <a href="#ref-for-dfn-verification-method-63" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-64" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-65" title="Reference 4">(4)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-66" title="§ 2.3.2 Assertion">§ 2.3.2 Assertion</a> <a href="#ref-for-dfn-verification-method-67" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-68" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-verification-method-66" title="§ 2.3.2 Assertion">§ 2.3.2 Assertion</a> <a href="#ref-for-dfn-verification-method-67" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-68" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-69" title="§ 2.3.3 Key Agreement">§ 2.3.3 Key Agreement</a> <a href="#ref-for-dfn-verification-method-70" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-71" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-verification-method-69" title="§ 2.3.3 Key Agreement">§ 2.3.3 Key Agreement</a> <a href="#ref-for-dfn-verification-method-70" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-71" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-72" title="§ 2.3.4 Capability Invocation">§ 2.3.4 Capability Invocation</a> <a href="#ref-for-dfn-verification-method-73" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-74" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-75" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-verification-method-72" title="§ 2.3.4 Capability Invocation">§ 2.3.4 Capability Invocation</a> <a href="#ref-for-dfn-verification-method-73" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-74" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-75" title="Reference 4">(4)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-76" title="§ 2.3.5 Capability Delegation">§ 2.3.5 Capability Delegation</a> <a href="#ref-for-dfn-verification-method-77" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-78" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-verification-method-76" title="§ 2.3.5 Capability Delegation">§ 2.3.5 Capability Delegation</a> <a href="#ref-for-dfn-verification-method-77" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-78" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-79" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> <a href="#ref-for-dfn-verification-method-80" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-81" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-82" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-83" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-84" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-85" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-method-86" title="Reference 8">(8)</a> <a href="#ref-for-dfn-verification-method-87" title="Reference 9">(9)</a> <a href="#ref-for-dfn-verification-method-88" title="Reference 10">(10)</a> <a href="#ref-for-dfn-verification-method-89" title="Reference 11">(11)</a> <a href="#ref-for-dfn-verification-method-90" title="Reference 12">(12)</a> <a href="#ref-for-dfn-verification-method-91" title="Reference 13">(13)</a> <a href="#ref-for-dfn-verification-method-92" title="Reference 14">(14)</a> 
+      <a href="#ref-for-dfn-verification-method-79" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> <a href="#ref-for-dfn-verification-method-80" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-81" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-82" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-83" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-84" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-85" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-method-86" title="Reference 8">(8)</a> <a href="#ref-for-dfn-verification-method-87" title="Reference 9">(9)</a> <a href="#ref-for-dfn-verification-method-88" title="Reference 10">(10)</a> <a href="#ref-for-dfn-verification-method-89" title="Reference 11">(11)</a> <a href="#ref-for-dfn-verification-method-90" title="Reference 12">(12)</a> <a href="#ref-for-dfn-verification-method-91" title="Reference 13">(13)</a> <a href="#ref-for-dfn-verification-method-92" title="Reference 14">(14)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-93" title="§ 3.5 Processing Errors">§ 3.5 Processing Errors</a> <a href="#ref-for-dfn-verification-method-94" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-verification-method-93" title="§ 3.5 Processing Errors">§ 3.5 Processing Errors</a> <a href="#ref-for-dfn-verification-method-94" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-95" title="§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document">§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document</a> 
+      <a href="#ref-for-dfn-verification-method-95" title="§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document">§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-96" title="§ 5.4 Verification Method Rotation">§ 5.4 Verification Method Rotation</a> <a href="#ref-for-dfn-verification-method-97" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-98" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-99" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-100" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-101" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-102" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-method-103" title="Reference 8">(8)</a> <a href="#ref-for-dfn-verification-method-104" title="Reference 9">(9)</a> <a href="#ref-for-dfn-verification-method-105" title="Reference 10">(10)</a> <a href="#ref-for-dfn-verification-method-106" title="Reference 11">(11)</a> <a href="#ref-for-dfn-verification-method-107" title="Reference 12">(12)</a> <a href="#ref-for-dfn-verification-method-108" title="Reference 13">(13)</a> 
+      <a href="#ref-for-dfn-verification-method-96" title="§ 5.4 Verification Method Rotation">§ 5.4 Verification Method Rotation</a> <a href="#ref-for-dfn-verification-method-97" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-98" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-99" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-100" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-101" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-102" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-method-103" title="Reference 8">(8)</a> <a href="#ref-for-dfn-verification-method-104" title="Reference 9">(9)</a> <a href="#ref-for-dfn-verification-method-105" title="Reference 10">(10)</a> <a href="#ref-for-dfn-verification-method-106" title="Reference 11">(11)</a> <a href="#ref-for-dfn-verification-method-107" title="Reference 12">(12)</a> <a href="#ref-for-dfn-verification-method-108" title="Reference 13">(13)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-109" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a> <a href="#ref-for-dfn-verification-method-110" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-111" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-112" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-113" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-114" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-115" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-method-116" title="Reference 8">(8)</a> <a href="#ref-for-dfn-verification-method-117" title="Reference 9">(9)</a> <a href="#ref-for-dfn-verification-method-118" title="Reference 10">(10)</a> <a href="#ref-for-dfn-verification-method-119" title="Reference 11">(11)</a> <a href="#ref-for-dfn-verification-method-120" title="Reference 12">(12)</a> <a href="#ref-for-dfn-verification-method-121" title="Reference 13">(13)</a> 
+      <a href="#ref-for-dfn-verification-method-109" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a> <a href="#ref-for-dfn-verification-method-110" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-111" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-112" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-method-113" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-method-114" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-method-115" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-method-116" title="Reference 8">(8)</a> <a href="#ref-for-dfn-verification-method-117" title="Reference 9">(9)</a> <a href="#ref-for-dfn-verification-method-118" title="Reference 10">(10)</a> <a href="#ref-for-dfn-verification-method-119" title="Reference 11">(11)</a> <a href="#ref-for-dfn-verification-method-120" title="Reference 12">(12)</a> <a href="#ref-for-dfn-verification-method-121" title="Reference 13">(13)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-122" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a> 
+      <a href="#ref-for-dfn-verification-method-122" title="§ 5.5.1 Revocation Semantics">§ 5.5.1 Revocation Semantics</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-123" title="§ 6.4 Controlled Identifier Document Correlation Risks">§ 6.4 Controlled Identifier Document Correlation Risks</a> <a href="#ref-for-dfn-verification-method-124" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-verification-method-123" title="§ 6.4 Controlled Identifier Document Correlation Risks">§ 6.4 Controlled Identifier Document Correlation Risks</a> <a href="#ref-for-dfn-verification-method-124" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-125" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a> 
+      <a href="#ref-for-dfn-verification-method-125" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-verification-relationship" aria-label="Links in this document to definition: verification relationship">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-verification-relationship" aria-label="Permalink for definition: verification relationship. Activate to close this dialog.">Permalink</a>
-        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-verification-relationship-1" title="§ 1. Introduction">§ 1. Introduction</a> 
+      <a href="#ref-for-dfn-verification-relationship-1" title="§ 1. Introduction">§ 1. Introduction</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-2" title="§ 2. Data Model">§ 2. Data Model</a> 
+      <a href="#ref-for-dfn-verification-relationship-2" title="§ 2. Data Model">§ 2. Data Model</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-3" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> 
+      <a href="#ref-for-dfn-verification-relationship-3" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-4" title="§ 2.2.4 Referring to Verification Methods">§ 2.2.4 Referring to Verification Methods</a> <a href="#ref-for-dfn-verification-relationship-5" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-verification-relationship-4" title="§ 2.2.4 Referring to Verification Methods">§ 2.2.4 Referring to Verification Methods</a> <a href="#ref-for-dfn-verification-relationship-5" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-6" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> <a href="#ref-for-dfn-verification-relationship-7" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-relationship-8" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-relationship-9" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-relationship-10" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-relationship-11" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-relationship-12" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-relationship-13" title="Reference 8">(8)</a> 
+      <a href="#ref-for-dfn-verification-relationship-6" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> <a href="#ref-for-dfn-verification-relationship-7" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-relationship-8" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-relationship-9" title="Reference 4">(4)</a> <a href="#ref-for-dfn-verification-relationship-10" title="Reference 5">(5)</a> <a href="#ref-for-dfn-verification-relationship-11" title="Reference 6">(6)</a> <a href="#ref-for-dfn-verification-relationship-12" title="Reference 7">(7)</a> <a href="#ref-for-dfn-verification-relationship-13" title="Reference 8">(8)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-14" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> 
+      <a href="#ref-for-dfn-verification-relationship-14" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-15" title="§ 2.3.2 Assertion">§ 2.3.2 Assertion</a> 
+      <a href="#ref-for-dfn-verification-relationship-15" title="§ 2.3.2 Assertion">§ 2.3.2 Assertion</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-16" title="§ 2.3.3 Key Agreement">§ 2.3.3 Key Agreement</a> 
+      <a href="#ref-for-dfn-verification-relationship-16" title="§ 2.3.3 Key Agreement">§ 2.3.3 Key Agreement</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-17" title="§ 2.3.4 Capability Invocation">§ 2.3.4 Capability Invocation</a> 
+      <a href="#ref-for-dfn-verification-relationship-17" title="§ 2.3.4 Capability Invocation">§ 2.3.4 Capability Invocation</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-18" title="§ 2.3.5 Capability Delegation">§ 2.3.5 Capability Delegation</a> <a href="#ref-for-dfn-verification-relationship-19" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-verification-relationship-18" title="§ 2.3.5 Capability Delegation">§ 2.3.5 Capability Delegation</a> <a href="#ref-for-dfn-verification-relationship-19" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-20" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> <a href="#ref-for-dfn-verification-relationship-21" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-relationship-22" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-relationship-23" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-verification-relationship-20" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> <a href="#ref-for-dfn-verification-relationship-21" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-relationship-22" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-relationship-23" title="Reference 4">(4)</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-24" title="§ 3.5 Processing Errors">§ 3.5 Processing Errors</a> 
+      <a href="#ref-for-dfn-verification-relationship-24" title="§ 3.5 Processing Errors">§ 3.5 Processing Errors</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-25" title="§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document">§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document</a> 
+      <a href="#ref-for-dfn-verification-relationship-25" title="§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document">§ 5.1.1 Proving Control of an Identifier and/or Controlled Identifier Document</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-26" title="§ 5.1.2 Binding to Physical Identity">§ 5.1.2 Binding to Physical Identity</a> 
+      <a href="#ref-for-dfn-verification-relationship-26" title="§ 5.1.2 Binding to Physical Identity">§ 5.1.2 Binding to Physical Identity</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-27" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a> 
+      <a href="#ref-for-dfn-verification-relationship-27" title="§ 5.5 Verification Method Revocation">§ 5.5 Verification Method Revocation</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-28" title="§ 5.10 Level of Assurance">§ 5.10 Level of Assurance</a> 
+      <a href="#ref-for-dfn-verification-relationship-28" title="§ 5.10 Level of Assurance">§ 5.10 Level of Assurance</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-relationship-29" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a> 
+      <a href="#ref-for-dfn-verification-relationship-29" title="§ 6.5 Subject Classification">§ 6.5 Subject Classification</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-identifier" aria-label="Links in this document to definition: identifier">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-identifier" aria-label="Permalink for definition: identifier. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-identifier-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-identifier-2" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-identifier-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-identifier-2" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-identifier-3" title="§ 2. Data Model">§ 2. Data Model</a> 
+      <a href="#ref-for-dfn-identifier-3" title="§ 2. Data Model">§ 2. Data Model</a>
     </li><li>
-      <a href="#ref-for-dfn-identifier-4" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-identifier-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-6" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-7" title="Reference 4">(4)</a> <a href="#ref-for-dfn-identifier-8" title="Reference 5">(5)</a> <a href="#ref-for-dfn-identifier-9" title="Reference 6">(6)</a> 
+      <a href="#ref-for-dfn-identifier-4" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-identifier-5" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-6" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-7" title="Reference 4">(4)</a> <a href="#ref-for-dfn-identifier-8" title="Reference 5">(5)</a> <a href="#ref-for-dfn-identifier-9" title="Reference 6">(6)</a>
     </li><li>
-      <a href="#ref-for-dfn-identifier-10" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-identifier-11" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-12" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-13" title="Reference 4">(4)</a> <a href="#ref-for-dfn-identifier-14" title="Reference 5">(5)</a> <a href="#ref-for-dfn-identifier-15" title="Reference 6">(6)</a> <a href="#ref-for-dfn-identifier-16" title="Reference 7">(7)</a> <a href="#ref-for-dfn-identifier-17" title="Reference 8">(8)</a> 
+      <a href="#ref-for-dfn-identifier-10" title="§ 2.1.2 Controllers">§ 2.1.2 Controllers</a> <a href="#ref-for-dfn-identifier-11" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-12" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-13" title="Reference 4">(4)</a> <a href="#ref-for-dfn-identifier-14" title="Reference 5">(5)</a> <a href="#ref-for-dfn-identifier-15" title="Reference 6">(6)</a> <a href="#ref-for-dfn-identifier-16" title="Reference 7">(7)</a> <a href="#ref-for-dfn-identifier-17" title="Reference 8">(8)</a>
     </li><li>
-      <a href="#ref-for-dfn-identifier-18" title="§ 2.1.4 Services">§ 2.1.4 Services</a> 
+      <a href="#ref-for-dfn-identifier-18" title="§ 2.1.4 Services">§ 2.1.4 Services</a>
     </li><li>
-      <a href="#ref-for-dfn-identifier-19" title="§ 5.2 Identifier Ambiguity">§ 5.2 Identifier Ambiguity</a> <a href="#ref-for-dfn-identifier-20" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-21" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-22" title="Reference 4">(4)</a> <a href="#ref-for-dfn-identifier-23" title="Reference 5">(5)</a> <a href="#ref-for-dfn-identifier-24" title="Reference 6">(6)</a> <a href="#ref-for-dfn-identifier-25" title="Reference 7">(7)</a> <a href="#ref-for-dfn-identifier-26" title="Reference 8">(8)</a> 
+      <a href="#ref-for-dfn-identifier-19" title="§ 5.2 Identifier Ambiguity">§ 5.2 Identifier Ambiguity</a> <a href="#ref-for-dfn-identifier-20" title="Reference 2">(2)</a> <a href="#ref-for-dfn-identifier-21" title="Reference 3">(3)</a> <a href="#ref-for-dfn-identifier-22" title="Reference 4">(4)</a> <a href="#ref-for-dfn-identifier-23" title="Reference 5">(5)</a> <a href="#ref-for-dfn-identifier-24" title="Reference 6">(6)</a> <a href="#ref-for-dfn-identifier-25" title="Reference 7">(7)</a> <a href="#ref-for-dfn-identifier-26" title="Reference 8">(8)</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-base-identifier" aria-label="Links in this document to definition: base identifier">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-base-identifier" aria-label="Permalink for definition: base identifier. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-base-identifier-1" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-base-identifier-2" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-base-identifier-1" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-base-identifier-2" title="Reference 2">(2)</a>
     </li><li>
-      <a href="#ref-for-dfn-base-identifier-3" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a> 
+      <a href="#ref-for-dfn-base-identifier-3" title="§ 2.3.1 Authentication">§ 2.3.1 Authentication</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-canonical-url" aria-label="Links in this document to definition: canonical URL">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-canonical-url" aria-label="Permalink for definition: canonical URL. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-canonical-url-1" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-canonical-url-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-canonical-url-3" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-canonical-url-1" title="§ 2.1.1 Subjects">§ 2.1.1 Subjects</a> <a href="#ref-for-dfn-canonical-url-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-canonical-url-3" title="Reference 3">(3)</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-service" aria-label="Links in this document to definition: service">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-service" aria-label="Permalink for definition: service. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-service-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-service-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-3" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-service-1" title="§ 1. Introduction">§ 1. Introduction</a> <a href="#ref-for-dfn-service-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-3" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-service-4" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a> 
+      <a href="#ref-for-dfn-service-4" title="§ 2.1 Controlled Identifier Documents">§ 2.1 Controlled Identifier Documents</a>
     </li><li>
-      <a href="#ref-for-dfn-service-5" title="§ 2.1.4 Services">§ 2.1.4 Services</a> <a href="#ref-for-dfn-service-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-service-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-service-9" title="Reference 5">(5)</a> <a href="#ref-for-dfn-service-10" title="Reference 6">(6)</a> <a href="#ref-for-dfn-service-11" title="Reference 7">(7)</a> <a href="#ref-for-dfn-service-12" title="Reference 8">(8)</a> <a href="#ref-for-dfn-service-13" title="Reference 9">(9)</a> 
+      <a href="#ref-for-dfn-service-5" title="§ 2.1.4 Services">§ 2.1.4 Services</a> <a href="#ref-for-dfn-service-6" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-7" title="Reference 3">(3)</a> <a href="#ref-for-dfn-service-8" title="Reference 4">(4)</a> <a href="#ref-for-dfn-service-9" title="Reference 5">(5)</a> <a href="#ref-for-dfn-service-10" title="Reference 6">(6)</a> <a href="#ref-for-dfn-service-11" title="Reference 7">(7)</a> <a href="#ref-for-dfn-service-12" title="Reference 8">(8)</a> <a href="#ref-for-dfn-service-13" title="Reference 9">(9)</a>
     </li><li>
-      <a href="#ref-for-dfn-service-14" title="§ 5.11 Service Endpoints for Authentication and Authorization">§ 5.11 Service Endpoints for Authentication and Authorization</a> <a href="#ref-for-dfn-service-15" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-16" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-service-14" title="§ 5.11 Service Endpoints for Authentication and Authorization">§ 5.11 Service Endpoints for Authentication and Authorization</a> <a href="#ref-for-dfn-service-15" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-16" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-service-17" title="§ 6.6 Service Privacy">§ 6.6 Service Privacy</a> <a href="#ref-for-dfn-service-18" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-19" title="Reference 3">(3)</a> <a href="#ref-for-dfn-service-20" title="Reference 4">(4)</a> <a href="#ref-for-dfn-service-21" title="Reference 5">(5)</a> 
+      <a href="#ref-for-dfn-service-17" title="§ 6.6 Service Privacy">§ 6.6 Service Privacy</a> <a href="#ref-for-dfn-service-18" title="Reference 2">(2)</a> <a href="#ref-for-dfn-service-19" title="Reference 3">(3)</a> <a href="#ref-for-dfn-service-20" title="Reference 4">(4)</a> <a href="#ref-for-dfn-service-21" title="Reference 5">(5)</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-verification-method-definition" aria-label="Links in this document to definition: verification method definition">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-verification-method-definition" aria-label="Permalink for definition: verification method definition. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-verification-method-definition-1" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a> 
+      <a href="#ref-for-dfn-verification-method-definition-1" title="§ 2.2 Verification Methods">§ 2.2 Verification Methods</a>
     </li><li>
-      <a href="#ref-for-dfn-verification-method-definition-2" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> 
+      <a href="#ref-for-dfn-verification-method-definition-2" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-verificationmethod" aria-label="Links in this document to definition: verificationMethod">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-verificationmethod" aria-label="Permalink for definition: verificationMethod. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
@@ -5184,19 +5184,19 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-verification-method-identifier" aria-label="Permalink for definition: verification method identifier. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-verification-method-identifier-1" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> <a href="#ref-for-dfn-verification-method-identifier-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-identifier-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-identifier-4" title="Reference 4">(4)</a> 
+      <a href="#ref-for-dfn-verification-method-identifier-1" title="§ 3.3 Retrieve Verification Method">§ 3.3 Retrieve Verification Method</a> <a href="#ref-for-dfn-verification-method-identifier-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-verification-method-identifier-3" title="Reference 3">(3)</a> <a href="#ref-for-dfn-verification-method-identifier-4" title="Reference 4">(4)</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-revoked" aria-label="Links in this document to definition: revoked">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-revoked" aria-label="Permalink for definition: revoked. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
@@ -5206,7 +5206,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-publickeymultibase" aria-label="Permalink for definition: publicKeyMultibase. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
@@ -5216,7 +5216,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-secretkeymultibase" aria-label="Permalink for definition: secretKeyMultibase. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
@@ -5226,7 +5226,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-publickeyjwk" aria-label="Permalink for definition: publicKeyJwk. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
@@ -5236,7 +5236,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-secretkeyjwk" aria-label="Permalink for definition: secretKeyJwk. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
@@ -5246,31 +5246,31 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#defn-keyAgreement" aria-label="Permalink for definition: keyAgreement. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-defn-keyAgreement-1" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a> 
+      <a href="#ref-for-defn-keyAgreement-1" title="§ 2.3 Verification Relationships">§ 2.3 Verification Relationships</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-multibase-header" aria-label="Links in this document to definition: Multibase header">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-multibase-header" aria-label="Permalink for definition: Multibase header. Activate to close this dialog.">Permalink</a>
-        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span> 
+        <span class="marker dfn-exported" title="Definition can be referenced by other specifications">exported</span>
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-multibase-header-1" title="§ 4.3.1 The multibase Datatype">§ 4.3.1 The multibase Datatype</a> <a href="#ref-for-dfn-multibase-header-2" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-multibase-header-1" title="§ 4.3.1 The multibase Datatype">§ 4.3.1 The multibase Datatype</a> <a href="#ref-for-dfn-multibase-header-2" title="Reference 2">(2)</a>
     </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-multiformats" aria-label="Links in this document to definition: Multiformats">
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-multiformats" aria-label="Permalink for definition: Multiformats. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
@@ -5280,14 +5280,14 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
       <span class="caret"></span>
       <div>
         <a class="self-link" href="#dfn-pairwise-identifier" aria-label="Permalink for definition: pairwise identifier. Activate to close this dialog.">Permalink</a>
-         
+
       </div>
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-      <a href="#ref-for-dfn-pairwise-identifier-1" title="§ 6.3 Identifier Correlation Risks">§ 6.3 Identifier Correlation Risks</a> <a href="#ref-for-dfn-pairwise-identifier-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-pairwise-identifier-3" title="Reference 3">(3)</a> 
+      <a href="#ref-for-dfn-pairwise-identifier-1" title="§ 6.3 Identifier Correlation Risks">§ 6.3 Identifier Correlation Risks</a> <a href="#ref-for-dfn-pairwise-identifier-2" title="Reference 2">(2)</a> <a href="#ref-for-dfn-pairwise-identifier-3" title="Reference 3">(3)</a>
     </li><li>
-      <a href="#ref-for-dfn-pairwise-identifier-4" title="§ 6.4 Controlled Identifier Document Correlation Risks">§ 6.4 Controlled Identifier Document Correlation Risks</a> <a href="#ref-for-dfn-pairwise-identifier-5" title="Reference 2">(2)</a> 
+      <a href="#ref-for-dfn-pairwise-identifier-4" title="§ 6.4 Controlled Identifier Document Correlation Risks">§ 6.4 Controlled Identifier Document Correlation Risks</a> <a href="#ref-for-dfn-pairwise-identifier-5" title="Reference 2">(2)</a>
     </li>
   </ul>
     </div><script id="respec-dfn-panel">(() => {
