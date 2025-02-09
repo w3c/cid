@@ -914,6 +914,15 @@ stored and retrieved according to the [=canonical URL=] of the document, which
 MUST also be the [=base identifier=] of the document.
             </p>
 
+            <p class="note" title="Trusted caching and archiving">
+It is possible for a [=controlled identifier document=] to be served from a
+trusted cache or archive where the [=canonical URL=] does not match the URL used
+to fetch the document from the trusted cache or archive. The language in the
+previous paragraph provides flexibility to applications that operate in this
+manner such that the documents can still be considered valid as long as the
+security implications are well understood by the application developer.
+            </p>
+
             <div class="note" title="Identifiers are context-dependent">
               <p>
 It is expected that the [=subject=] referred to by an `id` in a [=controlled identifier
