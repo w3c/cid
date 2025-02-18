@@ -253,9 +253,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <script id="initialUserConfig" type="application/json">{
   "specStatus": "PR",
   "shortName": "cid-1.0",
-  "publishDate": "2025-03-06",
+  "publishDate": "2025-3-20",
   "crEnd": "2025-02-28",
-  "prEnd": "2025-04-03",
+  "prEnd": "2025-4-17",
   "edDraftURI": "https://w3c.github.io/cid/",
   "implementationReportURI": "https://w3c.github.io/cid/implementations/1.0/",
   "editors": [
@@ -393,20 +393,20 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       ]
     }
   ],
-  "publishISODate": "2025-03-06T00:00:00.000Z",
-  "generatedSubtitle": "W3C Proposed Recommendation 06 March 2025"
+  "publishISODate": "2025-03-20T00:00:00.000Z",
+  "generatedSubtitle": "W3C Proposed Recommendation 20 March 2025"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-PR"></head>
 <body class="h-entry" data-cite="URL I18N-GLOSSARY INFRA VC-DATA-MODEL-2.0"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Controlled Identifiers v1.0</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#PR">W3C Proposed Recommendation</a> <time class="dt-published" datetime="2025-03-06">06 March 2025</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#PR">W3C Proposed Recommendation</a> <time class="dt-published" datetime="2025-03-20">20 March 2025</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2025/PR-cid-1.0-20250306/">https://www.w3.org/TR/2025/PR-cid-1.0-20250306/</a>
+                <a class="u-url" href="https://www.w3.org/TR/2025/PR-cid-1.0-20250320/">https://www.w3.org/TR/2025/PR-cid-1.0-20250320/</a>
               </dd>
         <dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/cid-1.0/">https://www.w3.org/TR/cid-1.0/</a>
@@ -501,7 +501,7 @@ interacting with, the controller of an identifier.
     
   </p><p>
         The <abbr title="World Wide Web Consortium">W3C</abbr> Membership and other interested parties are invited to review
-        the document and send comments through 03 April 2025.
+        the document and send comments through 17 April 2025.
         Advisory Committee Representatives should consult their
         <a href="https://www.w3.org/2002/09/wbs/myQuestionnaires">WBS questionnaires</a>. Note that substantive technical comments were expected during the
         Candidate Recommendation review period that ended
@@ -553,16 +553,10 @@ A <a data-link-type="dfn|abstract-op" href="#dfn-controlled-identifier-document"
 identifier, for which the current controlled identifier document is taken as authoritative.
       </p>
       <p>
-It is expected that other specifications will profile
-the features that are defined in this specification, requiring and/or
-recommending the use of some and prohibiting and/or deprecating the use of
-others.
+Other specifications, such as the <cite><a data-matched-text="[[[?DID]]]" href="https://www.w3.org/TR/did-core/">Decentralized Identifiers (DIDs) v1.0</a></cite> specification, profile the
+features that are defined in this specification, requiring and/or recommending
+the use of some and prohibiting and/or deprecating the use of others.
       </p>
-
-      <div class="issue" id="issue-container-number-150"><div role="heading" class="issue-title marker" id="h-issue" aria-level="3"><a href="https://github.com/w3c/cid/issues/150"><span class="issue-number">Issue 150</span></a><span class="issue-label">: Clarify that this specification is meant to be profiled <a class="respec-gh-label" href="https://github.com/w3c/cid/issues/?q=is%3Aissue+is%3Aopen+label%3A%22ready+for+pr%22" style="background-color: rgb(14, 138, 22); color: rgb(0, 0, 0);" aria-label="GitHub label: ready for pr">ready for pr</a><a class="respec-gh-label" href="https://github.com/w3c/cid/issues/?q=is%3Aissue+is%3Aopen+label%3A%22editorial%22" style="background-color: rgb(14, 138, 22); color: rgb(0, 0, 0);" aria-label="GitHub label: editorial">editorial</a></span></div><p dir="auto">The W3C TAG review noted that they would like to see language that clarifies that this document would be useful to authors that would like to profile its usage. The DID Core specification is one such document that does that, but citing it directly received objections. This issue notes that the WG intends to resolve the text below into something that we can achieve consensus on:</p>
-<blockquote>
-<p dir="auto">For example, the Decentralized Identifiers Specification is expected to define DID documents as a profile of controlled identifier documents, where the DID is the identifier, DID documents are controlled identifier documents, and resolution is the process of retrieving the canonical DID document for a DID.</p>
-</blockquote></div>
 
       <section id="use-cases"><div class="header-wrapper"><h3 id="x1-1-use-cases"><bdi class="secno">1.1 </bdi>Use Cases</h3><a class="self-link" href="#use-cases" aria-label="Permalink for Section 1.1"></a></div>
         
@@ -3076,7 +3070,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
               <td>
                 The vocabulary in JSON-LD format [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>].<br>
 
-                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.jsonld" data-hash-format="openssl dgst -sha256">3c91f5f4c5cc504e41ab5d08a099ab52e32926dd9e89855145f69c2a4075437a</span></code>
+                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.jsonld" data-hash-format="openssl dgst -sha256">2fae64e0b541876205c453eed2ec375b1f06e184b8c0e4d1d9dd5bceaba427ad</span></code>
               </td>
             </tr>
             <tr>
@@ -3086,7 +3080,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
               <td>
                 The vocabulary in Turtle format [<cite><a class="bibref" data-link-type="biblio" href="#bib-turtle" title="RDF 1.1 Turtle">TURTLE</a></cite>].<br>
 
-                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.ttl" data-hash-format="openssl dgst -sha256">b23c40940af5b307e7eaf962a06bcc15476ae5951f49722cf03a8118314c872e</span></code>
+                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.ttl" data-hash-format="openssl dgst -sha256">c668b69968f34633cbb32a1a1b040e79b43791e9a7cf9677909a80429b389bf8</span></code>
               </td>
             </tr>
             <tr>
@@ -3097,7 +3091,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
                 The vocabulary in HTML+RDFa Format [<cite><a class="bibref" data-link-type="biblio" href="#bib-html-rdfa" title="HTML+RDFa 1.1 - Second Edition">HTML-RDFA</a></cite>].<br>
 
 
-                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.html" data-hash-format="openssl dgst -sha256">3ad95eb4a1eb1b4880911d8b3906beb8743e1135de55821ccf6c73ea85d6ea1c</span></code>
+                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.html" data-hash-format="openssl dgst -sha256">890997ce0cfdc0c9f93409a38030e3f4c9723a7846e06729c28eb442b83da5f6</span></code>
               </td>
             </tr>
           </tbody>
@@ -4487,8 +4481,8 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
   </section><section id="informative-references"><div class="header-wrapper"><h3 id="e-2-informative-references"><bdi class="secno">E.2 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix E.2"></a></div>
     
     <dl class="bibliography"><dt id="bib-cid">[CID]</dt><dd>
-      <a href="https://www.w3.org/TR/cid-1.0/"><cite>Controlled Identifiers v1.0</cite></a>. Manu Sporny; Michael Jones.  W3C. 7 February 2025. CRD. URL: <a href="https://www.w3.org/TR/cid-1.0/">https://www.w3.org/TR/cid-1.0/</a>
-    </dd><dt id="bib-did-core">[DID-CORE]</dt><dd>
+      <a href="https://www.w3.org/TR/cid-1.0/"><cite>Controlled Identifiers v1.0</cite></a>. Manu Sporny; Michael Jones.  W3C. 9 February 2025. CRD. URL: <a href="https://www.w3.org/TR/cid-1.0/">https://www.w3.org/TR/cid-1.0/</a>
+    </dd><dt id="bib-did">[DID]</dt><dd>
       <a href="https://www.w3.org/TR/did-core/"><cite>Decentralized Identifiers (DIDs) v1.0</cite></a>. Manu Sporny; Amy Guy; Markus Sabadello; Drummond Reed.  W3C. 19 July 2022. W3C Recommendation. URL: <a href="https://www.w3.org/TR/did-core/">https://www.w3.org/TR/did-core/</a>
     </dd><dt id="bib-did-use-cases">[DID-USE-CASES]</dt><dd>
       <a href="https://www.w3.org/TR/did-use-cases/"><cite>Use Cases and Requirements for Decentralized Identifiers</cite></a>. Joe Andrieu; Phil Archer; Kim Duffy; Ryan Grant; Adrian Gropper.  W3C. 17 March 2021. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/did-use-cases/">https://www.w3.org/TR/did-use-cases/</a>
@@ -4505,7 +4499,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </dd><dt id="bib-turtle">[TURTLE]</dt><dd>
       <a href="https://www.w3.org/TR/turtle/"><cite>RDF 1.1 Turtle</cite></a>. Eric Prud'hommeaux; Gavin Carothers.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/turtle/">https://www.w3.org/TR/turtle/</a>
     </dd><dt id="bib-vc-data-integrity">[VC-DATA-INTEGRITY]</dt><dd>
-      <a href="https://www.w3.org/TR/vc-data-integrity/"><cite>Verifiable Credential Data Integrity 1.0</cite></a>. Manu Sporny; Ted Thibodeau Jr; Ivan Herman; Dave Longley; Greg Bernstein.  W3C. 3 February 2025. CRD. URL: <a href="https://www.w3.org/TR/vc-data-integrity/">https://www.w3.org/TR/vc-data-integrity/</a>
+      <a href="https://www.w3.org/TR/vc-data-integrity/"><cite>Verifiable Credential Data Integrity 1.0</cite></a>. Manu Sporny; Ted Thibodeau Jr; Ivan Herman; Dave Longley; Greg Bernstein.  W3C. 10 February 2025. CRD. URL: <a href="https://www.w3.org/TR/vc-data-integrity/">https://www.w3.org/TR/vc-data-integrity/</a>
     </dd><dt id="bib-vc-extensions">[VC-EXTENSIONS]</dt><dd>
       <a href="https://www.w3.org/TR/vc-extensions/"><cite>Verifiable Credential Extensions</cite></a>. Manu Sporny.  W3C. 30 September 2024. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/vc-extensions/">https://www.w3.org/TR/vc-extensions/</a>
     </dd><dt id="bib-vc-use-cases">[VC-USE-CASES]</dt><dd>
