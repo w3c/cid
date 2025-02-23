@@ -186,69 +186,223 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </style>
 <style>
 
-  .vc-tabbed {
-    overflow-x: hidden;
-    margin: 0 0;
-  }
+.vc-tabbed {
+  overflow-x: hidden;
+  margin: 0 0;
+}
 
-  .vc-tabbed [type="radio"] {
-    display: none;
-  }
+.vc-tabbed [type="radio"] {
+  display: none;
+}
 
-  .vc-tabs {
-    display: flex;
-    align-items: stretch;
-    list-style: none;
-    padding: 0;
-    border-bottom: 1px solid #ccc;
-  }
+.vc-tabs {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
 
-  li.vc-tab {
-    margin: unset;
-  }
+li.vc-tab {
+  margin: unset;
+}
 
-  .vc-tab > label {
-    display: block;
-    margin-bottom: -1px;
-    padding: .4em .5em;
-    border: 1px solid #ccc;
-    border-top-right-radius: .4em;
-    border-top-left-radius: .4em;
-    background: #eee;
-    color: #666;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  .vc-tab:hover label {
-    border-left-color: #333;
-    border-top-color: #333;
-    border-right-color: #333;
-    color: #333;
-  }
+.vc-tab > label {
+  display: block;
+  margin-bottom: -1px;
+  padding: .4em .5em;
+  border: 1px solid #ccc;
+  border-top-right-radius: .4em;
+  border-top-left-radius: .4em;
+  background: #eee;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 
-  .vc-tab-content {
-    display: none;
-  }
+.vc-tab:hover label {
+  border-left-color: #333;
+  border-top-color: #333;
+  border-right-color: #333;
+  color: #333;
+}
 
-  .vc-tabbed [type="radio"]:nth-of-type(1):checked ~ .vc-tabs .vc-tab:nth-of-type(1) label,
+.vc-tab-content {
+  display: none;
+}
+.vc-tab-content > pre {
+  white-space: pre-wrap;
+}
+
+.vc-jose-cose-tabbed, .vc-jose-cose-tabbed-jwt,
+.vc-jose-cose-tabbed-sd-jwt, .vc-jose-cose-tabbed-cose,
+.sd-jwt-tabbed {
+  overflow-x: hidden;
+  margin: 0 0;
+}
+
+.vc-jose-cose-tabbed [type="radio"], .vc-jose-cose-tabbed-jwt [type="radio"],
+.vc-jose-cose-tabbed-sd-jwt [type="radio"],
+.vc-jose-cose-tabbed-cose [type="radio"],
+.sd-jwt-tabbed [type="radio"] {
+  display: none;
+}
+
+.vc-jose-cose-tabs, .vc-jose-cose-jwt-tabs, .vc-jose-cose-sd-jwt-tabs,
+.vc-jose-cose-cose-tabs,
+.sd-jwt-tabs {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+li.vc-jose-cose-tab, li.vc-jose-cose-jwt-tab, li.vc-jose-cose-sd-jwt-tab,
+li.vc-jose-cose-cose-tab,
+li.sd-jwt-tab {
+  margin: 0 0;
+  margin-left: 8px;
+}
+
+.vc-jose-cose-tab>label, .vc-jose-cose-jwt-tab>label,
+.vc-jose-cose-sd-jwt-tab>label, .vc-jose-cose-cose-tab>label,
+.sd-jwt-tab>label {
+  display: block;
+  margin-bottom: -1px;
+  padding: .4em .5em;
+  border: 1px solid #ccc;
+  border-top-right-radius: .4em;
+  border-top-left-radius: .4em;
+  background: #eee;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.vc-jose-cose-tab:hover label, .vc-jose-cose-jwt-tab:hover label,
+.vc-jose-cose-sd-jwt-tab:hover label, .vc-jose-cose-cose-tab:hover label,
+.sd-jwt-tab:hover label {
+  border-left-color: #333;
+  border-top-color: #333;
+  border-right-color: #333;
+  color: #333;
+}
+
+.vc-jose-cose-tab-content,
+.sd-jwt-tab-content {
+  display: none;
+}
+
+.vc-tabbed [type="radio"]:nth-of-type(1):checked ~ .vc-tabs .vc-tab:nth-of-type(1) label,
   .vc-tabbed [type="radio"]:nth-of-type(2):checked ~ .vc-tabs .vc-tab:nth-of-type(2) label,
   .vc-tabbed [type="radio"]:nth-of-type(3):checked ~ .vc-tabs .vc-tab:nth-of-type(3) label,
   .vc-tabbed [type="radio"]:nth-of-type(4):checked ~ .vc-tabs .vc-tab:nth-of-type(4) label,
   .vc-tabbed [type="radio"]:nth-of-type(5):checked ~ .vc-tabs .vc-tab:nth-of-type(5) label,
-  .vc-tabbed [type="radio"]:nth-of-type(6):checked ~ .vc-tabs .vc-tab:nth-of-type(6) label {
-    border-bottom-color: #fff;
-    background: #fff;
-    color: #222;
-  }
+  .vc-tabbed [type="radio"]:nth-of-type(6):checked ~ .vc-tabs .vc-tab:nth-of-type(6) label,
+  .vc-tabbed [type="radio"]:nth-of-type(7):checked ~ .vc-tabs .vc-tab:nth-of-type(7) label,
+  .vc-tabbed [type="radio"]:nth-of-type(8):checked ~ .vc-tabs .vc-tab:nth-of-type(8) label,
+  .vc-tabbed [type="radio"]:nth-of-type(9):checked ~ .vc-tabs .vc-tab:nth-of-type(9) label,
+  .vc-tabbed [type="radio"]:nth-of-type(10):checked ~ .vc-tabs .vc-tab:nth-of-type(10) label {
+  border-bottom-color: #fff;
+  background: #fff;
+  color: #222;
+}
 
-  .vc-tabbed [type="radio"]:nth-of-type(1):checked ~ .vc-tab-content:nth-of-type(1),
+.vc-tabbed [type="radio"]:nth-of-type(1):checked ~ .vc-tab-content:nth-of-type(1),
   .vc-tabbed [type="radio"]:nth-of-type(2):checked ~ .vc-tab-content:nth-of-type(2),
   .vc-tabbed [type="radio"]:nth-of-type(3):checked ~ .vc-tab-content:nth-of-type(3),
   .vc-tabbed [type="radio"]:nth-of-type(4):checked ~ .vc-tab-content:nth-of-type(4),
   .vc-tabbed [type="radio"]:nth-of-type(5):checked ~ .vc-tab-content:nth-of-type(5),
-  .vc-tabbed [type="radio"]:nth-of-type(6):checked ~ .vc-tab-content:nth-of-type(6) {
-    display: block;
-  }
+  .vc-tabbed [type="radio"]:nth-of-type(6):checked ~ .vc-tab-content:nth-of-type(6),
+  .vc-tabbed [type="radio"]:nth-of-type(7):checked ~ .vc-tab-content:nth-of-type(7),
+  .vc-tabbed [type="radio"]:nth-of-type(8):checked ~ .vc-tab-content:nth-of-type(8),
+  .vc-tabbed [type="radio"]:nth-of-type(9):checked ~ .vc-tab-content:nth-of-type(9),
+  .vc-tabbed [type="radio"]:nth-of-type(10):checked ~ .vc-tab-content:nth-of-type(10),
+.sd-jwt-tabbed [type="radio"]:nth-of-type(1):checked ~ .sd-jwt-tab-content:nth-of-type(1),
+.sd-jwt-tabbed [type="radio"]:nth-of-type(2):checked ~ .sd-jwt-tab-content:nth-of-type(2),
+.sd-jwt-tabbed [type="radio"]:nth-of-type(3):checked ~ .sd-jwt-tab-content:nth-of-type(3) {
+  display: block;
+}
+
+.disclosure {
+  margin: 10px 0;
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 5px;
+}
+
+.disclosure h3 {
+  margin: 0;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.disclosure .claim-name {
+  color: #333;
+}
+
+.disclosure .hash,
+.disclosure .disclosure-value,
+.disclosure .contents {
+  color: #555;
+  word-wrap: break-word;
+  display: inline;
+}
+
+.disclosure p {
+  margin: 0;
+  padding-left: 5px;
+}
+
+.disclosure pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  padding-left: 5px;
+  line-height: 1.6;
+  display: inline-block;
+}
+
+.header-value {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  padding-left: 5px;
+  line-height: 1.6;
+  font-size: 12px;
+}
+
+.cose-text, .jose-text, .vc-jose-cose-jwt .text, .vc-jose-cose-sd-jwt .text,
+ .vc-jose-cose-cose .text {
+  font-family: monospace;
+  color: green;
+}
+
+.sd-jwt-compact, .jwt-compact, .vc-jose-cose-jwt .compact, .vc-jose-cose-sd-jwt
+ .compact, .vc-jose-cose-cose .compact {
+  background-color: rgba(0,0,0,.03);
+}
+
+.sd-jwt-header, .jwt-header, .vc-jose-cose-jwt .header, .vc-jose-cose-sd-jwt
+ .header, .vc-jose-cose-cose .header {
+  color: red;
+}
+
+.sd-jwt-payload, .jwt-payload, .vc-jose-cose-jwt .payload, .vc-jose-cose-sd-jwt
+ .payload, .vc-jose-cose-cose .payload {
+  color: green;
+}
+
+.sd-jwt-signature, .jwt-signature, .vc-jose-cose-jwt .signature,
+ .vc-jose-cose-sd-jwt .signature, .vc-jose-cose-cose .signature {
+  color: blue;
+}
+
+.sd-jwt-disclosure, .vc-jose-cose-jwt .disclosure, .vc-jose-cose-sd-jwt
+ .disclosure, .vc-jose-cose-cose .disclosure {
+  color: purple;
+}
 </style>
 <script id="initialUserConfig" type="application/json">{
   "specStatus": "PR",
@@ -3070,7 +3224,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
               <td>
                 The vocabulary in JSON-LD format [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>].<br>
 
-                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.jsonld" data-hash-format="openssl dgst -sha256">2fae64e0b541876205c453eed2ec375b1f06e184b8c0e4d1d9dd5bceaba427ad</span></code>
+                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.jsonld" data-hash-format="openssl dgst -sha256">689af6f393b55c9b35c37cfad59d13cc421e0c89ce97cf0e8234f9b4a3074104</span></code>
               </td>
             </tr>
             <tr>
@@ -3080,7 +3234,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
               <td>
                 The vocabulary in Turtle format [<cite><a class="bibref" data-link-type="biblio" href="#bib-turtle" title="RDF 1.1 Turtle">TURTLE</a></cite>].<br>
 
-                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.ttl" data-hash-format="openssl dgst -sha256">c668b69968f34633cbb32a1a1b040e79b43791e9a7cf9677909a80429b389bf8</span></code>
+                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.ttl" data-hash-format="openssl dgst -sha256">89d627efb812584a82eafff73927307e9dc7dff478a08301f217e9b853e56d38</span></code>
               </td>
             </tr>
             <tr>
@@ -3091,7 +3245,7 @@ the <code>proofPurpose</code> property in the <a data-link-type="dfn|abstract-op
                 The vocabulary in HTML+RDFa Format [<cite><a class="bibref" data-link-type="biblio" href="#bib-html-rdfa" title="HTML+RDFa 1.1 - Second Edition">HTML-RDFA</a></cite>].<br>
 
 
-                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.html" data-hash-format="openssl dgst -sha256">890997ce0cfdc0c9f93409a38030e3f4c9723a7846e06729c28eb442b83da5f6</span></code>
+                <strong>SHA2-256 Digest:</strong> <code><span class="vc-hash" data-hash-url="https://w3c.github.io/vc-data-integrity/vocab/security/vocabulary.html" data-hash-format="openssl dgst -sha256">18fe78ee9f714a6fae13391490d99b653ac2521246efa20f0ad82bae4d8d9f72</span></code>
               </td>
             </tr>
           </tbody>
@@ -4444,7 +4598,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
 <section id="references" class="appendix"><div class="header-wrapper"><h2 id="e-references"><bdi class="secno">E. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix E."></a></div><section id="normative-references"><div class="header-wrapper"><h3 id="e-1-normative-references"><bdi class="secno">E.1 </bdi>Normative references</h3><a class="self-link" href="#normative-references" aria-label="Permalink for Appendix E.1"></a></div>
     
     <dl class="bibliography"><dt id="bib-did-extensions-properties">[DID-EXTENSIONS-PROPERTIES]</dt><dd>
-      <a href="https://www.w3.org/TR/did-extensions-properties/"><cite>DID Document Property Extensions</cite></a>. Manu Sporny; Markus Sabadello.  W3C. 19 November 2024. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/did-extensions-properties/">https://www.w3.org/TR/did-extensions-properties/</a>
+      <a href="https://www.w3.org/TR/did-extensions-properties/"><cite>DID Document Property Extensions</cite></a>. Manu Sporny; Markus Sabadello.  W3C. 19 February 2025. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/did-extensions-properties/">https://www.w3.org/TR/did-extensions-properties/</a>
     </dd><dt id="bib-infra">[INFRA]</dt><dd>
       <a href="https://infra.spec.whatwg.org/"><cite>Infra Standard</cite></a>. Anne van Kesteren; Domenic Denicola.  WHATWG. Living Standard. URL: <a href="https://infra.spec.whatwg.org/">https://infra.spec.whatwg.org/</a>
     </dd><dt id="bib-jose-registries">[JOSE-REGISTRIES]</dt><dd>
@@ -4474,14 +4628,14 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </dd><dt id="bib-url">[URL]</dt><dd>
       <a href="https://url.spec.whatwg.org/"><cite>URL Standard</cite></a>. Anne van Kesteren.  WHATWG. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
     </dd><dt id="bib-vc-data-model-2.0">[VC-DATA-MODEL-2.0]</dt><dd>
-      <a href="https://www.w3.org/TR/vc-data-model-2.0/"><cite>Verifiable Credentials Data Model v2.0</cite></a>. Manu Sporny; Ted Thibodeau Jr; Ivan Herman; Gabe Cohen; Michael Jones.  W3C. 27 January 2025. CRD. URL: <a href="https://www.w3.org/TR/vc-data-model-2.0/">https://www.w3.org/TR/vc-data-model-2.0/</a>
+      <a href="https://www.w3.org/TR/vc-data-model-2.0/"><cite>Verifiable Credentials Data Model v2.0</cite></a>. Manu Sporny; Ted Thibodeau Jr; Ivan Herman; Gabe Cohen; Michael Jones.  W3C. 23 February 2025. CRD. URL: <a href="https://www.w3.org/TR/vc-data-model-2.0/">https://www.w3.org/TR/vc-data-model-2.0/</a>
     </dd><dt id="bib-xmlschema11-2">[XMLSCHEMA11-2]</dt><dd>
       <a href="https://www.w3.org/TR/xmlschema11-2/"><cite>W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes</cite></a>. David Peterson; Sandy Gao; Ashok Malhotra; Michael Sperberg-McQueen; Henry Thompson; Paul V. Biron et al.  W3C. 5 April 2012. W3C Recommendation. URL: <a href="https://www.w3.org/TR/xmlschema11-2/">https://www.w3.org/TR/xmlschema11-2/</a>
     </dd></dl>
   </section><section id="informative-references"><div class="header-wrapper"><h3 id="e-2-informative-references"><bdi class="secno">E.2 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix E.2"></a></div>
     
     <dl class="bibliography"><dt id="bib-cid">[CID]</dt><dd>
-      <a href="https://www.w3.org/TR/cid-1.0/"><cite>Controlled Identifiers v1.0</cite></a>. Manu Sporny; Michael Jones.  W3C. 9 February 2025. CRD. URL: <a href="https://www.w3.org/TR/cid-1.0/">https://www.w3.org/TR/cid-1.0/</a>
+      <a href="https://www.w3.org/TR/cid-1.0/"><cite>Controlled Identifiers v1.0</cite></a>. Manu Sporny; Michael Jones.  W3C. 18 February 2025. CRD. URL: <a href="https://www.w3.org/TR/cid-1.0/">https://www.w3.org/TR/cid-1.0/</a>
     </dd><dt id="bib-did">[DID]</dt><dd>
       <a href="https://www.w3.org/TR/did-core/"><cite>Decentralized Identifiers (DIDs) v1.0</cite></a>. Manu Sporny; Amy Guy; Markus Sabadello; Drummond Reed.  W3C. 19 July 2022. W3C Recommendation. URL: <a href="https://www.w3.org/TR/did-core/">https://www.w3.org/TR/did-core/</a>
     </dd><dt id="bib-did-use-cases">[DID-USE-CASES]</dt><dd>
@@ -4499,7 +4653,7 @@ Kaliya "Identity Woman" Young, Eric Welton, Fuqiao Xue, @Yue, Dmitri Zagidulin,
     </dd><dt id="bib-turtle">[TURTLE]</dt><dd>
       <a href="https://www.w3.org/TR/turtle/"><cite>RDF 1.1 Turtle</cite></a>. Eric Prud'hommeaux; Gavin Carothers.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/turtle/">https://www.w3.org/TR/turtle/</a>
     </dd><dt id="bib-vc-data-integrity">[VC-DATA-INTEGRITY]</dt><dd>
-      <a href="https://www.w3.org/TR/vc-data-integrity/"><cite>Verifiable Credential Data Integrity 1.0</cite></a>. Manu Sporny; Ted Thibodeau Jr; Ivan Herman; Dave Longley; Greg Bernstein.  W3C. 10 February 2025. CRD. URL: <a href="https://www.w3.org/TR/vc-data-integrity/">https://www.w3.org/TR/vc-data-integrity/</a>
+      <a href="https://www.w3.org/TR/vc-data-integrity/"><cite>Verifiable Credential Data Integrity 1.0</cite></a>. Manu Sporny; Ted Thibodeau Jr; Ivan Herman; Dave Longley; Greg Bernstein.  W3C. 23 February 2025. CRD. URL: <a href="https://www.w3.org/TR/vc-data-integrity/">https://www.w3.org/TR/vc-data-integrity/</a>
     </dd><dt id="bib-vc-extensions">[VC-EXTENSIONS]</dt><dd>
       <a href="https://www.w3.org/TR/vc-extensions/"><cite>Verifiable Credential Extensions</cite></a>. Manu Sporny.  W3C. 30 September 2024. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/vc-extensions/">https://www.w3.org/TR/vc-extensions/</a>
     </dd><dt id="bib-vc-use-cases">[VC-USE-CASES]</dt><dd>
