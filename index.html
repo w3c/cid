@@ -473,7 +473,7 @@ corresponding [=private key=].
 Cryptographic material that can be used to generate [=proofs=].
           </dd>
 
-          <dt><dfn data-lt="authenticated|authenticate">authentication</dfn></dt>
+          <dt><dfn class="export">authentication</dfn></dt>
           <dd>
 A process by which an entity can prove to a verifier that it has a specific
 attribute or controls a specific secret.
@@ -488,7 +488,7 @@ to cryptographically validate the assertion. A
 is a type of proof.
           </dd>
 
-          <dt><dfn data-lt="authorized|authorize">authorization</dfn></dt>
+          <dt><dfn class="export">authorization</dfn></dt>
           <dd>
 A process by which an entity can prove to a verifier that it is allowed to
 perform a specific activity.
@@ -503,7 +503,7 @@ their identifiers, and other related properties.<!--  See Section -->
 <!-- [[[#cryptographic-suites]]] for further detail. -->
           </dd>
 
-          <dt><dfn class="export" data-lt="controller(s)|Controllers">controller</dfn></dt>
+          <dt><dfn class="export">controller</dfn></dt>
           <dd>
             <p>
 An entity that is capable of performing an action with a specific resource, such
@@ -1100,10 +1100,10 @@ For more information regarding privacy and security considerations related to
         <section>
           <h2>Verification Methods</h2>
           <p>
-A [=controlled identifier document=] can express [=verification methods=], such as
-cryptographic [=public keys=], which can be used to verify [=proofs=],
-such as those used to [=authenticate=] or authorize interactions with the
-[=controller=] or associated parties. For example, a cryptographic [=public
+A [=controlled identifier document=] can express [=verification methods=], such
+as cryptographic [=public keys=], which can be used to verify [=proofs=], such
+as those used to [=authentication|authenticate=] or authorize interactions with
+the [=controller=] or associated parties. For example, a cryptographic [=public
 key=] can be used as a <a>verification method</a> with respect to a digital
 signature; in such use, it verifies that the signer could use the associated
 cryptographic private key. <a>Verification methods</a> might take many
@@ -1747,9 +1747,10 @@ any such properties used SHOULD be registered in the list of
 
             <p>
 The `authentication` [=verification relationship=] is used to specify how the
-[=subject=] is expected to be [=authenticated=], for purposes such as logging
-into a website or engaging in any sort of challenge-response protocol. The
-processing performed following authentication is application-specific.
+[=subject=] is expected to be [=authentication|authenticated=], for purposes
+such as logging into a website or engaging in any sort of challenge-response
+protocol. The processing performed following authentication is
+application-specific.
             </p>
 
             <dl>
@@ -1797,19 +1798,20 @@ referenced.
 
             <p>
 This is useful to any entity verifying authentication that needs to check
-whether an entity that is attempting to [=authenticate=] is presenting a valid
-proof of authentication. When such an authentication-verifying entity receives
-some data (in some protocol-specific format) that contains a [=proof=] that was made
-for the purpose of "authentication", and that says that an entity is identified
-by the `id`, then that <em>verifier</em> checks to ensure that the [=proof=] can be
-verified using a [=verification method=] (for example, [=public key=]) listed
-under `authentication` in the [=controlled identifier document=].
+whether an entity that is attempting to [=authentication|authenticate=] is
+presenting a valid proof of authentication. When such an
+authentication-verifying entity receives some data (in some protocol-specific
+format) that contains a [=proof=] that was made for the purpose of
+"authentication", and that says that an entity is identified by the `id`, then
+that <em>verifier</em> checks to ensure that the [=proof=] can be verified using
+a [=verification method=] (for example, [=public key=]) listed under
+`authentication` in the [=controlled identifier document=].
             </p>
             <p>
-Note that the [=verification method=] indicated by the
-`authentication` property of a [=controlled identifier document=] can
-only be used to [=authenticate=] on behalf
-of the [=controlled identifier document=]'s [=base identifier=].
+Note that the [=verification method=] indicated by the `authentication` property
+of a [=controlled identifier document=] can only be used to
+[=authentication|authenticate=] on behalf of the [=controlled identifier
+document=]'s [=base identifier=].
             </p>
           </section>
 
