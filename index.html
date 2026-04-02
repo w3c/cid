@@ -803,11 +803,14 @@ A [=controlled identifier document=] MUST contain an `id` value in the <em>topmo
             <p>
 The value of the `id` property in the <em>topmost</em>
 <a data-cite="INFRA#ordered-map">map</a> of the [=controlled identifier document=] is
-called the <dfn>base identifier</dfn> for the [=controlled identifier document=]. The URL
+called the <dfn>base identifier</dfn> for the [=controlled identifier document=].
+We call <dfn>primary identifier</dfn> the URL obtained by removing the [=url/fragment=]
+from the [=base identifier=], if any.
+The URL
 for retrieving the current, authoritative [=controlled identifier document=] for a given
 [=identifier=] is called the <dfn>canonical URL</dfn> for the [=controlled identifier
 document=]. Dereferencing the [=canonical URL=] MUST return the current
-authoritative [=controlled identifier document=]. The returned document's [=base
+authoritative [=controlled identifier document=]. The returned document's [=primary
 identifier=] MUST be the same as the [=canonical URL=]; if it is anything else,
 then the returned document is not an authoritative [=controlled identifier document=] and
 the [=identifier=] SHOULD be treated as invalid. Every controlled identifier document is
@@ -2566,7 +2569,12 @@ convey an error type of
 <a href="#INVALID_CONTROLLED_IDENTIFIER_DOCUMENT">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT</a>.
           </li>
           <li>
-If <var>controllerDocument</var>.<var>id</var> does not match the
+Let <var>primaryIdentifier</var> be the result of parsing
+<var>controllerDocument</var>.<var>id</var> according to the rules of the URL scheme and extracting
+the primary resource identifier (without the fragment identifier).
+          </li>
+          <li>
+If <var>primaryIdentifier</var> does not match the
 <var>controllerDocumentUrl</var>, an error MUST be raised and SHOULD
 convey an error type of
 <a href="#INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID">INVALID_CONTROLLED_IDENTIFIER_DOCUMENT_ID</a>.
@@ -2589,7 +2597,7 @@ convey an error type of
           </li>
           <li>
 If the absolute URL value of <var>verificationMethod</var>.<var>controller</var>
-does not equal <var>controllerDocumentUrl</var>, an error MUST be raised and
+does not equal <var>controllerDocument</var>.<var>id</var>, an error MUST be raised and
 SHOULD convey an error type of
 <a href="#INVALID_VERIFICATION_METHOD">INVALID_VERIFICATION_METHOD</a>.
           </li>
@@ -2695,8 +2703,9 @@ the document fragment.
 Let <var>documentFragment</var> be `null`.
           </li>
           <li>
-Let <var>canonicalDocumentUrl</var> be the value of
-<var>document</var>.<var>id</var>.
+Let <var>controllerDocumentUrl</var> be the result of parsing
+<var>document</var>.<var>id</var> according to the rules of the URL scheme and extracting
+the primary resource identifier (without the fragment identifier).
           </li>
           <li>
 Let <var>fullyQualifiedFragment</var> be the value of
